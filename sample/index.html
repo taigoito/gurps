@@ -25,7 +25,171 @@
   </header>
   <main id="main" class="container" role="main">
     <div class="row inner">
-      <div id="sample">In development...</div>
+      <div id="sample" class="col-lg-12">
+        <div id="sample-select">
+          <div class="row">
+            <div class="form-group col-6">
+              <label class="col-form-label">CP</label>
+              <select id="sample-select-cp" name="cp" class="form-control">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="24">24</option>
+                <option value="40">40</option>
+                <option value="56">56</option>
+              </select>
+            </div>
+            <div class="form-group col-6">
+              <label class="col-form-label">SORT</label>
+              <select id="sample-select-sort" name="sort" class="form-control">
+                <option value="">なし</option>
+                <option value="ST">ST</option>
+                <option value="DX">DX</option>
+                <option value="AG">AG</option>
+                <option value="VT">VT</option>
+                <option value="IN">IN</option>
+                <option value="WL">WL</option>
+                <option value="CM">CM</option>
+                <option value="HP">HP</option>
+                <option value="skill">Skill</option>
+                <option value="equip">Equip</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="sample-list">
+          <div class="table-responsive-lg">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">No.</th>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Gender</th>
+                  <th class="text-center">ST</th>
+                  <th class="text-center">DX</th>
+                  <th class="text-center">AG</th>
+                  <th class="text-center">VT</th>
+                  <th class="text-center">IN</th>
+                  <th class="text-center">WL</th>
+                  <th class="text-center">CM</th>
+                  <th class="text-center">HP</th>
+                  <th class="text-center">Skill</th>
+                  <th class="text-center">Equip</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div id="sample-list-overlay"></div>
+        </div>
+        <template id="sample-list-template">
+          <tr class="sample-list-row">
+            <th class="sample-list-row-no text-center">&nbsp;</th>
+            <td class="sample-list-row-name text-center">&nbsp;</td>
+            <td class="sample-list-row-gender text-center">&nbsp;</td>
+            <td class="sample-list-row-st text-center">&nbsp;</td>
+            <td class="sample-list-row-dx text-center">&nbsp;</td>
+            <td class="sample-list-row-ag text-center">&nbsp;</td>
+            <td class="sample-list-row-vt text-center">&nbsp;</td>
+            <td class="sample-list-row-in text-center">&nbsp;</td>
+            <td class="sample-list-row-wl text-center">&nbsp;</td>
+            <td class="sample-list-row-cm text-center">&nbsp;</td>
+            <td class="sample-list-row-hp text-center">&nbsp;</td>
+            <td class="sample-list-row-skill text-center">&nbsp;</td>
+            <td class="sample-list-row-equip text-center">&nbsp;</td>
+          </tr>
+        </template>
+        <div id="sample-unit" class="row"></div>
+        <template id="sample-unit-template">
+          <div class="col-md-6 col-lg-4">
+            <div class="sample-unit-profile table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Profile</caption>
+                <thead>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Name</th>
+                    <td class="sample-unit-profile-name text-left">&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th>Gender</th>
+                    <td class="sample-unit-profile-gender text-left">&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th>CP</th>
+                    <td class="sample-unit-profile-cp text-left">&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="sample-unit-ability table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Ability</caption>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-8">
+            <div class="sample-unit-skills table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Skills</caption>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="sample-unit-equips table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Equipmets</caption>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </template>
+        <template id="sample-unit-ability-template">
+          <tr>
+            <th class="sample-unit-ability-name">&nbsp;</th>
+            <td class="sample-unit-ability-value">&nbsp;</td>
+            <td class="sample-unit-ability-cp">&nbsp;</td>
+          </tr>
+        </template>
+        <template id="sample-unit-skill-template">
+          <tr>
+            <th class="sample-unit-skill-name-1">&nbsp;</th>
+            <td class="sample-unit-skill-value-1">&nbsp;</td>
+            <td class="sample-unit-skill-cp-1">&nbsp;</td>
+            <td class="border-bottom-0">&nbsp;</td>
+            <th class="sample-unit-skill-name-2">&nbsp;</th>
+            <td class="sample-unit-skill-value-2">&nbsp;</td>
+            <td class="sample-unit-skill-cp-2">&nbsp;</td>
+          </tr>
+        </template>
+        <template id="sample-unit-equip-template">
+          <tr>
+            <th class="sample-unit-equip-name">&nbsp;</th>
+            <td class="sample-unit-equip-head-1">&nbsp;</td>
+            <td class="sample-unit-equip-cell-1">&nbsp;</td>
+            <td class="sample-unit-equip-head-2">&nbsp;</td>
+            <td class="sample-unit-equip-cell-2">&nbsp;</td>
+            <td class="sample-unit-equip-head-3">&nbsp;</td>
+            <td class="sample-unit-equip-cell-3">&nbsp;</td>
+          </tr>
+        </template>
+      </div>
     </div>
   </main>
   <div id="cover-image"></div>

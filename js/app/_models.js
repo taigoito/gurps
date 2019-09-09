@@ -340,11 +340,12 @@ class Equipments extends Collection {
 
 class Profile extends Model {
   initialize() {
-    // IDがセットされていれば、デフォルト値を代入
-    if (this.id !== undefined) {
-      const g = this.get('gender') === undefined ? Math.floor(this.id / 54) % 2
+    // SIDまたはIDがセットされていれば、デフォルト値を代入
+    this.sid = this.get('sid') || this.id;
+    if (this.sid !== undefined) {
+      const g = this.get('gender') === undefined ? Math.floor(this.sid / 54) % 2
         : this._parseId(this.get('gender'));
-      const n = this.id % 54 + g * 54;
+      const n = this.sid % 54 + g * 54;
       this.set('name', data.name[n]);
       this.setGender(g);
     }
@@ -532,4 +533,4 @@ class Units extends Collection {
   }
 }
 
-export { Units };
+export { Unit, Units };
