@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクター作成の要領 - GURPS.QWEL</title>
+  <meta name="description" content="コラム | キャラクター作成の要領">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>コラム</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>キャラクター作成の要領</h3>
+              <p>キャラクター作成は、CPの振り分けによる能力値、技能、特徴の決定、および装備の選択によって成り立ちます。このうち最も大きくキャラクターの個性に影響を与えるのが、能力値の振り分けでしょう。技能に1～2CP消費し、特徴で2CP獲得するという前提なら、能力値に消費できるのはだいたい10～11CPになります。</p>
+              <p>以下、冒険者のタイプを剣士、戦士、術士、術戦士の4タイプに分けて、能力値の振り分け方を見ていきます。</p>
+              <h4>剣士タイプ</h4>
+              <p>剣士とは、戦士のように戦闘に特化するのでは無く、探索や隠密行動、交渉など、多岐に渡って活躍できる冒険者を指すことにします。</p>
+              <p>剣士は様々な技能を効率よく修得するために、まずDX(器用さ)とAG(素早さ)に4CPずつ消費して12にします。これによって、「細工」、「運動」などの必須技能をそれぞれ1/2CP消費で、技能値11という実用レベルで修得できます。戦闘も行うので、VT(活力)に1CP消費して11にしましょう。</p>
+              <p>後は好みによる振り分けです。ST(腕力)が高ければ戦闘は幾分有利にこなせますし、IN(知力)が高ければ精神技能が充実します。WL(意志力)やCM(魅力)を上げるのも個性が出て面白いでしょう。</p>
+              <p>戦闘技能は「剣術」で、剣を扱うのがおすすめです。防具は革鎧にして重量を抑え、「運動」や「隠密」の技能に支障の無いよう配慮しましょう。</p>
+              <h4>戦士タイプ</h4>
+              <p>戦士とは、傭兵や騎士として普段は軍隊に属して行動している、戦闘のプロフェッショナルです。</p>
+              <p>本ルールではST(腕力)が高ければ、戦闘は有利にこなせますので、8CP消費して13にしましょう。そして守備に関係するAG(素早さ)とVT(活力)も2～4CP消費して12にしたいところです。</p>
+              <p>ここまでで14CP必要ですが、戦士にはDX(器用さ)、IN(知力)、CM(魅力)はさほど重要ではないので、下げてしまっても構いません。もしCPが余ればWL(意志力)を上げて、術抵抗できるようにしましょう。</p>
+              <p>戦闘技能はもちろん「武術」で、攻撃性重視なら大剣や戦斧が強力ですが、状況に応じて用途を替えられる長剣や鉾槍もおすすめです。</p>
+              <h4>術士タイプ</h4>
+              <p>術法は精神技能に属する技能の一種です。よって術士はIN(知力)が高ければ高いほど、術法の修得に有利になります。また術の集中が途切れないよう、WL(意志力)も重要です。</p>
+              <p>術士の能力値の振り分けは、とにかく下げられる能力値は下げて、INに注ぎ込むカタチになります。戦闘には参加しないのでST(腕力)は下げ、CPを獲得しましょう。最低限の技能をこなすため、DX(器用さ)とAG(素早さ)は11が妥当です。生死判定に関係するVT(活力)も11は欲しいでしょう。</p>
+              <p>するとだいたい、IN、WL共に13くらいにできるはずです。もしも、より強力な魔術師を作りたいのならば、更にリスクを背負ってDX、AG、VT、CM(魅力)、HP(耐久点)を下げてCPを獲得すれば、INを14にまで引き上げることもできるでしょう。</p>
+              <h4>術戦士タイプ</h4>
+              <p>術戦士とは、いくつかの術法までも扱える、万能の戦士のことを指しています。</p>
+              <p>戦闘も術法もこなすということは、戦闘技能を司るST(腕力)、精神技能を司るIN(知力)、どちらも4CPずつ消費して、12は必要です。守備に関係するAG(素早さ)やVT(活力)の他、術の集中を維持するWL(意志力)もおろそかにできません。WLは13欲しいところですが、そのために他の能力値を抑えるのも難しいかも知れません。</p>
+              <p>ゲーム開始初期は実質的に、戦闘では戦士に劣り、術法では術士に劣る、中途半端な存在ですが、やがて技能が充実してくれば、術戦士ならではの戦いができるようになります。</p>
+              <p>戦闘技能は「武術」にして、長剣、戦槌、薙刀あたりを選び、ダメージと回避値を稼ぐのが無難です。修得できる技能も限られるため、術法はCP節約のため1系統に絞りましょう。</p>
+              <h4>その他のタイプ</h4>
+              <p>上記4タイプのいずれにも当てはまらない冒険者として、弓使いや、格闘家など考えられますが、いずれもDX(器用さ)とAG(素早さ)を重点的に上げることが重要になりそうです。次いで、弓使いならWL(意志力)、格闘家ならST(腕力)やVT(活力)が必要となるでしょう。</p>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

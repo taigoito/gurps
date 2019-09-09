@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特徴 - GURPS.QWEL</title>
+  <meta name="description" content="特徴一覧 | 意志判定と恐怖判定">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>キャラクター</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>特徴</h3>
+              <p>例えば「かんしゃく持ち」は、緊張状態ですぐ抜刀するとか、「正直者」は、敵対する相手にさえ嘘がつけないとか、人物の性格や方向性(特徴)をあらかじめ決めておき、プレイヤーはそれに沿ったキャラクターを演じる、というルールです。</p>
+              <p>精神的な特徴を1つ決めると、1/2CP獲得します。特徴は最大2CP分決めることができますので、強いキャラクターを作ろうと思ったら、真っ先に4つの特徴を決めてしまいましょう。</p>
+              <p>「能力値」、「技能」、「特徴」が決まったら、CPによるキャラクター作成の工程は完了です。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    精神的な特徴一覧
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>特徴</th>
+                      <th>説明</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>暴れん坊</td>
+                      <td>いじめっ子。意志判定に失敗すると、その場の一番弱い者を罵り続け、反応-2。</td>
+                    </tr>
+                    <tr>
+                      <td>内気</td>
+                      <td>普段から寡黙で、知らない相手に対して消極的。知らない相手に対する交渉時などの判定-2。</td>
+                    </tr>
+                    <tr>
+                      <td>臆病</td>
+                      <td>危険な行動を避ける。戦闘で前衛に立つには意志判定。この性格に気付いた兵士などの反応-2。</td>
+                    </tr>
+                    <tr>
+                      <td>頑固</td>
+                      <td>考えを曲げない。常に反応-1。</td>
+                    </tr>
+                    <tr>
+                      <td>かんしゃく</td>
+                      <td>緊張状態で意志判定に失敗すると、即座に抜刀するか、屈辱の言葉を投げかけてしまう。</td>
+                    </tr>
+                    <tr>
+                      <td>義務感(対象)</td>
+                      <td>自発的に抱く、誰かを守ったり助けたりする義務感。例)祖国、仲間、女性、弱者</td>
+                    </tr>
+                    <tr>
+                      <td>恐怖症(対象)</td>
+                      <td>恐怖の対象(主に場所・空間)を克服するのに修正-2で恐怖判定（後述）。例)暗闇、高所、海洋、群集</td>
+                    </tr>
+                    <tr>
+                      <td>狭量</td>
+                      <td>階級や宗派の違う相手を受け入れられない。修正-2で自分の反応を決める。</td>
+                    </tr>
+                    <tr>
+                      <td>虚言癖</td>
+                      <td>常に自分の功績などを誇張し、聞き手から尊敬を集めるのが大好き。</td>
+                    </tr>
+                    <tr>
+                      <td>グルメ</td>
+                      <td>食事や酒の誘惑に勝てない(意志判定)。</td>
+                    </tr>
+                    <tr>
+                      <td>けちんぼ</td>
+                      <td>絶対に必要な金しか払わない(意志判定)。</td>
+                    </tr>
+                    <tr>
+                      <td>潔癖症</td>
+                      <td>汚れに対し恐怖判定。スラム街などではブツブツ文句を言ったりして悪態を振舞い、反応-1。</td>
+                    </tr>
+                    <tr>
+                      <td>好奇心</td>
+                      <td>意志判定に失敗すると危険だと知っていても調べずにはいられない。</td>
+                    </tr>
+                    <tr>
+                      <td>好色</td>
+                      <td>わずかでも異性との接触があれば、色目を使ってしまう(意志判定)。</td>
+                    </tr>
+                    <tr>
+                      <td>サディスト</td>
+                      <td>血と悲鳴が大好きで、意志判定に失敗すると敵や捕虜に対して残虐行為を行う。この性格に気付いたNPCは反応-3。</td>
+                    </tr>
+                    <tr>
+                      <td>残忍</td>
+                      <td>敵を皆殺しにしようとする。見張り、降伏した敵、捕虜などを生かしておくには意志判定が必要。</td>
+                    </tr>
+                    <tr>
+                      <td>自信過剰</td>
+                      <td>「心配いらない。任せとけ！」という性で、慎重に行動できない(意志判定)。普通反応-2だが、場合によっては反応+2。</td>
+                    </tr>
+                    <tr>
+                      <td>嫉妬</td>
+                      <td>自分より賢い、美しい、裕福といった相手を嫉妬。修正-2で自分の反応を決める。</td>
+                    </tr>
+                    <tr>
+                      <td>使命(様々)</td>
+                      <td>何か重要な人物・組織のために動いており、「使命」を最優先に考える。</td>
+                    </tr>
+                    <tr>
+                      <td>守銭奴</td>
+                      <td>金の誘惑に勝てない(意志判定)。</td>
+                    </tr>
+                    <tr>
+                      <td>酒乱</td>
+                      <td>酒の誘惑に勝てない。意志判定に失敗すると酔っ払うまで飲む（酒に強いわけではない）。</td>
+                    </tr>
+                    <tr>
+                      <td>正直</td>
+                      <td>嘘をつくのが嫌いか、嘘をつくのが下手。黙り通すには修正-4で意志判定を行う。</td>
+                    </tr>
+                    <tr>
+                      <td>誠実</td>
+                      <td>規則を守り、法律を尊重する。嘘はつけるが卑劣な行為はできない。この性格に気付いたNPCは反応+2。</td>
+                    </tr>
+                    <tr>
+                      <td>怠惰</td>
+                      <td>肉体労働が大嫌い。何か仕事をしても、収入は少なく、昇給の可能性も低い。</td>
+                    </tr>
+                    <tr>
+                      <td>誓い(様々)</td>
+                      <td>たてた誓いを絶対に守る。</td>
+                    </tr>
+                    <tr>
+                      <td>中毒</td>
+                      <td>幻覚剤や、興奮剤の類の中毒。服用を中止すると何らかのペナルティ。</td>
+                    </tr>
+                    <tr>
+                      <td>直情</td>
+                      <td>行動してから考える。相談して決めようとしても、すぐに具体的な行動をとってしまう。</td>
+                    </tr>
+                    <tr>
+                      <td>不運</td>
+                      <td>ゲームの展開で、PCたちのうち誰かに不運なことが起きるならば、「不運」な人に起きる。</td>
+                    </tr>
+                    <tr>
+                      <td>平和愛好</td>
+                      <td>愛と平和に尽力。一般市民を犠牲にすることができない。「誓い」の一例。</td>
+                    </tr>
+                    <tr>
+                      <td>偏執狂</td>
+                      <td>古くからの友人以外が皆、敵に見える。この性格に気付いたNPCの反応-2。</td>
+                    </tr>
+                    <tr>
+                      <td>方向音痴</td>
+                      <td>入り組んだスラム街や樹海、迷路などで必ず迷う。おまけに数字に弱い。</td>
+                    </tr>
+                    <tr>
+                      <td>放心</td>
+                      <td>周囲の出来事に気が付かない。見張りの役には立たず、退屈な話は覚えてない。</td>
+                    </tr>
+                    <tr>
+                      <td>木訥</td>
+                      <td>耳にしたこと全てを信じてしまう。相手の話を鵜呑みにしてはいけない交渉時などの判定-2。</td>
+                    </tr>
+                    <tr>
+                      <td>朴念仁</td>
+                      <td>冗談を解さず、誰もがつねに真面目なものと信じる。この性格に気付いたNPCの反応-2。</td>
+                    </tr>
+                    <tr>
+                      <td>名誉重視</td>
+                      <td>屈辱を看過できない。屈辱を受けたら、必ず屈辱仕返さなければならない。</td>
+                    </tr>
+                    <tr>
+                      <td>妄想(様々)</td>
+                      <td>思い込みが激しく、何かの妄想に取りつかれている。この性格に気付いたNPCの反応-2。例)誇大妄想</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>意志判定と恐怖判定</h4>
+              <p>意志判定は、WL(意志力)を基準に行う判定です。この目標値は（どんなにWLが高くても）最大で13、つまり、14以上の出目は自動的に失敗です。恐怖判定については別章を参照してください。</p>
+              <div class="pagination"> <a class="btn-prev float-left" href="../01-03/" data-role="navigate" data-target="/docs/01-03/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../01-05/" data-role="navigate" data-target="/docs/01-05/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

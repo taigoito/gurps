@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>経験点・報酬 - GURPS.QWEL</title>
+  <meta name="description" content="経験点 | 所持金と報酬 | 上質の武器 | 上質の防具">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>キャラクター</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>経験点・報酬</h3>
+              <h4>経験点</h4>
+              <p>1つの使命(クエスト)を達成したり、進展させたりしたら、PCはGMから経験点を与えられます。</p>
+              <p>経験点は、CPとして各技能に振り分け、技能値を上昇させることができます。このとき、1つの技能(主技能)に振り分けられるCPの上限は、CP総計の半分までとします。</p>
+              <p>経験点を用いて能力値を上昇させる場合、キャラクター作成時の2倍のCPを用意する必要があり、その半分は能力時の上昇とともに、CP総計から消失します。</p>
+              <p>与えられる経験点は、PCの使命達成と、優秀な演技によって決められます。一度に獲得できる経験点は普通0～3点です。</p>
+              <table class="table table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th>使命達成と演技</th>
+                    <th>獲得CP</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>使命を達成したり、進展させた。</td>
+                    <td>1～2CP/全員</td>
+                  </tr>
+                  <tr>
+                    <td>賢明な行動をとった。</td>
+                    <td>1CP/個人</td>
+                  </tr>
+                  <tr>
+                    <td>優れた演技をした。</td>
+                    <td>1CP/個人</td>
+                  </tr>
+                  <tr>
+                    <td>まずい演技をした。</td>
+                    <td>-1CP/個人</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>報酬</h4>
+              <h5>所持金と報酬</h5>
+              <p>所持金は、必ずしも厳密に定める必要はありません。キャラクター作成時は、装備一覧から好きな武器・防具を自由に選んで構わないとしても良いでしょう。ただしその場合は、後述の上質の武器・防具は、GMが特別に用意しなければ、使用することはできません。</p>
+              <p>所持金を定める場合、基本の初期所持金は1000金とします。都会の宿の一日の宿泊費と食費の相場を10金とします。2000年代の日本円に換算すると、1金=1000円くらいだと考えて下さい。</p>
+              <p>1つの使命を達成したときの報酬は、田舎では100金～500金、都会では300金～2000金くらいでしょうか。大きな危険を伴う仕事や、一国の存亡を賭けたような仕事では、10000金以上の報酬が得られる場合もあるでしょう。</p>
+              <h5>上質の武器</h5>
+              <p>冒険開始時は普通、標準的な質の武器を持っていますが、冒険を進めるにつれ、高価な上質の武器を手に入れることもあるでしょう。</p>
+              <p>上質の武器は品名に+1と記し、市場では定価の5倍で取引され、ダメージを+1します。標準的な武器は一般に鉄製ですが、上質の武器は鋼鉄製なのでしょう。</p>
+              <p>最上質の武器は品名に+2と記し、市場では定価の20倍以上で取引され、ダメージを+2します。最上質の武器はダマスカス鋼製であったり、名工が打った逸品なのでしょう。</p>
+              <p>上級ルールの「攻撃型」を導入する場合、用途が「刺し」の武器は、上質ではダメージ変化無し(折れにくい)、最上質ではダメージ+1となります。</p>
+              <h5>上質の防具</h5>
+              <p>鎧や盾にも上質、最上質の品物があります。</p>
+              <p>上質の鎧は、ダメージ抵抗を+1します。最上質の鎧は、ダメージ抵抗は+1のままですが、重量が1軽くなります。</p>
+              <p>上質、最上質の盾は、攻撃用の突起が付いており、回避値は変わりませんが、攻撃に用いるときのダメージを+1、+2します。</p>
+              <div class="pagination"> <a class="btn-prev float-left" href="../01-05/" data-role="navigate" data-target="/docs/01-05/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../02-01/" data-role="navigate" data-target="/docs/02-01/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

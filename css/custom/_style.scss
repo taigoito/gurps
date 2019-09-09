@@ -1,0 +1,199 @@
+// Entrance
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 576px;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+#title {
+  position: relative;
+  z-index: 1000;
+  height: 144px;
+  margin-bottom: .5rem;
+  border-bottom: 2px solid $gray-100;
+  transition: 1s all ease-in-out;
+}
+
+h1 {
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 21rem;
+  font-size: 3rem;
+  line-height: 1.5rem;
+  text-align: center;
+  transition: 1s all ease-in-out;
+  
+  span {
+    font-size: 1rem;
+  }
+
+  @include media-breakpoint-up("md") {
+    left: 12.5%;
+  }
+}
+
+.entrance {
+  #title {
+    height: 50vh;
+    
+    h1 {
+      left: 50%;
+      margin-left: -10.5rem;
+    }
+  }
+}
+
+#menu {
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  
+  li:not(:first-child)::before {
+    content: "/";
+    margin-right: .65em
+  }
+}
+
+
+// Common
+
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.15rem;
+  padding-left: 0.65rem;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted $gray-100;
+  line-height: 1
+}
+
+h3 {
+  padding-left: .65rem;
+  border-left: 0.35rem solid $gray-100;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-top: 1.75rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  
+  &::before {
+    content: "- ";
+    vertical-align: 8%;
+  }
+}
+
+h5, h6 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+p {
+  text-align: justify;
+  text-indent: .65em;
+}
+
+caption {
+  caption-side: top;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-style: italic;
+  font-size: $font-size-sm;
+  color: $gray-200;
+}
+
+
+// Docs
+
+.docs-nav, .docs-nav-item {
+  list-style-type: upper-roman;
+  padding-left: 2rem;
+}
+
+.docs-nav-item {
+  list-style-type: lower-roman;
+  margin-left: -1.5rem;
+  margin-bottom: .25rem;
+}
+
+.docs-nav > li {
+  &:first-child,
+  &:last-child {
+    list-style-type: none;
+  }
+}
+
+.docs-nav-item > li {
+  &:last-child {
+    list-style-type: none;
+    font-style: italic;
+  }
+}
+
+.pagination {
+  @include clearfix();
+}
+
+
+// Background
+
+#cover-image, #cover-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#cover-image {
+  background: url(../images/landscape00.jpg) center center / cover no-repeat scroll;
+}
+
+#cover-gradient {
+  background: radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 1));
+}
+
+
+// Copyright
+
+footer {
+  margin: 6rem auto;
+  text-align: center;
+}
+
+
+// Animation
+
+.anim-show {
+	animation: fadein .35s ease-out;
+}
+.anim-hide {
+	animation: fadeout .15s ease-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

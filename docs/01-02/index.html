@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPと能力値 - GURPS.QWEL</title>
+  <meta name="description" content="10点制の新しいCP(キャラクターポイント)の振り分け | 腕力 | 器用さ | 素早さ | 活力 | 知力 | 意志力 | 魅力 | 耐久点">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>キャラクター</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>CPと能力値</h3>
+              <h4>CP(キャラクターポイント)の振り分け</h4>
+              <p>キャラクター作成は、CP(キャラクター・ポイント)の持ち点を10点とし、これを「能力値」、「技能」、「特徴」に振り分けることから始まります。</p>
+              <p>持ち点が足りないと感じたら、不利な能力や特徴を決め、持ち点を増やすこともできます。能力値の下降は、初期値-2までとします。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    能力値一覧
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>能力値</th>
+                      <th>説明</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ST(腕力)</td>
+                      <td>力の強さ。攻撃の命中、敵に与えるダメージ、HPに関係します。10を初期値とし、2CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>DX(器用さ)</td>
+                      <td>攻撃の命中、手先を使った技能の多くに関係します。10を初期値とし、2CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>AG(素早さ)</td>
+                      <td>攻撃の回避、身体を使った技能の多くに関係します。10を初期値とし、2CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>VT(活力)</td>
+                      <td>丈夫さ。気絶、生死の間際に関係します。10を初期値とし、1CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>IN(知力)</td>
+                      <td>賢さ。知識、術法の修得と行使に関係します。10を初期値とし、2CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>WL(意志力)</td>
+                      <td>意志の強さ。誘惑や恐怖の克服に関係します。10を初期値とし、1CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>CM(魅力)</td>
+                      <td>容姿、声、仕草など。NPCへの好感度に関係します。10を初期値とし、1CPより上昇・下降できます。</td>
+                    </tr>
+                    <tr>
+                      <td>HP(耐久点)</td>
+                      <td>打たれ強さ。負傷(ダメージ)に耐えうる点数。ST(腕力)を初期値とし、1/2CPより上昇・下降できます。</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    CPと能力値の関係表
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>上昇/下降値</th>
+                      <th>ST(腕力)、DX(器用さ)、AG(素早さ)、IN(知力)</th>
+                      <th>VT(活力)、WL(意志力)、CM(魅力)</th>
+                      <th>HP(耐久点)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>-2</td>
+                      <td>-4CP</td>
+                      <td>-2CP</td>
+                      <td>-1CP</td>
+                    </tr>
+                    <tr>
+                      <td>-1</td>
+                      <td>-2CP</td>
+                      <td>-1CP</td>
+                      <td>-1/2CP</td>
+                    </tr>
+                    <tr>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>+1</td>
+                      <td>2CP</td>
+                      <td>1CP</td>
+                      <td>1/2CP</td>
+                    </tr>
+                    <tr>
+                      <td>+2</td>
+                      <td>4CP</td>
+                      <td>2CP</td>
+                      <td>1CP</td>
+                    </tr>
+                    <tr>
+                      <td>+3</td>
+                      <td>8CP</td>
+                      <td>4CP</td>
+                      <td>2CP</td>
+                    </tr>
+                    <tr>
+                      <td>+4</td>
+                      <td>16CP</td>
+                      <td>8CP</td>
+                      <td>4CP</td>
+                    </tr>
+                    <tr>
+                      <td>+5</td>
+                      <td>24CP</td>
+                      <td>16CP</td>
+                      <td>8CP</td>
+                    </tr>
+                    <td>以降+1ごとに</td>
+                    <td>+8CP</td>
+                    <td>+8CP</td>
+                    <td>+8CP</td>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination"> <a class="btn-prev float-left" href="../01-01/" data-role="navigate" data-target="/docs/01-01/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../01-03/" data-role="navigate" data-target="/docs/01-03/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

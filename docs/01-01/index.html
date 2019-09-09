@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>判定 - GURPS.QWEL</title>
+  <meta name="description" content="判定の基本 | 修正 | クリティカル | ファンブル | 即決勝負">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>キャラクター</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>判定</h3>
+              <h4>判定の基本</h4>
+              <p>ダイスで行為の成功、失敗を判定することを、「行為判定」、または単に「判定」と呼びます。一般に、3d(六面体ダイス3個)を振り、出目の合計が、GMが指示した「目標値」以下だと成功です。</p>
+              <p>このとき「目標値」の基準となるのが、キャラクターの能力値、技能値です。例えば、</p>
+              <table class="table table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th>事例</th>
+                    <th>判定</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>鍵のかけられた扉を、強引に叩き破ることができるかどうか?</td>
+                    <td>ST(腕力)判定</td>
+                  </tr>
+                  <tr>
+                    <td>針金やバールを用いて、鍵をこじ開けることができるかどうか?</td>
+                    <td>「細工」判定</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>といった具合です。</p>
+              <p>目標値が10なら確率はちょうど五分です。能力値や技能値は10を目安に決めると良いでしょう。</p>
+              <h4>修正</h4>
+              <p>多くの行為判定は、行為の易しさ、難しさに応じて目標値に修正を受けます。</p>
+              <table class="table table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th>行為の易しさ、難しさ</th>
+                    <th>修正</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>些細な有利さ/不利さ</td>
+                    <td>+1/-1</td>
+                  </tr>
+                  <tr>
+                    <td>明白な有利さ/不利さ</td>
+                    <td>+2/-2</td>
+                  </tr>
+                  <tr>
+                    <td>圧倒的な有利さ/不利さ</td>
+                    <td>+4/-4</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><small>※技能判定において、技能が無い場合、基準能力値-2を用います。</small></p>
+              <h4>クリティカル</h4>
+              <ul>
+                <li>どんな目標値であっても3、4を振ったら大成功(内容はGMが決める)!</li>
+                <li>目標値が15のときは、5を振った場合も大成功!</li>
+                <li>目標値が16以上のときは、5、6を振った場合も大成功!</li>
+              </ul>
+              <h4>ファンブル</h4>
+              <ul>
+                <li>どんな目標値であっても17を振ったら失敗、18を振ったら大失敗(内容はGMが決める)!</li>
+                <li>目標値が16未満のときは、17を振った場合も大失敗!</li>
+              </ul>
+              <h4>即決勝負</h4>
+              <p>複数の人物が行為の優劣を競うことです。例えば、</p>
+              <table class="table table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th>事例</th>
+                    <th>&nbsp;</th>
+                    <th>対抗</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>罠を仕掛ける(細工)</td>
+                    <td>vs</td>
+                    <td>罠を見つけ出す(探索)</td>
+                  </tr>
+                  <tr>
+                    <td>とぼける(演技)</td>
+                    <td>vs</td>
+                    <td>見破る(尋問)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>両者が判定を行い、目標値を下回った分(成功度)の大きい方が勝ちです。</p>
+              <p>成功度が同じだった場合は、行為を後から行う方や行為が受け身の方(上の例ならいずれも後者)を勝ちとするか、即座にもう一度勝負を行うか、最終的にはGMが判断します。</p>
+              <div class="pagination"> <a class="btn-prev float-left" href="../" data-role="navigate" data-target="/docs/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../01-02/" data-role="navigate" data-target="/docs/01-02/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>恐怖判定 - GURPS.QWEL</title>
+  <meta name="description" content="NPC | 恐怖判定">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>NPC</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>恐怖判定</h3>
+              <p>主にキャラクターが「特徴」によって定められている衝動を抑えるために行うのが意志判定です。さらに、それが不意をつかれたものだったりした場合は、恐怖判定になります。恐怖判定は、意志判定の失敗度に、さらに3dを足して反応を決めます。</p>
+              <p>意志判定の目標値は最大13であることも忘れないでいて下さい。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    恐怖判定表
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>出目</th>
+                      <th>呼称</th>
+                      <th>効果</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12以下</td>
+                      <td>朦朧</td>
+                      <td>精神的な朦朧状態に陥る。次ターン以降、WL(意志力)による回復判定を行う。</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>不運</td>
+                      <td>何故か一日中「不運」の特徴を持つ。</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>失声</td>
+                      <td>声を失う。実際のゲーム時間の30分間、キャラクターとして喋ってはいけない。</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>思考不能</td>
+                      <td>失敗度のターン数、精神的な朦朧状態に陥る。ターン経過後、WL(意志力)による回復判定を行う。</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>混乱</td>
+                      <td>失敗度のターン数、パニックを起こし、叫びながら走ったり、座り込んで泣いたりする。</td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td>卒倒</td>
+                      <td>失敗度の分間、卒倒して意識不明に陥る。</td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td>昏睡</td>
+                      <td>失敗度の時間、昏睡状態に陥る。</td>
+                    </tr>
+                    <tr>
+                      <td>19</td>
+                      <td>恐怖症/軽度</td>
+                      <td>何か新しい軽度の恐怖症や妄想を植え付けられるか、軽度の恐怖症が重度になる。さらに同じ修正でもう一度判定。</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>恐怖症/重度</td>
+                      <td>何か新しい重度の恐怖症や妄想を植え付けられる。さらに同じ修正でもう一度判定。</td>
+                    </tr>
+                    <tr>
+                      <td>21以上</td>
+                      <td>記憶喪失</td>
+                      <td>20の効果と、冒険を始めてからの記憶を全て失う。</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination"> <a class="btn-prev float-left" href="../05-02/" data-role="navigate" data-target="/docs/05-02/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../06-01/" data-role="navigate" data-target="/docs/06-01/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>行動の解決 - GURPS.QWEL</title>
+  <meta name="description" content="基本戦闘 | 行動の解決 | 攻撃 | フェイント | 全力攻撃 | 全力防御 | 準備 | 狙い | 精神集中 | 移動 | その他の行動">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>基本戦闘</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>行動の解決</h3>
+              <h4>攻撃</h4>
+              <p>攻撃は、命中判定、回避判定、ダメージ判定の3つのステップを踏んで解決します。</p>
+              <h5>命中判定</h5>
+              <p>攻撃側が3dを振って、技能値以下が出れば、攻撃は敵に当たりかけます。</p>
+              <h5>回避判定</h5>
+              <p>防御側が3dを振って、「受け」、「止め」、「よけ」のいずれかの方法で回避を試みることができます。</p>
+              <ul>
+                <li>受け(Parry): 武器によって攻撃を受け流す試みで、目標値はD-EV(よけ)+P-EV(受け)となります。</li>
+                <li>止め(Block): 盾によって攻撃を止める試みで、目標値は、D-EV(よけ)+B-EV(止め)となります。</li>
+                <li>よけ(Dodge): 身体を左右に振って攻撃をよける試みで、目標値は、D-EV(よけ)-WT(防具の重量)となります。</li>
+              </ul>
+              <p>このうち「受け」と「止め」は1ターンにそれぞれ一度ずつしか試みることができません。また、射撃武器による攻撃に対しては、「受け」は試みることができず、「止め」は-2の修正を受けます。</p>
+              <h5>ダメージ判定</h5>
+              <p>命中判定に成功し、敵が回避判定に失敗したら、いよいよダメージ判定です。</p>
+              <p>ダイスを振って算出したダメージから、敵の鎧のDR(ダメージ抵抗)を引いた分が、最終的なダメージです。ダメージは単に敵のHPを減らすだけでなく、衝撃、朦朧、転倒といった効果を生じさせます。HPが0以下になった敵は、気絶したり、死亡したりするかも知れません。</p>
+              <h5>クリティカルとファンブル</h5>
+              <p>攻撃のクリティカルが発生したら、敵の回避判定、ダメージ抵抗を無視して、即座にダメージを決めます。</p>
+              <p>攻撃のファンブル、または回避のクリティカルが発生したら、攻撃側が2dを振って〈ファンブル表〉を参照します。</p>
+              <h4>フェイント</h4>
+              <p>次のターンの攻撃に備え、攻撃するふりをして敵の回避率を下げます。</p>
+              <p>フェイントは、敵と自分とが、構えている武器(ないし格闘)の技能値を用いて、技能勝負を行って解決します。</p>
+              <p>自分の成功度から、敵の成功度を引いた分が、フェイントの効果です。技能判定の成功度が1に満たなかったり、技能勝負に勝てなかったりしたら失敗です。クリティカルやファンブルの処理は行いません。</p>
+              <p>次のターン攻撃するとき、フェイントの効果だけ、敵の回避判定にマイナスの修正を与えます。この修正は、次のターンでないときの攻撃や、他の味方からの攻撃には、全く影響はありません。</p>
+              <h4>全力攻撃</h4>
+              <p>防御を破棄し、攻撃に専念します。以下4つの全力攻撃から1つを選択して下さい。</p>
+              <ul>
+                <li>ダメージ+2で攻撃</li>
+                <li>技能値+4で攻撃</li>
+                <li>フェイントをかけて即攻撃</li>
+                <li>2回攻撃(斧など攻撃の都度、引き戻しが必要な武器では不可)、または武器を1ターン分引き戻して即攻撃</li>
+              </ul>
+              <p>全力攻撃を行うと、次の自分の行動順が巡ってくるまでの間、敵の攻撃に対し、回避判定に-4の修正を受けます。</p>
+              <p>前のターンにフェイントをかけて、2回攻撃を行う場合、フェイントが有効なのは1回目の攻撃のみです。フェイント即攻撃を行う場合、フェイントの効果は重複せず、効果の大きい方を適用します。</p>
+              <h4>全力防御</h4>
+              <p>全力防御を行うと、次の自分の行動順が巡ってくるまでの間、回避判定に失敗したとき、別の回避方法でもう一度判定を試みるができます。例えば「止め」に失敗したら「受け」を試たり、「受け」に失敗したら「よけ」を試みたりできます。</p>
+              <p>さらにこの間、「受け」と「止め」を1ターンにそれぞれ2回ずつ行えます。これは複数回攻撃される可能性がある場合に有効でしょう。</p>
+              <h4>準備</h4>
+              <p>腰に吊り下げていたり、背中に背負っている武器や盾を使用できるように引き抜く（準備）にはそれぞれ1ターンを要します。</p>
+              <p>斧などバランスの悪い武器は、攻撃を繰り出したり、「受け」を行う都度、1ターンかけて武器を引き戻す動作が必要になります。この間、もちろん敵の攻撃に対し「受け」は行えません。フェイントをかけただけなら、武器を引き戻す動作は不要です。</p>
+              <p>弓や弩は、攻撃の都度、1ターンかけて矢をつがえなければなりません。さらに弩は、弦を引き絞る動作に1ターン以上要します。射撃武器の準備をしているターンに回避を試みると、そのターンの準備は無効になってしまいます。回避を試みるのは任意です。</p>
+              <h4>狙い</h4>
+              <p>弓や弩は準備のあと、さらに1ターンを要して「狙い」をつけます。</p>
+              <p>意志判定を行って、その成功度が狙いの効果です。次のターンに射撃を行うとき、この効果分だけ命中判定にプラスの修正を与えます。</p>
+              <p>狙いをつけないと、意志判定の修正を得られないばかりか、-4の修正を受けて、射撃を行わなければなりません。</p>
+              <p>通常武器と異なり、射撃武器はターンの開始時に射撃（攻撃）を行います。射撃を行ったターンは次の矢の準備をするなど、他の行動がとれます。</p>
+              <p>狙いをつけているターンに回避を試みると、照準が乱れ、狙いの効果は無くなってしまいます。回避を試みるのは任意ですが、ダメージを受けた次ターンは、射撃時の命中判定に、衝撃による修正を受けます。</p>
+              <h4>精神集中</h4>
+              <p>術法を発動させるための精神集中を行います。精神集中が終わったら、次のターンの開始時に術法を発動させます。術法を発動させたターンは、次の術法の精神集中を行うなど、他の行動がとれます。</p>
+              <p>精神集中しているターンに回避を試みると、維持判定(-2の修正で意志判定)に成功しなければ、集中が途絶えてしまいます。回避を試みるのは任意ですが、ダメージを受けた次ターンは、発動判定に、衝撃による修正を受けます。</p>
+              <h4>移動</h4>
+              <p>前衛、後衛の位置を替えたり、特定の味方を守ったり、特定の敵に近づいたりします。</p>
+              <h4>その他の行動</h4>
+              <p>どのように解決するかはGMが決めます。何か叫んだり、物を拾ったりするだけなら、他の行動を伴えます。</p>
+              <p>落ちている物を拾うのは、まず膝を着き、次に拾って立ち上がるので、2ターンを要します（2ターン目には攻撃できます）。</p>
+              <div class="pagination"> <a class="btn-prev float-left" href="../02-01/" data-role="navigate" data-target="/docs/02-01/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../02-03/" data-role="navigate" data-target="/docs/02-03/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

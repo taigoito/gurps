@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>姿勢・距離 - GURPS.QWEL</title>
+  <meta name="description" content="上級戦闘 | 姿勢 | 距離 | 空振り | 軽業よけ | 後退">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>上級戦闘</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>姿勢・距離</h3>
+              <h4>姿勢</h4>
+              <p>戦闘時の姿勢は、直立、屈み、膝着き、這いの4つがあり、直立以外の姿勢では、ST(腕力)、DX(器用さ)、AG(素早さ)がそれぞれ低下します。これは技能値とD-EV(よけ)に与える影響が大きいので、修正する値は、技能値とD-EV(よけ)で表記します。これは必要に応じて、能力値の低下に読み替えてください。この修正は現行ルールとも異なるので注意してください。</p>
+              <p>また敵の射手の命中判定に対しても不利な修正を与えます。直立、屈み、膝着きの姿勢時は、ターン開始時にいつでも他の姿勢に変更できます。しかし這いの姿勢時は、1ターンかけて膝着きの姿勢になることしかできません。</p>
+              <table class="table table-hover">
+                <caption>
+                  姿勢表
+                </caption>
+                <thead>
+                  <tr>
+                    <th>姿勢</th>
+                    <th>技能値</th>
+                    <th>D-EV(よけ)</th>
+                    <th>射手の命中判定</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>直立</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>屈み</td>
+                    <td>-1</td>
+                    <td>-</td>
+                    <td>-2</td>
+                  </tr>
+                  <tr>
+                    <td>膝着き</td>
+                    <td>-2</td>
+                    <td>-1</td>
+                    <td>-4</td>
+                  </tr>
+                  <tr>
+                    <td>這い</td>
+                    <td>-4(弩は+2)</td>
+                    <td>-2</td>
+                    <td>-8</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><small>※竿状武器、射撃武器以外では、直立した姿勢で、転倒している敵を攻撃したり、足や足首を狙って攻撃（後述）ができない。それらを行うには、「屈み」か「膝着き」の姿勢になる必要がある(技能値-2)。</small></p>
+              <p><small>※基本ルールでは、転倒して朦朧状態から回復するまでの間、D-EVへの修正は-6だったが、上級ルールではこれは-7になる。そして自分のターンが回ってきて朦朧状態から回復し、膝着きの姿勢になったら、-2の修正になる。</small></p>
+              <h4>距離</h4>
+              <p>基本ルールでは、弓矢や呪文は命中し易く、非常に強力でした。上級ルールではこれらに、目標との距離による修正を課します。</p>
+              <table class="table table-hover">
+                <caption>
+                  距離による修正表
+                </caption>
+                <thead>
+                  <tr>
+                    <th>距離</th>
+                    <th>修正</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5m</td>
+                    <td>-2</td>
+                  </tr>
+                  <tr>
+                    <td>10m</td>
+                    <td>-4</td>
+                  </tr>
+                  <tr>
+                    <td>20m</td>
+                    <td>-6</td>
+                  </tr>
+                  <tr>
+                    <td>40m</td>
+                    <td>-8</td>
+                  </tr>
+                  <tr>
+                    <td>80m</td>
+                    <td>-10</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><small>※実際には、後衛から敵の前衛を目標とする場合は-2、敵の後衛を目標とする場合は-4くらいが普通。狭い屋内での戦闘なら、修正はその半分。</small></p>
+              <h4>回避の追加ルール</h4>
+              <h5>空振り</h5>
+              <p>敵が「よけ」に成功した場合、攻撃者は大きく空振りしてしまい、次のターンに1ターン余分な引き戻しが必要になります。当然それまでの間、武器を「受け」に使うこともできません。</p>
+              <h5>軽業よけ</h5>
+              <p>回避を試みるときに「軽業よけ」と宣言すると、「軽業」の技能値で「よけ」を試みることができます。このときWT(防具の重量)がペナルティとなることに注意してください。「軽業よけ」は1ターンに1度しか試みることができません。</p>
+              <h5>後退</h5>
+              <p>「後退」は独立した防御の方法ではなく、何らかの回避を試みるときに「後退しながら」と宣言すると、回避値に+3のボーナスを得られます。ただし1度後退すると、敵を後退させるか、自分が「全力攻撃」を仕掛けるまで、2度と後退できません。</p>
+              <div class="pagination"> <a class="btn-prev float-left" href="../03-01/" data-role="navigate" data-target="/docs/03-01/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../03-03/" data-role="navigate" data-target="/docs/03-03/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

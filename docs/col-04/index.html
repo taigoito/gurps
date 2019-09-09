@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>術法の要領 - GURPS.QWEL</title>
+  <meta name="description" content="コラム | 術法の要領">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>コラム</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>術法の要領</h3>
+              <p><strong>GURPS.QWEL</strong>の術は、某有名RPGシリーズより抜擢していることを、この場で再度お詫び申し上げます。ただし実際その効果については、原作と大分異なりますので、ここで術法の要領についてまとめておきます。</p>
+              <p>術はその効果によって、直接攻撃型、関節攻撃型、回復型、防御型、補助型、特殊型に分類できます（下記表）。</p>
+              <p>術はどれも非常に強力です。術士の1ターンは、碁や将棋の一手のように、戦略性が不可欠となります。ですが、碁や将棋と異なるのは、同じ一手でも、ダイスの振る舞いによって、効果が現れる場合と、全く現れない場合があることです。術士の行動は、プレイヤーが成功率を予測できることが、非常に重要になってきます。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    術法分類表
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>タイプ</th>
+                      <th>該当術・下位</th>
+                      <th>該当術・上位</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>直接攻撃型</td>
+                      <td>ウインドカッター、ソーンバインド、ファイアボール、ストーンバレット、ヒートウェイブ、スターフィクサー、サクション</td>
+                      <td>竜巻、幻竜術、イニシレイション、クラック、召雷、太陽風</td>
+                    </tr>
+                    <tr>
+                      <td>関節攻撃型</td>
+                      <td>ナップ、ベルセルク、アースハンド、サンシャイン、デイブレイク、ソウルフリーズ</td>
+                      <td>タッチゴールド、幻惑光</td>
+                    </tr>
+                    <tr>
+                      <td>回復型</td>
+                      <td>生命の息吹、生命の水、神秘の水、ムーンシャイン</td>
+                      <td>リヴァイヴァ、再生光</td>
+                    </tr>
+                    <tr>
+                      <td>防御型</td>
+                      <td>セルフバーニング、カムフラージュ、スパークリングミスト</td>
+                      <td>ミサイルガード、ファイアウォール、ストーンスキン、光の壁、スコール</td>
+                    </tr>
+                    <tr>
+                      <td>補助型</td>
+                      <td>ダンシングリーフ、ハードファイア、ベルセルク、ウォーターポール、ムーングロウ</td>
+                      <td>魂の歌</td>
+                    </tr>
+                    <tr>
+                      <td>特殊型</td>
+                      <td>無し</td>
+                      <td>風と樹の唄、時間遡行、クイックタイム、光の剣、幻日、月読の鐘、アンティマジック、シャドウサーバント</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p><small>※「ベルセルク」は補助の効果があるが、副作用を狙って関節攻撃にも使える。</small></p>
+              </div>
+              <h4>直接攻撃型</h4>
+              <p>直接攻撃型の術は、決まれば効果が最も大きく、ゲーム的にも盛り上がるでしょう。しかし集中に要する時間が長く、敵が回避や抵抗に成功するとほとんど効果が無くなるため、行使のタイミングを見定めるのは最も難しいです。</p>
+              <p>下位の術は多くありますが、命中すればダメージは大きいです。ソーンバインド、スターフィクサーは、ダメージが小さいものの、低確率ですが手足の故障を狙え、成功すれば効果は大きいでしょう。ヒートウェイブは下位で唯一の範囲攻撃です。</p>
+              <p>上位の術は、それぞれ個性があります。幻竜術は白竜を召喚し、連続して攻撃が繰り出せます。クラックは敵を大地に葬ってしまいます。イニシレイションは盾を破壊できます。召雷は金属鎧を身に着けた敵に対して成功率が高いです。竜巻、太陽風は範囲攻撃です。</p>
+              <h4>関節攻撃型</h4>
+              <p>関節攻撃型の術は、敵に何らかの障害を与え、無力にしてしまいます。効果が持続するため、敵の頭数を減らすのに有効でしょう。</p>
+              <p>下位術は、抵抗に-2の修正を与えます。敵を幻惑状態にさせるナップ、敵の足の動きを止めるアースハンド、恐怖に怯えさせるソウルフリーズは、様々な使い道がありそうです。狂戦士にさせるベルセルクは、強化の効果もあるので諸刃の剣です。サンシャインは範囲攻撃です。デイブレイクは敵を逃がしてしまうため、敵を捕らえたい場合など戦いの目的に合わなければ使えません。</p>
+              <p>上位術は、抵抗に-4の修正を与えます。タッチゴールドは実質、即死をもたらします。超重力は、敵の足を故障させるという、単純ながら有用な術です。幻惑光は効果がランダムなのでNPCが使うと面白いかも知れません。</p>
+              <p>デイブレイク、タッチゴールド以外の効果は、アンティマジックの術で解くこともできます。</p>
+              <h4>回復型</h4>
+              <p>負傷を癒したり、気絶、死亡から復帰させたり、毒、麻痺、幻惑、恐怖などの一時異状を治したりしますが、このうち複数の効果がある術もあります。</p>
+              <p>生命の水、ムーンシャイン、再生光は、負傷を癒します。</p>
+              <p>生命の息吹、リヴァイヴァは、気絶や死亡から復帰させます。</p>
+              <p>生命の水は身体の一時異常を、ムーンシャインは精神の一時異常を、神秘の水は身体・精神の両方の一時異状を治し、再生光は身体の一時異状と部位の故障を治すことができます。</p>
+              <h4>防御型</h4>
+              <p>防御型の術は、敵の攻撃を何らかの形で妨害し、味方を守ります。効果は術により様々ですが、上位術のいくつかの術だけ紹介します。</p>
+              <p>ミサイルガードは、敵味方共に弓矢などの射撃を一切無効にする術です。ファイアウォールは、味方全員を熱と冷気による攻撃から守ります。光の壁は、あらゆる物理攻撃のダメージを減らします。これらはどれも1ターンの集中で発動でき、そのターン中効果が持続します。敵の構成によっては非常に役に立つ術ですので、特筆しました。</p>
+              <h4>補助型</h4>
+              <p>能力値や特殊な戦闘能力値を付加する術です。連続してかけることで、効果が増していきます。地味ですが、確実に効果を期待できるのが特徴です。</p>
+              <p>下位術では、ダンシングリーフはAG(素早さ)を、ハードファイアとムーンシャインは技能値を、ベルセルクはST(筋力)とVT(活力)を、ウォーターポールはDR(ダメージ抵抗)を高めます。上位術では、魂の歌は味方全員の技能値を高めます。</p>
+              <p>ハードファイア、ムーングロウ、魂の歌は、精神の一時異状を打ち消す効果もあります。</p>
+              <h4>特殊型</h4>
+              <p>その他の術で、効果は様々です。</p>
+              <p>時間を操作するクイックタイム、分身を作り出す幻日、シャドウサーバントは最上術であり、いずれも非常に強力です。光の剣も、術戦士であれば是非修得したい魅力的な術でしょう。</p>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

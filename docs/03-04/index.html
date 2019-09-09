@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>部分防具 - GURPS.QWEL</title>
+  <meta name="description" content="上級戦闘 | 部分防具 | 風土と重量">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>上級戦闘</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>部分防具</h3>
+              <p>部分防具のルールを導入すると、ゲーム中の物語のディテールを深く表現できることでしょう。ですが、ルールが煩雑になり過ぎないよう、部分鎧は、胴防具、頭防具、手防具、足防具の4か所だけに分けて設定します。</p>
+              <p>部位狙いのルールと合わせて考えると、胴防具は、部位狙い宣言無しのときと、腕、脚、肚、喉を守ります。頭防具は、頭、耳、目を守ります。手防具は手首を、足防具は足首を守ります。素材の強度と保護する面積によってDR(ダメージ抵抗)が決められており、実際に保護される身体の部位に対し、適用されるルールは合致するとは限りません。</p>
+              <p>WT(重量)は胴防具の値を用います。頭防具、手防具、足防具の重量が課せられませんが、状況に応じて、DX(器用さ)やAG(素早さ)に修正を与えます。</p>
+              <h4>胴防具</h4>
+              <p>胴防具の重量は、「よけ」と「軽業」の判定に修正を与えます。最も重要な防具ですので、他のどの部位よりもDR(ダメージ抵抗)を優先すべきでしょう。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    胴防具一覧
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>胴防具</th>
+                      <th>DR</th>
+                      <th>WT</th>
+                      <th>技能</th>
+                      <th>説明</th>
+                      <th>価格</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>服</td>
+                      <td>1(0)</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>革服</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>なめした革の服。</td>
+                      <td>80</td>
+                    </tr>
+                    <tr>
+                      <td>革鎧</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>-</td>
+                      <td>油で煮て硬くした革の鎧。</td>
+                      <td>160</td>
+                    </tr>
+                    <tr>
+                      <td>チェインメイル</td>
+                      <td>3(1)</td>
+                      <td>2</td>
+                      <td>武術</td>
+                      <td>鎖を編んでできた鎧。</td>
+                      <td>240</td>
+                    </tr>
+                    <tr>
+                      <td>ブリガンディ</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>武術</td>
+                      <td>金属製の輪や小片で補強した革鎧。</td>
+                      <td>320</td>
+                    </tr>
+                    <tr>
+                      <td>ハーフ・プレイト</td>
+                      <td>4(2)</td>
+                      <td>3</td>
+                      <td>武術</td>
+                      <td>板金の胸当てを付けたチェインメイル。</td>
+                      <td>640</td>
+                    </tr>
+                    <tr>
+                      <td>プレイトメイル</td>
+                      <td>4</td>
+                      <td>4</td>
+                      <td>武術</td>
+                      <td>胴部全体を覆う板金の鎧。</td>
+                      <td>1280</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>頭防具</h4>
+              <p>頭防具の重量は、見る、聞くなど知覚に関わる判定に修正を与えます。また、町で兜を身に着けて歩いていると、反応判定に-3の修正を受けます。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    頭防具一覧
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>頭防具</th>
+                      <th>DR</th>
+                      <th>WT</th>
+                      <th>技能</th>
+                      <th>説明</th>
+                      <th>価格</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>バンダナ</td>
+                      <td>1(0)</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>革の帽子</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>なめした革の帽子。</td>
+                      <td>40</td>
+                    </tr>
+                    <tr>
+                      <td>ヘッドギア</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>-</td>
+                      <td>油で煮て硬くした革の兜。</td>
+                      <td>80</td>
+                    </tr>
+                    <tr>
+                      <td>チェインコイフ</td>
+                      <td>3(1)</td>
+                      <td>2</td>
+                      <td>武術</td>
+                      <td>鎖を編んでできたフード。</td>
+                      <td>120</td>
+                    </tr>
+                    <tr>
+                      <td>オープンヘルム</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>武術</td>
+                      <td>頭頂部を覆う板金の兜。見る、聞くなど知覚に関わる判定-1。</td>
+                      <td>320</td>
+                    </tr>
+                    <tr>
+                      <td>クローズヘルム</td>
+                      <td>4</td>
+                      <td>4</td>
+                      <td>武術</td>
+                      <td>頭部全体を覆う板金の兜。見る、聞くなど知覚に関わる判定-2。</td>
+                      <td>640</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>手防具</h4>
+              <p>手防具の重量は、DX(器用さ)に修正を与えます。足防具に比べれば手防具は脱着が容易なので、技能を用いるときは脱ぐことも考えられます。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    手防具一覧
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>手防具</th>
+                      <th>DR</th>
+                      <th>WT</th>
+                      <th>技能</th>
+                      <th>説明</th>
+                      <th>価格</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>バンテージ</td>
+                      <td>1(0)</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>グローブ</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>なめした革の手袋。</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>レザーグローブ</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>-</td>
+                      <td>油で煮て硬くした革の手袋。</td>
+                      <td>40</td>
+                    </tr>
+                    <tr>
+                      <td>ガントレット</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>武術</td>
+                      <td>板金の手袋。DX(器用さ)-1。</td>
+                      <td>160</td>
+                    </tr>
+                    <tr>
+                      <td>ヴァンブレイス</td>
+                      <td>4</td>
+                      <td>4</td>
+                      <td>武術</td>
+                      <td>肘まで覆う板金の籠手。DX(器用さ)-2。</td>
+                      <td>320</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>足防具</h4>
+              <p>足防具の重量は、AG(素早さ)に修正を与えます。隠密などを行う人物は、軽めの足防具を選ぶ方が無難かも知れません。</p>
+              <div class="table-responsive-lg">
+                <table class="table table-hover">
+                  <caption>
+                    足防具一覧
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th>足防具</th>
+                      <th>DR</th>
+                      <th>WT</th>
+                      <th>技能</th>
+                      <th>説明</th>
+                      <th>価格</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>サンダル</td>
+                      <td>1(0)</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>ブーツ</td>
+                      <td>1</td>
+                      <td>0</td>
+                      <td>-</td>
+                      <td>なめした革の靴。</td>
+                      <td>30</td>
+                    </tr>
+                    <tr>
+                      <td>レザーブーツ</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>-</td>
+                      <td>油で煮て硬くした革の靴。</td>
+                      <td>60</td>
+                    </tr>
+                    <tr>
+                      <td>ソールレット</td>
+                      <td>3</td>
+                      <td>3</td>
+                      <td>武術</td>
+                      <td>板金の靴。AG(素早さ)-1。</td>
+                      <td>240</td>
+                    </tr>
+                    <tr>
+                      <td>グリーヴ</td>
+                      <td>4</td>
+                      <td>4</td>
+                      <td>武術</td>
+                      <td>膝まで覆う板金の具足。AG(素早さ)-2。</td>
+                      <td>480</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3>風土と重量</h3>
+              <p>熱帯地域で活動する場合、防具の重量や修正を全て2倍に計算し直します。</p>
+              <div class="pagination"> <a class="btn-prev float-left" href="../03-03/" data-role="navigate" data-target="/docs/03-03/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../03-05/" data-role="navigate" data-target="/docs/03-05/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

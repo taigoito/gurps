@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPC - GURPS.QWEL</title>
+  <meta name="description" content="NPC | ランダム作成">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title" role="banner">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="container" role="main">
+    <div class="row inner">
+      <nav id="navigation" class="col-lg-3" role="navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
+              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
+              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">術法</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
+              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
+            </ol>
+          </li>
+          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
+              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
+              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
+              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
+            </ol>
+          </li>
+          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
+              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
+              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
+            </ol>
+          </li>
+          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
+            <ol class="docs-nav-item collapsing">
+              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
+              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
+              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="article col-lg-9">
+        <div class="inner">
+          <h2>NPC</h2>
+          <section class="section">
+            <div class="inner">
+              <h3>ランダム作成</h3>
+              <p>ときには、時間や手間をかけずに、すぐにNPCを作成したいこともあるでしょう。さほど重要でない人物でも、戦ったり、繰り返し登場して何かしら判定を行うのであれば、能力値や技能を決めておく必要があります。そういうときは、下記ランダムキャラクター作成表を活用して下さい。</p>
+              <p>まず能力値を決めるため3dを振り、能力値決定表を参照します。さらに任意の回数3dを振り、能力値修正表に従って能力値を修正します。</p>
+              <p>技能は出自を参考にして選択します。出自に関係する技能の技能値は全てダイスを1つ振り、1～3なら能力値-1、4か5なら能力値と同じ、6なら能力値+1とします。あくまでランダムに決定したい場合は、技能決定表を上手に活用してください。</p>
+              <p>上級ルールの攻撃型を導入すると、自分と敵との武器と防具の相性によって、有利・不利が生じます。武器の決定は、公平を期すため、武器決定表を用いてランダムで決めることを推奨します。武器欄に記述が2つある個所では、DX(器用さ)がST(腕力)より高ければ右（「剣術」）、そうでなければ左（「武術」）になります。</p>
+              <p>技能が「剣術」なら、防具は革鎧、小盾になります。「武術」なら、防具はチェインメイルかブリガンディ（※）、中盾になります。プレイトメイルや大盾は、大国の軍隊でもなければ、一介の兵士や盗賊が身に着けているということはありません。「よけ」が重要となる格闘家や射手であれば、革服を着用していることもあります。</p>
+              <p>この方法で作成したキャラクターは、総計10CPのキャラクターより少し弱く、一般的な兵士や盗賊の強さとします。</p>
+              <p><small>※ダイスを振って、1～3ならチェインメイル、4～6ならブリガンディ。</small></p>
+              <div class="row">
+                <div class="col-lg-12 table-responsive-lg">
+                  <table class="table table-hover">
+                    <caption>
+                      能力値決定表
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>出目</th>
+                        <th>ST</th>
+                        <th>DX</th>
+                        <th>AG</th>
+                        <th>VT</th>
+                        <th>IN</th>
+                        <th>WL</th>
+                        <th>CM</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>3</th>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>5</th>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>6</th>
+                        <td>9</td>
+                        <td>13</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>7</th>
+                        <td>9</td>
+                        <td>13</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>8</th>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>9</th>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>10</th>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>11</th>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>13</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>12</th>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>13</th>
+                        <td>12</td>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>14</th>
+                        <td>13</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>15</th>
+                        <td>13</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>16</th>
+                        <td>12</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th>17</th>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th>18</th>
+                        <td>11</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>12</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-lg-5 table-responsive-lg">
+                  <table class="table table-hover">
+                    <caption>
+                      能力値修正表
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>出目</th>
+                        <th>修正</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3</td>
+                        <td>HP-1</td>
+                        <td>CM+1</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>HP-1</td>
+                        <td>WL+1</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>DX-1</td>
+                        <td>IN+1</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>ST-1</td>
+                        <td>IN+1</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>ST-1</td>
+                        <td>AG+1</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>ST-1</td>
+                        <td>DX+1</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>VT-1</td>
+                        <td>HP+1</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>CM-1</td>
+                        <td>HP+1</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>CM-1</td>
+                        <td>HP+1</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>WL-1</td>
+                        <td>HP+1</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>IN-1</td>
+                        <td>DX+1</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>IN-1</td>
+                        <td>AG+1</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>IN-1</td>
+                        <td>ST+1</td>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td>DX-1</td>
+                        <td>ST+1</td>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td>HP-1</td>
+                        <td>VT+1</td>
+                      </tr>
+                      <tr>
+                        <td>18</td>
+                        <td>HP-1</td>
+                        <td>CM+1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-lg-7 table-responsive-lg">
+                  <table class="table table-hover">
+                    <caption>
+                      武器決定表
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>出目</th>
+                        <th>武器</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3</td>
+                        <td>間に合わせの武器</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>柔術</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>メタルナックル</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>カイザーナックル</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>エストック&gt;レイピア</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>ウォーハンマー&gt;モーニングスター</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>バトルアクス&gt;ハンドアクス</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>青竜刀&gt;三日月刀</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>バスタードソード&gt;ブロードソード</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td>ハルバード&gt;スピア</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>グレイヴ&gt;クォータースタッフ</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td>グレートソード&gt;ダガー</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td>狩人の弓+もう1回振って決める</td>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td>ボウガン+もう1回振って決める</td>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td>長弓+もう1回振って決める</td>
+                      </tr>
+                      <tr>
+                        <td>18</td>
+                        <td>クロスボウ+もう1回振って決める</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-lg-12 table-responsive-lg">
+                  <table class="table table-hover">
+                    <caption>
+                      技能決定表
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>出目</th>
+                        <th>A群</th>
+                        <th>B群</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>3</th>
+                        <td>演奏</td>
+                        <td>研究</td>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <td>技術</td>
+                        <td>言語</td>
+                      </tr>
+                      <tr>
+                        <th>5</th>
+                        <td>柔術、持久走</td>
+                        <td>陰術</td>
+                      </tr>
+                      <tr>
+                        <th>6</th>
+                        <td>柔術、軽業</td>
+                        <td>玄武術</td>
+                      </tr>
+                      <tr>
+                        <th>7</th>
+                        <td>弓術</td>
+                        <td>蒼龍術</td>
+                      </tr>
+                      <tr>
+                        <th>8</th>
+                        <td>生存、隠密</td>
+                        <td>演技、交渉</td>
+                      </tr>
+                      <tr>
+                        <th>9</th>
+                        <td>探索、生存</td>
+                        <td>探索、治癒</td>
+                      </tr>
+                      <tr>
+                        <th>10</th>
+                        <td>探索、運動</td>
+                        <td>礼儀作法、尋問</td>
+                      </tr>
+                      <tr>
+                        <th>11</th>
+                        <td>細工、運動</td>
+                        <td>礼儀作法、説得</td>
+                      </tr>
+                      <tr>
+                        <th>12</th>
+                        <td>細工、早業</td>
+                        <td>細工、商人</td>
+                      </tr>
+                      <tr>
+                        <th>13</th>
+                        <td>早業、隠密</td>
+                        <td>鑑定、歴史</td>
+                      </tr>
+                      <tr>
+                        <th>14</th>
+                        <td>怪力</td>
+                        <td>白虎術</td>
+                      </tr>
+                      <tr>
+                        <th>15</th>
+                        <td>格闘、軽業</td>
+                        <td>朱鳥術</td>
+                      </tr>
+                      <tr>
+                        <th>16</th>
+                        <td>格闘、持久走</td>
+                        <td>陽術</td>
+                      </tr>
+                      <tr>
+                        <th>17</th>
+                        <td>技術</td>
+                        <td>知識</td>
+                      </tr>
+                      <tr>
+                        <th>18</th>
+                        <td>舞踏</td>
+                        <td>歌唱</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="pagination"> <a class="btn-prev float-left" href="../04-03/" data-role="navigate" data-target="/docs/04-03/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../05-02/" data-role="navigate" data-target="/docs/05-02/">next <small>&gt;&gt;</small></a> </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>
