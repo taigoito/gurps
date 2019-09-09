@@ -546,6 +546,7 @@ export const data = {
     {
       'itemId': 1,
       'name': 'ブロードソード',
+      'secondName': 'バスタードソード(片手)',
       'equipmentType': 2,
       'baseDmg': 6,
       'dmgType': 2,
@@ -557,6 +558,7 @@ export const data = {
     {
       'itemId': 2,
       'name': 'バスタードソード',
+      'secondName': 'バスタードソード(両手)',
       'equipmentType': 4,
       'baseDmg': 7,
       'dmgType': 2,
@@ -579,6 +581,7 @@ export const data = {
     {
       'itemId': 4,
       'name': '三日月刀',
+      'secondName': '青龍刀(片手)',
       'equipmentType': 2,
       'baseDmg': 6,
       'dmgType': 2,
@@ -590,6 +593,7 @@ export const data = {
     {
       'itemId': 5,
       'name': '青竜刀',
+      'secondName': '青龍刀(両手)',
       'equipmentType': 4,
       'baseDmg': 7,
       'dmgType': 2,
@@ -678,6 +682,7 @@ export const data = {
     {
       'itemId': 13,
       'name': 'スピア',
+      'secondName': 'ハルバード(突き)',
       'equipmentType': 5,
       'baseDmg': 5,
       'dmgType': 1,
@@ -700,6 +705,7 @@ export const data = {
     {
       'itemId': 15,
       'name': 'ハルバード',
+      'secondName': 'ハルバード(振り)',
       'equipmentType': 5,
       'baseDmg': 9,
       'dmgType': 2,

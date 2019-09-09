@@ -9,92 +9,92 @@ const items = [
   {
     name: 'ベースシステム/下層',
     proportion: 9,
-    developed: 8
+    developed: 9
   },
   {
     name: 'ベースシステム/上層',
     proportion: 9,
-    developed: 0
+    developed: 3
   },
   {
     name: '攻撃',
     proportion: 9,
-    developed: 0
+    developed: 9
   },
   {
     name: 'フェイント',
     proportion:3,
-    developed: 0
+    developed: 3
   },
   {
     name: '全力攻撃',
     proportion: 6,
-    developed: 0
+    developed: 6
   },
   {
     name: 'ダメージ効果',
     proportion: 9,
-    developed: 0
+    developed: 9
   },
   {
     name: '部位狙い',
     proportion: 3,
-    developed: 0
+    developed: 3
   },
   {
     name: '部位の故障',
     proportion: 3,
-    developed: 0
+    developed: 3
   },
   {
     name: '全力防御',
     proportion: 1,
-    developed: 0
+    developed: 1
   },
   {
     name: '射撃',
     proportion: 2,
-    developed: 0
+    developed: 2
   },
   {
     name: '狙い',
     proportion: 1,
-    developed: 0
+    developed: 1
   },
   {
     name: '術法: ベース',
     proportion: 6,
-    developed: 0
+    developed: 6
   },
   {
     name: '術法: 直接攻撃',
     proportion: 9,
-    developed: 0
+    developed: 6
   },
   {
     name: '術法: 間接攻撃',
     proportion: 6,
-    developed: 0
+    developed: 6
   },
   {
     name: '術法: 回復',
     proportion: 3,
-    developed: 0
+    developed: 1
   },
   {
     name: '術法: 防御',
     proportion: 3,
-    developed: 0
+    developed: 1
   },
   {
     name: '術法: 補助',
     proportion: 3,
-    developed: 0
+    developed: 3
   },
   {
     name: '術法: 特殊',
     proportion: 12,
-    developed: 0
+    developed: 1
   },
   {
     name: '移動',
@@ -104,12 +104,12 @@ const items = [
   {
     name: '姿勢変更',
     proportion: 2,
-    developed: 0
+    developed: 2
   },
   {
     name: '装備変更',
     proportion: 2,
-    developed: 0
+    developed: 1
   },
   {
     name: '反応判定',

@@ -223,7 +223,9 @@ class DetailView {
 
     this.model.equipments.models.forEach((equip) => {
       const row = document.importNode(template.content, true);
-      row.querySelector(`.${this._prefix}-unit-equip-name`).textContent = equip.get('name');
+      const equipName = (equip.id === 0 && equip.get('itemId') !== equip.get('usualUsage') || equip.id === 1) ?
+        equip.get('secondName') : equip.get('name');
+      row.querySelector(`.${this._prefix}-unit-equip-name`).textContent = equipName;
       if (equip.id < 4) {
         row.querySelector(`.${this._prefix}-unit-equip-head-1`).textContent = 'Dmg: ';
         row.querySelector(`.${this._prefix}-unit-equip-cell-1`).textContent = `${equip.get('dmg').name}(${equip.get('dmgType').name})`;
