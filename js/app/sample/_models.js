@@ -340,4 +340,4 @@ class SampleUnits extends Units {
   }
 }
 
-export { SampleUnits };
+export { SampleUnit, SampleUnits };

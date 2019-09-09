@@ -4293,6 +4293,10 @@ caption {
   max-width: 100%;
   padding-right: 1rem;
   padding-left: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 1024px) {
@@ -4342,6 +4346,193 @@ caption {
 .caption {
   line-height: 2rem;
   margin-bottom: 0;
+}
+
+#battle-formation-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#battle-formation-col-pc-back,
+#battle-formation-col-pc-forward,
+#battle-formation-col-enemy-forward,
+#battle-formation-col-enemy-back {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+}
+
+#battle-formation-col-pc-back > div,
+#battle-formation-col-pc-forward > div,
+#battle-formation-col-enemy-forward > div,
+#battle-formation-col-enemy-back > div {
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+#battle-formation-col-pc-forward {
+  padding-top: .75rem;
+  padding-bottom: 1.25rem;
+  border-right: 1px solid red;
+}
+
+#battle-formation-col-enemy-forward {
+  padding-top: .75rem;
+  padding-bottom: 1.25rem;
+  border-left: 1px solid red;
+}
+
+#battle-formation .c-bad {
+  color: #fcc;
+}
+
+#battle-formation .c-worse {
+  color: #f99;
+}
+
+#battle-formation .c-worst {
+  color: #f66;
+}
+
+#battle-formation .dead {
+  color: #f66;
+}
+
+#battle-summary {
+  font-size: 80%;
+}
+
+#battle-summary table {
+  width: 100%;
+}
+
+#battle-summary caption {
+  padding: 0;
+  text-align: left;
+}
+
+#battle-summary thead {
+  border-bottom: 1px solid #b3b3b3;
+}
+
+#battle-summary th, #battle-summary td {
+  width: 6rem;
+  padding: .25rem 0;
+  text-align: center;
+}
+
+#battle-summary th:first-child, #battle-summary td:first-child {
+  border-right: 1px solid #b3b3b3;
+}
+
+#battle-command {
+  overflow: auto;
+}
+
+#battle-command .description {
+  font-size: 80%;
+}
+
+#battle-command button {
+  width: 6rem;
+  height: 2rem;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 80%;
+}
+
+#battle-command button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#battle-command button:not(.active):not(.excute):not(.back) {
+  display: none;
+}
+
+#battle-command-main,
+.command-option {
+  max-width: 25rem;
+  margin: auto;
+  text-align: center;
+}
+
+#battle-command-main:not(.active),
+.command-option:not(.active) {
+  display: none;
+}
+
+#battle-info {
+  position: relative;
+  height: 60rem;
+  margin: 3rem auto;
+}
+
+#battle-list {
+  opacity: 0;
+}
+
+#battle-list.show {
+  opacity: 1;
+  -webkit-transition: opacity .5s linear;
+  transition: opacity .5s linear;
+}
+
+#battle-list .table thead th, #battle-list .table thead td {
+  padding: .5rem;
+  border-top: 0;
+}
+
+#battle-list .table tr {
+  cursor: pointer;
+}
+
+#battle-list-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+#battle-list.show #battle-list-overlay {
+  display: none;
+}
+
+#battle-unit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin: auto;
+}
+
+#battle-unit .table-sm th, #battle-unit .table-sm td {
+  padding: .9rem .3rem 0;
+  border-top: 0;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+#battle-unit .table-sm td {
+  text-align: center;
+}
+
+.battle-unit-skills th,
+.battle-unit-equips th {
+  font-weight: 500;
 }
 
 #cover-image, #cover-gradient {

@@ -30,17 +30,354 @@
         <div class="row">
           <div id="battle-formation" class="order-1">
             <h5 class="caption">Formation</h5>
+            <div id="battle-formation-row">
+              <div id="battle-formation-col-pc-back">
+                <div id="battle-formation-pc-back-1">&nbsp;</div>
+                <div id="battle-formation-pc-back-2">&nbsp;</div>
+                <div id="battle-formation-pc-back-3">&nbsp;</div>
+                <div id="battle-formation-pc-back-4">&nbsp;</div>
+              </div>
+              <div id="battle-formation-col-pc-forward">
+                <div id="battle-formation-pc-left">&nbsp;</div>
+                <div id="battle-formation-pc-center">&nbsp;</div>
+                <div id="battle-formation-pc-right">&nbsp;</div>
+              </div>
+              <div id="battle-formation-col-enemy-forward">
+                <div id="battle-formation-enemy-right">&nbsp;</div>
+                <div id="battle-formation-enemy-center">&nbsp;</div>
+                <div id="battle-formation-enemy-left">&nbsp;</div>
+              </div>
+              <div id="battle-formation-col-enemy-back">
+                <div id="battle-formation-enemy-back-4">&nbsp;</div>
+                <div id="battle-formation-enemy-back-3">&nbsp;</div>
+                <div id="battle-formation-enemy-back-2">&nbsp;</div>
+                <div id="battle-formation-enemy-back-1">&nbsp;</div>
+              </div>
+            </div>
           </div>
           <div id="battle-summary" class="order-3">
             <h5 class="caption">Summary</h5>
+            <table>
+              <caption>
+                第 <span id="battle-summary-turn">0</span>ターン / <span id="battle-summary-actor">&nbsp;</span>の行動
+              </caption>
+              <thead>
+                <tr>
+                  <th>名前</th>
+                  <th>HP</th>
+                  <th>状態</th>
+                  <th>行動</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
           </div>
+          <template id="summary-template">
+            <tr>
+              <td class="battle-summary-name">&nbsp;</td>
+              <td class="battle-summary-hp">&nbsp;</td>
+              <td class="battle-summary-disadvantage">&nbsp;</td>
+              <td class="battle-summary-action">&nbsp;</td>
+            </tr>
+          </template>
           <div id="battle-command" class="order-2">
             <h5 class="caption">Command</h5>
+            <div id="battle-command-main" class="active">
+              <button id="battle-command-main-ready" type="button" data-command="ready" data-role="show-option">準備</button>
+              <button id="battle-command-main-attack" type="button" data-command="attack" data-role="show-target" data-role-option="forward">攻撃</button>
+              <button id="battle-command-main-feint" type="button" data-command="feint" data-role="show-target" data-role-option="forward">フェイント</button>
+              <button id="battle-command-main-special" type="button" data-command="special" data-role="show-option">特殊攻撃</button>
+              <button id="battle-command-main-snipe" type="button" data-command="snipe" data-role="show-target" data-role-option="enemy">狙い</button>
+              <button id="battle-command-main-chant" type="button" data-command="chant" data-role="show-option">集中</button>
+              <button id="battle-command-main-spell" type="button" data-command="spell" data-role="show-option">術法</button>
+              <button id="battle-command-main-defense" type="button" data-command="defense" data-role="show-option">全力防御</button>
+              <button id="battle-command-main-move" type="button" data-command="move" data-role="show-option">移動</button>
+              <button id="battle-command-main-change-posture" type="button" data-command="change-posture" data-role="show-option">姿勢変更</button>
+              <button id="battle-command-main-change-equipment" type="button" data-command="change-equipment" data-role="show-option">装備変更</button>
+              <button id="battle-command-main-auto-command" type="button" data-command="auto-command" data-role="show-option">自動</button>
+            </div>
+            <div id="battle-command-ready" class="command-option">
+              <div class="description">
+                武器を準備します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-attack" class="command-option">
+              <div class="description">
+                攻撃を実行します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-feint" class="command-option">
+              <div class="description">
+                フェイントを実行します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-special" class="command-option">
+              <div class="description">
+                全力攻撃を実行します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-snipe" class="command-option">
+              <div class="description">
+                このターンは狙いに専念します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-chant" class="command-option">
+              <div class="description">
+                このターンは呪文に集中します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-spell" class="command-option">
+              <div class="description">
+                実行します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-defense" class="command-option">
+              <div class="description">
+                このターンは防御に専念します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-move" class="command-option">
+              <button id="battle-command-move-left" type="button" data-move-option="left" data-role="excute">左翼</button>
+              <button id="battle-command-move-center" type="button" data-move-option="center" data-role="excute">中央</button>
+              <button id="battle-command-move-right" type="button" data-move-option="right" data-role="excute">右翼</button>
+              <button id="battle-command-move-back" type="button" data-move-option="back" data-role="excute">後退</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-change-posture" class="command-option">
+              <div class="description">
+                姿勢を変更します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute"> 実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-change-equipment" class="command-option">
+              <div class="description">
+                装備を変更します。よろしいですか？
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-auto-command" class="command-option">
+              <div class="description">
+                お任せで行動します。よろしいですか？</p>
+              </div>
+              <button class="excute" type="button" data-role="excute">実行</button>
+              <button class="back" type="button" data-role="hide-option">戻る</button>
+            </div>
+            <div id="battle-command-target" class="command-option">
+              <button id="battle-command-target-0" type="button" data-role="show-confirm" data-role-option="0">&nbsp;</button>
+              <button id="battle-command-target-1" type="button" data-role="show-confirm" data-role-option="1">&nbsp;</button>
+              <button id="battle-command-target-2" type="button" data-role="show-confirm" data-role-option="2">&nbsp;</button>
+              <button id="battle-command-target-3" type="button" data-role="show-confirm" data-role-option="3">&nbsp;</button>
+              <button id="battle-command-target-4" type="button" data-role="show-confirm" data-role-option="4">&nbsp;</button>
+              <button id="battle-command-target-5" type="button" data-role="show-confirm" data-role-option="5">&nbsp;</button>
+              <button id="battle-command-target-6" type="button" data-role="show-confirm" data-role-option="6">&nbsp;</button>
+              <button id="battle-command-target-7" type="button" data-role="show-confirm" data-role-option="7">&nbsp;</button>
+              <button class="back" type="button" data-role="hide-target">戻る</button>
+            </div>
           </div>
           <div id="battle-log" class="order-4">
             <h5 class="caption">Log</h5>
           </div>
         </div>
+      </div>
+      <div id="battle-info" class="col-lg-12">
+        <div id="battle-list">
+          <div class="table-responsive-lg">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">No.</th>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Gender</th>
+                  <th class="text-center">ST</th>
+                  <th class="text-center">DX</th>
+                  <th class="text-center">AG</th>
+                  <th class="text-center">VT</th>
+                  <th class="text-center">IN</th>
+                  <th class="text-center">WL</th>
+                  <th class="text-center">CM</th>
+                  <th class="text-center">HP</th>
+                  <th class="text-center">Skill</th>
+                  <th class="text-center">Equip</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <div id="battle-list-overlay"></div>
+        </div>
+        <template id="battle-list-template">
+          <tr class="battle-list-row">
+            <th class="battle-list-row-no text-center">&nbsp;</th>
+            <td class="battle-list-row-name text-center">&nbsp;</td>
+            <td class="battle-list-row-gender text-center">&nbsp;</td>
+            <td class="battle-list-row-st text-center">&nbsp;</td>
+            <td class="battle-list-row-dx text-center">&nbsp;</td>
+            <td class="battle-list-row-ag text-center">&nbsp;</td>
+            <td class="battle-list-row-vt text-center">&nbsp;</td>
+            <td class="battle-list-row-in text-center">&nbsp;</td>
+            <td class="battle-list-row-wl text-center">&nbsp;</td>
+            <td class="battle-list-row-cm text-center">&nbsp;</td>
+            <td class="battle-list-row-hp text-center">&nbsp;</td>
+            <td class="battle-list-row-skill text-center">&nbsp;</td>
+            <td class="battle-list-row-equip text-center">&nbsp;</td>
+          </tr>
+        </template>
+        <div id="battle-unit" class="row"></div>
+        <template id="battle-unit-template">
+          <div class="col-md-6 col-lg-4">
+            <div class="battle-unit-profile table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Profile</caption>
+                <thead>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Name</th>
+                    <td class="battle-unit-profile-name text-left">&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th>Gender</th>
+                    <td class="battle-unit-profile-gender text-left">&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th>CP</th>
+                    <td class="battle-unit-profile-cp text-left">&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="battle-unit-ability table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Ability</caption>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-8">
+            <div class="battle-unit-skills table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Skills</caption>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="battle-unit-equips table-responsive-lg">
+              <table class="table table-sm table-hover">
+                <caption>Equipmets</caption>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </template>
+        <template id="battle-unit-ability-template">
+          <tr>
+            <th class="battle-unit-ability-name">&nbsp;</th>
+            <td class="battle-unit-ability-value">&nbsp;</td>
+            <td class="battle-unit-ability-cp">&nbsp;</td>
+          </tr>
+        </template>
+        <template id="battle-unit-skill-template">
+          <tr>
+            <th class="battle-unit-skill-name-1">&nbsp;</th>
+            <td class="battle-unit-skill-value-1">&nbsp;</td>
+            <td class="battle-unit-skill-cp-1">&nbsp;</td>
+            <td class="border-bottom-0">&nbsp;</td>
+            <th class="battle-unit-skill-name-2">&nbsp;</th>
+            <td class="battle-unit-skill-value-2">&nbsp;</td>
+            <td class="battle-unit-skill-cp-2">&nbsp;</td>
+          </tr>
+        </template>
+        <template id="battle-unit-equip-template">
+          <tr>
+            <th class="battle-unit-equip-name">&nbsp;</th>
+            <td class="battle-unit-equip-head-1">&nbsp;</td>
+            <td class="battle-unit-equip-cell-1">&nbsp;</td>
+            <td class="battle-unit-equip-head-2">&nbsp;</td>
+            <td class="battle-unit-equip-cell-2">&nbsp;</td>
+            <td class="battle-unit-equip-head-3">&nbsp;</td>
+            <td class="battle-unit-equip-cell-3">&nbsp;</td>
+          </tr>
+        </template>
+      </div>
+    </div>
+    <div id="developing-progress" class="col-lg-12">
+      <h5><small>開発完了率</small> <span id="progress" class="mx-1">0</span><small>%</small></h5>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <table id="table-1" class="table table-sm small">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>状態</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-4">
+          <table id="table-2" class="table table-sm small">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>状態</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-lg-4">
+          <table id="table-3" class="table table-sm small">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>状態</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <template id="developing-progress-template">
+          <tr>
+            <td>&nbsp;</td>
+            <td>未完了</td>
+          </tr>
+        </template>
       </div>
     </div>
   </main>
