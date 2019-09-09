@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://gurps.qwel.design%{REQUEST_URI} [R=301,L]
