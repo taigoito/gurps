@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>特徴 - GURPS.QWEL</title>
-  <meta name="description" content="特徴一覧 | 意志判定と恐怖判定">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,253 +20,408 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>キャラクター</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
-              <h3>特徴</h3>
-              <p>例えば「かんしゃく持ち」は、緊張状態ですぐ抜刀するとか、「正直者」は、敵対する相手にさえ嘘がつけないとか、人物の性格や方向性(特徴)をあらかじめ決めておき、プレイヤーはそれに沿ったキャラクターを演じる、というルールです。</p>
-              <p>精神的な特徴を1つ決めると、1/2CP獲得します。特徴は最大2CP分決めることができますので、強いキャラクターを作ろうと思ったら、真っ先に4つの特徴を決めてしまいましょう。</p>
-              <p>「能力値」、「技能」、「特徴」が決まったら、CPによるキャラクター作成の工程は完了です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    精神的な特徴一覧
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>特徴</th>
-                      <th>説明</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>暴れん坊</td>
-                      <td>いじめっ子。意志判定に失敗すると、その場の一番弱い者を罵り続け、反応-2。</td>
-                    </tr>
-                    <tr>
-                      <td>内気</td>
-                      <td>普段から寡黙で、知らない相手に対して消極的。知らない相手に対する交渉時などの判定-2。</td>
-                    </tr>
-                    <tr>
-                      <td>臆病</td>
-                      <td>危険な行動を避ける。戦闘で前衛に立つには意志判定。この性格に気付いた兵士などの反応-2。</td>
-                    </tr>
-                    <tr>
-                      <td>頑固</td>
-                      <td>考えを曲げない。常に反応-1。</td>
-                    </tr>
-                    <tr>
-                      <td>かんしゃく</td>
-                      <td>緊張状態で意志判定に失敗すると、即座に抜刀するか、屈辱の言葉を投げかけてしまう。</td>
-                    </tr>
-                    <tr>
-                      <td>義務感(対象)</td>
-                      <td>自発的に抱く、誰かを守ったり助けたりする義務感。例)祖国、仲間、女性、弱者</td>
-                    </tr>
-                    <tr>
-                      <td>恐怖症(対象)</td>
-                      <td>恐怖の対象(主に場所・空間)を克服するのに修正-2で恐怖判定（後述）。例)暗闇、高所、海洋、群集</td>
-                    </tr>
-                    <tr>
-                      <td>狭量</td>
-                      <td>階級や宗派の違う相手を受け入れられない。修正-2で自分の反応を決める。</td>
-                    </tr>
-                    <tr>
-                      <td>虚言癖</td>
-                      <td>常に自分の功績などを誇張し、聞き手から尊敬を集めるのが大好き。</td>
-                    </tr>
-                    <tr>
-                      <td>グルメ</td>
-                      <td>食事や酒の誘惑に勝てない(意志判定)。</td>
-                    </tr>
-                    <tr>
-                      <td>けちんぼ</td>
-                      <td>絶対に必要な金しか払わない(意志判定)。</td>
-                    </tr>
-                    <tr>
-                      <td>潔癖症</td>
-                      <td>汚れに対し恐怖判定。スラム街などではブツブツ文句を言ったりして悪態を振舞い、反応-1。</td>
-                    </tr>
-                    <tr>
-                      <td>好奇心</td>
-                      <td>意志判定に失敗すると危険だと知っていても調べずにはいられない。</td>
-                    </tr>
-                    <tr>
-                      <td>好色</td>
-                      <td>わずかでも異性との接触があれば、色目を使ってしまう(意志判定)。</td>
-                    </tr>
-                    <tr>
-                      <td>サディスト</td>
-                      <td>血と悲鳴が大好きで、意志判定に失敗すると敵や捕虜に対して残虐行為を行う。この性格に気付いたNPCは反応-3。</td>
-                    </tr>
-                    <tr>
-                      <td>残忍</td>
-                      <td>敵を皆殺しにしようとする。見張り、降伏した敵、捕虜などを生かしておくには意志判定が必要。</td>
-                    </tr>
-                    <tr>
-                      <td>自信過剰</td>
-                      <td>「心配いらない。任せとけ！」という性で、慎重に行動できない(意志判定)。普通反応-2だが、場合によっては反応+2。</td>
-                    </tr>
-                    <tr>
-                      <td>嫉妬</td>
-                      <td>自分より賢い、美しい、裕福といった相手を嫉妬。修正-2で自分の反応を決める。</td>
-                    </tr>
-                    <tr>
-                      <td>使命(様々)</td>
-                      <td>何か重要な人物・組織のために動いており、「使命」を最優先に考える。</td>
-                    </tr>
-                    <tr>
-                      <td>守銭奴</td>
-                      <td>金の誘惑に勝てない(意志判定)。</td>
-                    </tr>
-                    <tr>
-                      <td>酒乱</td>
-                      <td>酒の誘惑に勝てない。意志判定に失敗すると酔っ払うまで飲む（酒に強いわけではない）。</td>
-                    </tr>
-                    <tr>
-                      <td>正直</td>
-                      <td>嘘をつくのが嫌いか、嘘をつくのが下手。黙り通すには修正-4で意志判定を行う。</td>
-                    </tr>
-                    <tr>
-                      <td>誠実</td>
-                      <td>規則を守り、法律を尊重する。嘘はつけるが卑劣な行為はできない。この性格に気付いたNPCは反応+2。</td>
-                    </tr>
-                    <tr>
-                      <td>怠惰</td>
-                      <td>肉体労働が大嫌い。何か仕事をしても、収入は少なく、昇給の可能性も低い。</td>
-                    </tr>
-                    <tr>
-                      <td>誓い(様々)</td>
-                      <td>たてた誓いを絶対に守る。</td>
-                    </tr>
-                    <tr>
-                      <td>中毒</td>
-                      <td>幻覚剤や、興奮剤の類の中毒。服用を中止すると何らかのペナルティ。</td>
-                    </tr>
-                    <tr>
-                      <td>直情</td>
-                      <td>行動してから考える。相談して決めようとしても、すぐに具体的な行動をとってしまう。</td>
-                    </tr>
-                    <tr>
-                      <td>不運</td>
-                      <td>ゲームの展開で、PCたちのうち誰かに不運なことが起きるならば、「不運」な人に起きる。</td>
-                    </tr>
-                    <tr>
-                      <td>平和愛好</td>
-                      <td>愛と平和に尽力。一般市民を犠牲にすることができない。「誓い」の一例。</td>
-                    </tr>
-                    <tr>
-                      <td>偏執狂</td>
-                      <td>古くからの友人以外が皆、敵に見える。この性格に気付いたNPCの反応-2。</td>
-                    </tr>
-                    <tr>
-                      <td>方向音痴</td>
-                      <td>入り組んだスラム街や樹海、迷路などで必ず迷う。おまけに数字に弱い。</td>
-                    </tr>
-                    <tr>
-                      <td>放心</td>
-                      <td>周囲の出来事に気が付かない。見張りの役には立たず、退屈な話は覚えてない。</td>
-                    </tr>
-                    <tr>
-                      <td>木訥</td>
-                      <td>耳にしたこと全てを信じてしまう。相手の話を鵜呑みにしてはいけない交渉時などの判定-2。</td>
-                    </tr>
-                    <tr>
-                      <td>朴念仁</td>
-                      <td>冗談を解さず、誰もがつねに真面目なものと信じる。この性格に気付いたNPCの反応-2。</td>
-                    </tr>
-                    <tr>
-                      <td>名誉重視</td>
-                      <td>屈辱を看過できない。屈辱を受けたら、必ず屈辱仕返さなければならない。</td>
-                    </tr>
-                    <tr>
-                      <td>妄想(様々)</td>
-                      <td>思い込みが激しく、何かの妄想に取りつかれている。この性格に気付いたNPCの反応-2。例)誇大妄想</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <h3>装備</h3>
+              <p>初期所持金は誰でも例外無く100金です。装備一覧から技能に応じた好きな武器と防具を選び、必要な数値を書き写します。必要体力のような概念はありません。</p>
+              <table class="table">
+                <caption>武器について</caption>
+                <tbody>
+                  <tr>
+                    <th>Dmg(ダメージ)</th>
+                    <td  class="td--desc">攻撃力を表します。dはダイスの数です。<br>武器の基本ダメージに、本人の腕力によるダメージを足した値です。</td>
+                  </tr>
+                  <tr>
+                    <th>Lv(レベル)</th>
+                    <td  class="td--desc">技能値を書き写します。命中判定の目標値になります。</td>
+                  </tr>
+                  <tr>
+                    <th>PEV(受け)</th>
+                    <td  class="td--desc">「受け」を試みるとき、武器によって有利に補正される回避判定の修正値を表します。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>防具について</caption>
+                <tbody>
+                  <tr>
+                    <th>DR(ダメージ抵抗)</th>
+                    <td  class="td--desc">防御力を表します。</td>
+                  </tr>
+                  <tr>
+                    <th>BEV(止め)</th>
+                    <td  class="td--desc">「止め」を試みるとき、盾によって有利に補正される回避判定の修正値を表します。</td>
+                  </tr>
+                  <tr>
+                    <th>WT(重量)</th>
+                    <td  class="td--desc">「よけ」を試みるとき、重量によって不利に補正される回避判定の修正値を表します。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>片手持ちの武器を選んだ場合は、盾も忘れずに購入しましょう。どの武器を選んだとしても、それぞれ状況によって個性を発揮しますが、「どれが強くて、どれが弱い」ということはありませんので、作りたい人物のイメージで決めてしまってください。</p>
+              <p>初期所持金の100金では、十分な装備が揃わないのが普通ですが、PC間で金銭の貸し借りは原則禁止です。ウォーリアロールを選択する予定の人物には、なるべくGMから物語上で装備を支給するようにしてください。</p>
+              <table class="table">
+                <caption>刀剣</caption>
+                <thead>
+                  <tr>
+                    <th>武器</th>
+                    <th>Dmg</th>
+                    <th>PEV</th>
+                    <th>金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ダガー</td>
+                    <td>1d+2</td>
+                    <td>1</td>
+                    <td>50金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>ブロードソード</td>
+                    <td>2d</td>
+                    <td>1</td>
+                    <td>100金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>バスタードソード W</td>
+                    <td>2d+2</td>
+                    <td>2</td>
+                    <td>150金</td>
+                    <td>両手, ブロードソードとしても使える</td>
+                  </tr>
+                  <tr>
+                    <td>グレートソード W</td>
+                    <td>2d+4</td>
+                    <td>2</td>
+                    <td>200金</td>
+                    <td>両手</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>殴打武器</caption>
+                <thead>
+                  <tr>
+                    <th>武器</th>
+                    <th>Dmg</th>
+                    <th>PEV</th>
+                    <th>金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>モーニングスター</td>
+                    <td>2d</td>
+                    <td>1</td>
+                    <td>15金</td>
+                    <td>引き戻しに1ターン, 敵は受け-2</td>
+                  </tr>
+                  <tr>
+                    <td>手斧</td>
+                    <td>2d+2</td>
+                    <td>1</td>
+                    <td>30金</td>
+                    <td>引き戻しに1ターン</td>
+                  </tr>
+                  <tr>
+                    <td>戦鎚 W</td>
+                    <td>2d+2</td>
+                    <td>1</td>
+                    <td>45金</td>
+                    <td>引き戻しに1ターン, 敵は受け-2</td>
+                  </tr>
+                  <tr>
+                    <td>戦斧 W</td>
+                    <td>2d+4</td>
+                    <td>1</td>
+                    <td>60金</td>
+                    <td>引き戻しに1ターン</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>竿上武器</caption>
+                <thead>
+                  <tr>
+                    <th>武器</th>
+                    <th class="th--desc">Dmg</th>
+                    <th>PEV</th>
+                    <th class="th--desc">金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>スタッフ</td>
+                    <td class="td--desc">2d-2</td>
+                    <td>3</td>
+                    <td class="td--desc">15金</td>
+                    <td>両手</td>
+                  </tr>
+                  <tr>
+                    <td>スピア</td>
+                    <td class="td--desc">2d</td>
+                    <td>3</td>
+                    <td class="td--desc">30金</td>
+                    <td>両手</td>
+                  </tr>
+                  <tr>
+                    <td>グレイヴ W</td>
+                    <td class="td--desc">2d+2</td>
+                    <td>3</td>
+                    <td class="td--desc">45金</td>
+                    <td>両手</td>
+                  </tr>
+                  <tr>
+                    <td>ハルバード W</td>
+                    <td class="td--desc">4d</td>
+                    <td>3</td>
+                    <td class="td--desc">60金</td>
+                    <td>両手, 引き戻しに1ターン, スピアとしても使える</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>射撃武器</caption>
+                <thead>
+                  <tr>
+                    <th>武器</th>
+                    <th>Dmg</th>
+                    <th>PEV</th>
+                    <th>金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ボウガン</td>
+                    <td>2d+2</td>
+                    <td>-</td>
+                    <td>50金</td>
+                    <td>準備に2ターン</td>
+                  </tr>
+                  <tr>
+                    <td>クロスボウ</td>
+                    <td>2d+4</td>
+                    <td>-</td>
+                    <td>100金</td>
+                    <td>準備に3ターン</td>
+                  </tr>
+                  <tr>
+                    <td>狩人の弓</td>
+                    <td>2d-2</td>
+                    <td>-</td>
+                    <td>25金</td>
+                    <td>準備に1ターン</td>
+                  </tr>
+                  <tr>
+                    <td>長弓 S</td>
+                    <td>2d</td>
+                    <td>-</td>
+                    <td>50金</td>
+                    <td>準備に1ターン</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>格闘動作</caption>
+                <thead>
+                  <tr>
+                    <th>武器</th>
+                    <th>Dmg</th>
+                    <th>PEV</th>
+                    <th>金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>拳 W</td>
+                    <td>1d-2</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>蹴り W</td>
+                    <td>1d</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>命中判定-2で、失敗すると転倒</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>盾</caption>
+                <thead>
+                  <tr>
+                    <th>防具</th>
+                    <th>BEV</th>
+                    <th>金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>小盾</td>
+                    <td>2</td>
+                    <td>10金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>中盾 W</td>
+                    <td>3</td>
+                    <td>15金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>大盾 W</td>
+                    <td>4</td>
+                    <td>20金</td>
+                    <td>命中判定-2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table">
+                <caption>鎧</caption>
+                <thead>
+                  <tr>
+                    <th>防具</th>
+                    <th>DR</th>
+                    <th>WT</th>
+                    <th>金額</th>
+                    <th>備考</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>服</td>
+                    <td>1 (0)</td>
+                    <td>0</td>
+                    <td>20金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>革服</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>40金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>革鎧</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>80金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>チェインメイル</td>
+                    <td>3 (1)</td>
+                    <td>2</td>
+                    <td>120金</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>ブリガンディ W</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>160金</td>
+                    <td>DX-1,AG-1</td>
+                  </tr>
+                  <tr>
+                    <td>ハーフプレイト W</td>
+                    <td>4 (2)</td>
+                    <td>3</td>
+                    <td>240金</td>
+                    <td>DX-1,AG-1</td>
+                  </tr>
+                  <tr>
+                    <td>プレイトメイル W</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>320金</td>
+                    <td>DX-2,AG-2</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="list-items">
+                <li>装備名のすぐ横のW印は「武術」で、S印は「弓術」でしか扱えない装備を示す（それ以外は「剣術」で扱える）。</li>
+                <li>繊維構造の服やチェインメイルの刺突攻撃に対するDRは()内の値を用いる。</li>
+              </ul>
+              <h4>報酬</h4>
+              <p>冒険のきっかけが、誰かからの依頼であったりする場合には、ミッション達成時に報酬を得られます。その報酬によって、PCは装備を揃えていくことができます。</p>
+              <h5>上質の武器</h5>
+              <p>冒険開始時は普通、標準的な質の武器を持っていますが、冒険を進めるにつれ、高価な上質の武器を手に入れることもあるでしょう。</p>
+              <p>上質の武器は品名に+1と記し、市場では定価の約5倍で取引され、ダメージを+1します。標準的な武器は一般に鉄製ですが、上質の武器は鋼鉄製なのでしょう。</p>
+              <p>最上質の武器は品名に+2と記し、市場では定価の20倍以上で取引され、ダメージを+2します。最上質の武器はダマスカス鋼製であったり、名工が打った逸品なのでしょう。</p>
+              <p>上級ルールの「攻撃型」を導入する場合、用途が「刺し」の武器は、上質ではダメージ変化無し(折れにくい)、最上質ではダメージ+1となります。</p>
+              <h5>呪符と秘薬</h5>
+              <p>冒険や戦いに役に立つのは、武器と防具だけではありません。法術の効果を持つ呪符や秘薬も存在します。そういったアイテム（品物）も報酬から買い揃えることができます。</p>
+              <p>具体的な呪符や秘薬の内容については、別章で記載します。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../01-03/" data-role="navigate" data-target="/docs/01-03/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../01-05/" data-role="navigate" data-target="/docs/01-05/">next <small>&gt;&gt;</small></a>
               </div>
-              <h4>意志判定と恐怖判定</h4>
-              <p>意志判定は、WL(意志力)を基準に行う判定です。この目標値は（どんなにWLが高くても）最大で13、つまり、14以上の出目は自動的に失敗です。恐怖判定については別章を参照してください。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="../01-03/" data-role="navigate" data-target="/docs/01-03/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../01-05/" data-role="navigate" data-target="/docs/01-05/">next <small>&gt;&gt;</small></a> </div>
             </div>
           </section>
         </div>
@@ -274,7 +430,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

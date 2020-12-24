@@ -1,0 +1,58 @@
+// Variables
+
+// Root
+$root-font-size: 18px;
+
+// Grid system
+$grid-columns: 3;
+$grid-gutter-width: 2rem;
+
+// Breakpoints
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1152px
+);
+
+// Container max widths
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 1152px
+);
+
+// Theme color
+$key-color: hsl(60, 20%, 50%);
+$theme-colors: (
+  primary:       $key-color,
+  light:         lighten(#000000, 85%),
+  dark:          lighten(#000000, 15%)
+);
+
+$body-bg:    #000000;
+$body-color: darken(#ffffff, 15%);
+
+$link-color:            darken(#ffffff, 30%);;
+$link-decoration:       none;
+$link-hover-color:      map-get($theme-colors, "primary");
+$link-hover-decoration: none;
+
+// Theme Fonts
+$font-family-sans-serif:    "游ゴシック", YuGothic, "ヒラギノゴシック ProN W3", "Hiragino Gothic ProN", Roboto, "Droid Sans", "メイリオ", Meiryo, sans-serif;
+$font-family-serif:         "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", Roboto, "Droid Sans", "メイリオ", Meiryo, serif;
+$font-weight-sans-serif:    500;
+$font-weight-serif:         500;
+
+$font-family-base:    $font-family-sans-serif;
+$font-weight-base:    $font-weight-sans-serif;
+$font-size-base:      1rem;
+$text-align-base:     justify;
+$line-height-base:    28.8 / ($root-font-size / ($root-font-size* 0 + 1));
+$letter-spacing-base: 0;
+
+$heading-font-family: $font-family-serif;
+$heading-font-weight: $font-weight-serif;
+
+$small-font-size:      percentage(7 / 8);
+$small-line-height:    $line-height-base * 9 / 8;
+$small-letter-spacing: 0.04rem;

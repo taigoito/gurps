@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>疲労・一時異状 - GURPS.QWEL</title>
-  <meta name="description" content="基本戦闘 | 疲労・一時異状 | 毒 | 麻痺 | 痺れ | 幻惑 | 狂戦士 | 混乱">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,105 +20,84 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>基本戦闘</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
               <h3>疲労・一時異状</h3>
               <h4>疲労</h4>
-              <p>剣を交えて戦ったり、術法を連続して行使するなど、戦闘ターン数が10ターンを超えると、疲労し始めます。10ターンごとの最初に「持久走」で判定を行い、失敗する度に、疲労によってVT(活力)が一時的に1点ずつ低下します。2時間程度の十分な休憩ごとに、疲労によるVTの低下は1点ずつ回復します。</p>
+              <p>剣（武器・拳）を交えて戦ったり、法術を連続行使するなど、戦闘ターン数が10ターンを超えると、疲労し始めます。11ターン目からターン開始時にST(体力)判定を行い、失敗するとSTが一時的に1ずつ低下します。これは1時間程度の十分な休憩ごとに回復します。</p>
               <h4>一時異状</h4>
-              <p>冒険者を苦しめるのは負傷や疲労だけではありません。毒や術、時に恐怖などにより、様々なペナルティが課せられることがあります。</p>
               <h5>毒</h5>
-              <p>毒蛇に咬まれたり、毒を塗布した刃によってダメージを負ったりすることで、毒に侵されることがあります。毒に侵されると、毎ターン開始時に1d-2点程度（毒の強さによる）ダメージを負います。もちろん、衝撃の効果も伴います。</p>
+              <p>毒蛇に咬まれたり、毒を塗布した刃によってダメージを負ったりすることで、毒に侵されます。毒に侵されると、疲労と同様に毎ターン開始時にST(体力)が奪われます。毒によって奪われた体力は、医療的な対処（薬草術）を施さないと回復しません。</p>
               <h5>麻痺</h5>
-              <p>毒の一種で、身体を麻痺させる類のものもあります。グール（死食鬼）が麻痺毒を有していると言われています。麻痺に侵されると、一時的にST(腕力)、DX(器用さ)、AG(素早さ)が低下します。それに伴い、技能値、Dmg(ダメージ)、D-EV(よけ)も低下します。</p>
+              <p>毒の一種で、身体を麻痺させます。麻痺は、一時的にST(体力)、DX(器用さ)、AG(敏捷さ)を低下させます。それに伴って、Dmg(ダメージ)、D-EV(よけ)も低下します。</p>
               <h5>痺れ</h5>
-              <p>毒や麻痺に局部的に侵されると、侵された部位が痺れて使えなくなります。しかし毒、麻痺本来の効果は免れます。これは上級ルールの「部位狙い」を参照してください。</p>
+              <p>毒や麻痺に局部的に侵されると、侵された四肢などの部位が痺れて一時的に使えなくなります。これは、上級ルールの「部位狙い」を参照してください。</p>
               <h5>幻惑</h5>
-              <p>術や恐怖によって魂を抜かれたような状態（幻惑状態）です。ぼんやりしていて、話をしたりはできますが、幻惑状態中に起きた事は、後になって一切思い出せません。また、積極的な行動は何も行えません。</p>
+              <p>術や恐怖によって魂を抜かれたような状態（幻惑状態）です。ぼんやりしていて、話をしたり、身を守るための単純な行動は取れますが、積極的な行動は行えません。また、幻惑状態中に起きた事は、後になって思い出せません。</p>
               <h5>狂戦士</h5>
-              <p>術や恐怖によって暴走した状態です。最も近くにいる者に、ひたすら全力攻撃を繰り返します。射撃武器は、狙いをつけずに矢が無くなるまで乱射します。また、痛みを感じなくなり、衝撃・朦朧の効果を無視します。</p>
+              <p>術や恐怖によって暴走した状態です。最も近くにいる者に、ひたすら全力攻撃を繰り返します。射撃武器は、狙いをつけずに矢が無くなるまで乱射します。</p>
               <h5>混乱</h5>
               <p>術や恐怖によって混乱した状態です。様々な状態が考えられますが、戦闘は継続できないでしょう。危険に直面しても、50%の確率で愚かな行動をとり、危険を回避できません。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="../02-03/" data-role="navigate" data-target="/docs/02-03/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../02-05/" data-role="navigate" data-target="/docs/02-05/">next <small>&gt;&gt;</small></a> </div>
+              <h5>精神的な朦朧状態</h5>
+              <p>身体的なダメージからではなく、精神的な衝撃や苦痛から来る朦朧状態です。身体的な朦朧状態とほとんど同じ状態ですが、回復判定はWL(意志力)を基準に行います。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../02-03/" data-role="navigate" data-target="/docs/02-03/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../02-05/" data-role="navigate" data-target="/docs/02-05/">next <small>&gt;&gt;</small></a>
+              </div>
             </div>
           </section>
         </div>
@@ -126,7 +106,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

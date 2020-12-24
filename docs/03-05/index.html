@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>近接戦闘 - GURPS.QWEL</title>
-  <meta name="description" content="上級戦闘 | 近接戦闘">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,149 +20,99 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>上級戦闘</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
               <h3>近接戦闘</h3>
-              <p>拳や蹴りで戦うには、敵の立ち位置にまで踏み込まなければなりません。このような格闘戦(近接戦闘)にはいくつかのルールがあります。</p>
-              <ul>
-                <li>通常の武器では直接攻撃できない。可能なのはダガーなど近接戦闘可の武器による攻撃、拳、蹴り、組み付きなど。</li>
+              <p>拳や蹴りで戦うには、敵の立ち位置にまで踏み込まなければなりません。このような格闘戦（近接戦闘）にはいくつかのルールがあります。</p>
+              <ul class="list-items">
+                <li>通常の武器では直接攻撃できない。可能なのはダガー、拳、蹴り、組み付きなど。</li>
                 <li>有効な回避は「よけ」のみ。</li>
                 <li>組み付かれた場合、振りほどきに成功しなければ、近接戦闘から離脱できない。</li>
               </ul>
-              <p>敵と自分とが技能勝負を行い、これに勝てば近接戦闘に持ち込めます。このとき片手が空いていれば、自動的に組み付くことができます。近接戦闘は比較的攻撃が当たり易いので、膠着した戦いの最中に持ち込むのも有効かも知れません。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    近接戦闘での行動表
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>行動</th>
-                      <th>説明</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>組み付き</td>
-                      <td>敵の身体の一部をつかむ動作を組み付きと呼びます。組み付きを行うには、少なくとも片手が空いてなくてはなりません。</td>
-                    </tr>
-                    <tr>
-                      <td>攻撃</td>
-                      <td>拳や蹴りで攻撃します。組み付いた状態では間合いが非常に近いため、蹴りはダメージを-1した膝蹴りになります。<br>
-                        威力の大きい通常の蹴りを行うのであれば、その都度、技能勝負を行い近接戦闘に持ち込まなければなりません。</td>
-                    </tr>
-                    <tr>
-                      <td>部位狙い</td>
-                      <td>ダガーやカイザーナックルなど、攻撃型が「刺し」の武器は、近接戦闘において、いずれかの部位の防具の隙間を突いて攻撃できます。部位狙いの修正が2倍になりますが、敵の防具のDR(ダメージ抵抗)が半分(端数切捨)になります。</td>
-                    </tr>
-                    <tr>
-                      <td>武器を奪う</td>
-                      <td>片手が空いていて、AGか「柔術」勝負に勝てば、敵の武器の柄か、敵の腕に組み付くことできます。<br>
-                        次のターンST勝負に勝てば、敵の武器を落とす（ダガーの場合）か、奪うことができます。このとき両手を用いている側は+2の修正があります。<br>
-                        近接戦闘中に落ちている武器を拾うには、AG勝負を行って敵に勝たなくてはなりません。</td>
-                    </tr>
-                    <tr>
-                      <td>窒息</td>
-                      <td>両手が空いていて、AGか「柔術」勝負に勝てば、敵の喉に組み付くことができます。<br>
-                        次のターンから自分のST(+2の修正)と、敵のVTで勝負を行い、勝った分だけダメージを与えます。<br>
-                        敵は窒息を振りほどいたターンは呼吸に専念することで、VT判定の成功度だけダメージが回復します。</td>
-                    </tr>
-                    <tr>
-                      <td>振りほどき</td>
-                      <td>組み付きを振りほどくには、自分の行動順でSTの勝負を行い、勝たなくてはなりません。両手で組み付かれている場合は敵に+2の修正があります。<br>
-                        振りほどきに成功したターンは、攻撃など何か行動できます。</td>
-                    </tr>
-                    <tr>
-                      <td>倒し</td>
-                      <td>両手が空いていて、自分のST、AG、「柔術」のいずれかと、敵のSTで勝負を行い、勝てば敵を転倒させることができます。続けて「押さえ込み」を行うなら、自分もいっしょに倒れます。もし敵も自分に組み付いているなら、このときに振りほどけます。</td>
-                    </tr>
-                    <tr>
-                      <td>押さえ込み</td>
-                      <td>転倒している敵に対し、「倒し」と同様の勝負を行って勝てば、敵を押さえ込んで一切抵抗できないようにしてしまいます。</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <p>敵と自分とが技能勝負を行い、これに勝てば近接戦闘に持ち込めます。このとき片手が空いていれば、自動的に組み付く（相手の服や体の一部をつかむ）ことができます。近接戦闘は比較的攻撃が当たり易いので、膠着した戦いの最中に持ち込むのも有効かも知れません。</p>
+              <h4>近接戦闘中の行動</h4>
+              <h5>組み付き</h5>
+              <p>敵の身体の一部をつかむ動作を組み付きと呼びます。組み付きを行うには、少なくとも片手が空いてなくてはなりません。</p>
+              <p>判定には、AG(敏捷さ)-2、または「柔術」を用います。</p>
+              <h5>噛み付き・拳・蹴り</h5>
+              <p>人間の基本ダメージは、噛み付き(1d-4)、拳(1d-2)、蹴り(1d)です。</p>
+              <p>このうち、咬み付きは組み付いていることが条件、蹴りは組み付いていないことが条件になります。</p>
+              <p>判定には、ST(体力)-2、または「格闘」を用います。</p>
+              <h5>武器を奪う</h5>
+              <p>片手が空いていて、「柔術」勝負に勝てば、敵の武器の柄に組み付くことできます。</p>
+              <p>次のターンST勝負に勝てば、敵の武器を落とす（ダガーの場合）ことができます。その後、近接戦闘中に落ちている武器を拾うには、AG勝負で敵に勝たなくてはなりません。</p>
+              <p>もし、両手を用いているのであれば、落とすのではなく、直接奪うことができます。</p>
+              <h5>窒息</h5>
+              <p>両手が空いていて、「柔術」勝負に勝てば、敵の喉に組み付くことができます。</p>
+              <p>次のターンから、基本ダメージ2d（DR無視）の窒息ダメージを与えます。</p>
+              <h5>振りほどき</h5>
+              <p>自分の行動順でSTの勝負を行い、勝たなくてはなりません。</p>
+              <p>両手で組み付かれている場合は敵に+2の修正がありますが、両手で振りほどきを試みるなら自分にも+2の修正があります。</p>
+              <p>振りほどきに成功したターンは、攻撃など何か他の行動が取れます。</p>
+              <h5>倒し</h5>
+              <p>両手が空いていて、自分のST、AG、「柔術」のいずれかと、敵のSTで勝負を行い、勝てば敵を転倒させることができます。</p>
+              <p>続けて「押さえ込み」を行うなら、自分もいっしょに倒れます。</p>
+              <p>もし敵も自分に組み付いているなら、このときに振りほどけます。</p>
+              <h5>押さえ込み</h5>
+              <p>転倒している敵に対し、「倒し」と同様の勝負を行って勝てば、敵を押さえ込んで一切抵抗できないようにしてしまいます。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../03-04/" data-role="navigate" data-target="/docs/03-04/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../03-06/" data-role="navigate" data-target="/docs/03-06/">next <small>&gt;&gt;</small></a>
               </div>
-              <div class="pagination"> <a class="btn-prev float-left" href="../03-04/" data-role="navigate" data-target="/docs/03-04/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../03-06/" data-role="navigate" data-target="/docs/03-06/">next <small>&gt;&gt;</small></a> </div>
             </div>
           </section>
         </div>
@@ -170,7 +121,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

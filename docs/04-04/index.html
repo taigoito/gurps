@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
+</head>
+
+<body>
+  <noscript>
+    <p class="no-support">このWebページはJavaScriptを有効にすることで正常に動作します。
+      <br>JavaScriptを有効にして再度ご来訪ください。</p>
+  </noscript>
+  <script src="../../js/preloader.js"></script>
+  <script>
+    const preloader = new Preloader();
+  </script>
+  <header id="title">
+    <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
+  </header>
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
+        <h2>目次</h2>
+        <ol class="docs-nav" start="0">
+          <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
+          <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
+            <ol class="docs-nav__item collapsing">
+              <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
+              <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
+              <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
+            </ol>
+          </li>
+          <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
+            <ol class="docs-nav__item collapsing">
+              <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
+              <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
+              <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
+              <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
+              <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
+            </ol>
+          </li>
+          <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
+            <ol class="docs-nav__item collapsing">
+              <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
+              <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
+              <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
+              <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
+              <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
+            </ol>
+          </li>
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
+              <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
+              <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
+            </ol>
+          </li>
+          <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
+        </ol>
+      </nav>
+      <article class="document__article">
+        <div class="inner">
+          <h2>法術</h2>
+          <section class="document--section">
+            <div class="inner">
+              <h3>魔物</h3>
+              <h4>概要</h4>
+              <p>GURPS.QWELの冒険の世界における「法術」の存在は、私たちの世界の「科学」のような文明を形成するほど洗練されたものではなく、かつ生活の身近に普及しているものでもありません。</p>
+              <p>同様に、魔物の存在は、生態系に組み込まれた野生生物の延長ではなく、神や霊に近い畏怖の対象です。そういった意味では、私たちの世界と何ら変わりないとも言えます。</p>
+              <p>人間社会の文化・文明は、中世ヨーロッパの時代を踏襲します。つまり産業革命・大航海時代の以前であり、文明は未熟で、地上世界の全貌さえ分かっていません。</p>
+              <p>魔物は、人々の自然に対する畏怖が具現化されて発生する、と賢者達は考えますが、それが一般的に理解されている訳でもありません。</p>
+              <p>何らかの原因で物語の時代は魔物が溢れ始めており、それを食い止めていくことが、PC達の目的の1つになるでしょう。</p>
+              <h4>魔物の作成</h4>
+              <p>魔物は、ゲームを盛り上げるために（言い方は悪いですが）人間よりも扱いやすい「やられ役」だと思ってください。</p>
+              <p>人間以外の種族は、能力値という型で強さを測定するのが難しいので、設定が必要なのは以下の6項目です。</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>HP(ヒットポイント)</td>
+                    <td class="td--desc">ダメージに耐え得る基準値。</td>
+                  </tr>
+                  <tr>
+                    <td>Dmg(ダメージ)</td>
+                    <td class="td--desc">攻撃手段を想定した攻撃力。</td>
+                  </tr>
+                  <tr>
+                    <td>Lv(技能値)</td>
+                    <td class="td--desc">攻撃手段を想定した命中判定の目標値。</td>
+                  </tr>
+                  <tr>
+                    <td>EV(回避値)</td>
+                    <td class="td--desc">防御手段を想定した回避判定の目標値。</td>
+                  </tr>
+                  <tr>
+                    <td>RE(抵抗値)</td>
+                    <td class="td--desc">法術の抵抗値。</td>
+                  </tr>
+                  <tr>
+                    <td>Role(ロール)</td>
+                    <td class="td--desc">戦闘時の役割。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>例えばゴブリンのような頻繁に出くわす魔物の強さを設定するときは、HPや技能値に関してだけでも、ダイスを振ってある程度ランダムに決め、プレイヤーに強さが分からないようにすると良いでしょう。</p>
+              <p>人間や動物、妖魔は、止むを得ず戦いに至ることがあっても、基本的には威嚇であり、相手を殺そうとはしません。実際に、剣士（フェンサーロール）の人物は、よほどダイス運が良くない限り、致死的ダメージは与えられないことが多いのです。</p>
+              <p>逆に言うと、怨念で動く不死（アンデッド）の魔物などは、PCを殺すつもりで戦いを挑んでくるので、戦士（ウォーリアロール）を積極的に設定してください。</p>
+              <p>戦斧や鉾槍のような武器を持たせると、ダメージ判定に緊迫感が出ることと思います。</p>
+              <h5>ゴブリン</h5>
+              <p>最もポピュラーな魔物である「ゴブリン」は、母親が子供をしつけるときに、「悪い子だとゴブリンに連れていかれてしまうよ！」などと言ったときに、子供の怖れが具現化し、どこか近くの森にゴブリンを産み落とします。</p>
+              <p>森に棲み着いたゴブリンは繁殖し、勢力を拡大しますが、さほどの脅威ではありません。夜行性で狩猟採集の生活をしていて、時々、人間の集落から家畜や子供をさらっていく程度です。家畜は食べてしまうでしょうが、子供は無垢で怖れを知らなければ、ゴブリンが子供を殺してしまうことはありません。人間の子供をさらうのは興味本位なのです。</p>
+              <p>また光り物が好きで、ゴブリンの巣窟には、少しの金銀財宝が蓄えられていることもあります。
+              ゴブリンの強さは、10歳位の人間の子供と同程度（体力(ST)が10未満）です。ダガーやメイスなど原始的な武器を振るいますが、非力なので、攻撃が当たっても致命傷には至らないでしょう。</p>
+              <p>中には、弦で小石を発射するプロッドという武器、白虎術を扱うなど、何かの技能に長けた者も存在します。</p>
+              <h6>ゴブリンの強さ</h6>
+              <p>多くのRPGがそうであるように、ゴブリン退治は駆け出し冒険者（あるいはプレイヤー）にとって、手慣らしにちょうど良い仕事です。</p>
+              <p>下記表に従って作成すれば、駆け出しPCであっても、滅多に負けることは無いでしょう。</p>
+              <p>雑魚なので、一対多数の戦いなどを用意しておくと面白いかも知れません。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>出目</th>
+                    <th>役割</th>
+                    <th>ST</th>
+                    <th>DX</th>
+                    <th>AG</th>
+                    <th>IN</th>
+                    <th>WL</th>
+                    <th>攻撃方法 Dmg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>ダガー 1d (刺)</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>13</td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>ダガー 1d (刺)</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>メイス 2d (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>13</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>メイス 2d (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>剣士</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>11</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>ダガー 1d-1 (刺)</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>剣士</td>
+                    <td>9</td>
+                    <td>13</td>
+                    <td>11</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>ダガー 1d-1 (刺)</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>剣士</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>メイス 2d-1 (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>剣士</td>
+                    <td>9</td>
+                    <td>13</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>メイス 2d-1 (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>剣士</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>ショートソード 1d-1 (切)</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>剣士</td>
+                    <td>8</td>
+                    <td>13</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>ショートソード 1d-1 (切)</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>弓使い</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>プロッド 2d-1 (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>弓使い</td>
+                    <td>8</td>
+                    <td>13</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>プロッド 2d-1 (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>術士</td>
+                    <td>7</td>
+                    <td>12</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>スピア 1d-1 (刺)</td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>術士</td>
+                    <td>7</td>
+                    <td>13</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>8</td>
+                    <td>スピア 1d-1 (刺)</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>術士</td>
+                    <td>7</td>
+                    <td>12</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>スタッフ 1d (叩)</td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>術士</td>
+                    <td>7</td>
+                    <td>13</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>スタッフ 1d (叩)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="list-items">
+                <li>技能値は、DX(器用さ)に等しい。メイスは引き戻しに1ターンを要する。</li>
+                <li>防具は、出目が奇数なら革服と盾無し、偶数なら服と小盾の組み合わせ。</li>
+                <li>弓使いの場合、プロッドは小石の準備に2ターンを要し、さらに狙いを付けて発射する。</li>
+                <li>術士の場合、白虎術の使い手になる。</li>
+              </ul>
+              <h5>狼・熊</h5>
+              <p>山林に生息する野生動物ですが、ゴブリンが調教している場合もあります。</p>
+              <p>また空腹時や子連れと遭遇した場合にも、襲われる可能性が少なからずあります。</p>
+              <p>狼や熊は、近接戦闘で組み付き、牙で咬み付きます。ST(体力)とAG(敏捷性)を、ダイスを振って決めてください。</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>狼</td>
+                    <td>ST: 3d</td>
+                    <td>AG: 4d</td>
+                  </tr>
+                  <tr>
+                    <td>熊</td>
+                    <td>ST: 4d</td>
+                    <td>AG: 3d</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5>スカルウォーリア / スカルソーサラー</h5>
+              <p>戦場で散った兵士の怨霊が、白骨化した死体や武具に宿り、生者を見境なく襲ってくる魔物と化すことがあります。それが戦士であればスカルウォーリア、術士であればスカルソーサラーと呼ばれます。生前の武術や法術を駆使して戦います。</p>
+              <p>アンデッド（不死）と呼ばれる彼らは、かなり特殊な性質を持っています。</p>
+              <ul class="list-items">
+                <li>「切」や「刺」の武器で攻撃しても、ダメージ増加が無い。</li>
+                <li>精神力が異常に強い（抵抗値が高め）。</li>
+                <li>陽光で破壊される。陽光にさらされると、1ターンおきにHP(ヒットポイント)が1ずつ減じる。</li>
+              </ul>
+              <p>昼なお暗い森や沼地、古戦場、地下牢などで遭遇することがあるかも知れません。</p>
+              <h6>SKウォーリア / SKソーサラーの強さ</h6>
+              <p>下記表に従って作成すると、アンデッドの特性により、人間よりも手強い敵になります。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>出目</th>
+                    <th>役割</th>
+                    <th>HP</th>
+                    <th>攻撃方法 Dmg/Lv</th>
+                    <th>回避値</th>
+                    <th>抵抗値</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td>戦士</td>
+                    <td>12</td>
+                    <td>鉾槍 1d+2(刺)/16</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>戦士</td>
+                    <td>12</td>
+                    <td>長剣 2d-1(切)/16</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>戦士</td>
+                    <td>11</td>
+                    <td>戦斧 2d+1(切)/15</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>戦士</td>
+                    <td>11</td>
+                    <td>戦鎚 2d+2(叩)/15</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>剣士</td>
+                    <td>11</td>
+                    <td>手槍 1d+1(刺)/14</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>剣士</td>
+                    <td>11</td>
+                    <td>剣 1d+2(切)/14</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>手斧 2d(切)/13</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>槌鎚 2d(叩)/13</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>手槍 1d+1(刺)/13</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>剣士</td>
+                    <td>10</td>
+                    <td>剣 1d+2(切)/13</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>13, 14</td>
+                    <td>弓使い</td>
+                    <td>9</td>
+                    <td>弩 1d+2(刺)/14</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>15, 16</td>
+                    <td>術士</td>
+                    <td>9</td>
+                    <td>杖 1d(叩)/15</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                  <tr>
+                    <td>17, 18</td>
+                    <td>術士</td>
+                    <td>8</td>
+                    <td>杖 1d(叩)/16</td>
+                    <td>9</td>
+                    <td>16</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="list-items">
+                <li>防具は、戦士なら革鎧と中盾、剣士なら革服と小盾の組み合わせ。</li>
+                <li>弓使いの場合、弩の準備は2ターンを要し、さらに狙いを付けて発射する。</li>
+                <li>術士の場合、陰術の使い手になる。</li>
+              </ul>
+              <h5>グール / グーラ</h5>
+              <p>遺恨を残して死亡した人の思念が具現化されると、「グール（女性はグーラ）」と呼ばれる死肉を食い漁る魔物を発生させることがあります。</p>
+              <p>アンデッドの特性を持ち、鋭い爪や牙で近接戦闘を挑み、襲い掛かってきますが、その爪や牙には、何かしらの毒があると言われています。</p>
+              <p>グールは爪（格闘動作扱い）で攻撃してくる一方、グーラは組み付いた後、牙で咬み付いてきます。</p>
+              <p>ゲームとしては、プレイヤーが通常の戦闘に慣れてきた頃、近接戦闘の手慣らしとして出現させると良いでしょう。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>役割</th>
+                    <th>HP</th>
+                    <th>攻撃方法 Dmg/Lv</th>
+                    <th>回避値</th>
+                    <th>抵抗値</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>グール (戦士)</th>
+                    <th>2d+2</th>
+                    <th>爪 1d+1(切)/13</th>
+                    <th>11</th>
+                    <th>16</th>
+                  </tr>
+                  <tr>
+                    <th>グーラ (剣士)</th>
+                    <th>2d+2</th>
+                    <th>牙 1d(刺)/13</th>
+                    <th>11</th>
+                    <th>16</th>
+                  </tr>
+                </tbody>
+              </table>
+              <h5>スライム</h5>
+              <p>ゼリー状の半透明な物質で満たされ、中心に核を持つ単細胞の形態をした魔物です。弾力のある身体で、飛び跳ねて打撃したり、溶解液を吐出したりして攻撃します。</p>
+              <p>スライムは特性上、「切」や「刺」の武器で攻撃したときのダメージ増加分でしかダメージを与えることができません。</p>
+              <p>スライムはどのように発生するのかは不明ですが、特定の条件で大量に出現することもあります。分裂して増殖するという説もありますが、定かではありません。</p>
+              <p>以下に従って大きさ（強さ）を決めてください。</p>
+              <ul class="list-items">
+                <li>ST(体力)を2dないし3dを振って決める。これは固体の大きさも示す。</li>
+                <li>打撃の基本ダメージは 1d(刺) で、これにSTによるダメージ増加（減少）分を加える。</li>
+                <li>攻撃型が「刺」なのは、酸によるダメージ増加。</li>
+                <li>溶解液のダメージは 1d(刺) で、準備不要の射撃扱い。溶解液を吐くと、自身のSTが1減じる。</li>
+                <li>命中・回避の目標値は一律 10 。</li>
+              </ul>
+              <h5>異形</h5>
+              <p>牛頭の巨人「ミノタウロス」や、半人半馬「ケンタウロス」など、人間と異生物が同化して成り果てた姿の者を「異形」と呼びます。</p>
+              <p>どれだけ人間の知性が残っているかはそれぞれですが、手強い敵となるのは明らかです。</p>
+              <p>遺跡などで遭遇することもあるかも知れませんが、ほとんど伝説上の存在であり、冒険者も滅多に出会うことはありません。</p>
+              <p>異形は、数千年前に発祥しその後滅亡した古代人の超術文明で誕生したとか、アビス（魔界）からやってきたとか、色々な説があります。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../04-03/" data-role="navigate" data-target="/docs/04-03/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="/" data-role="navigate" data-target="/">Top</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </main>
+  <div id="cover-image"></div>
+  <div id="cover-gradient"></div>
+  <footer><small>&copy; 2020 QWEL</small></footer>
+  <script src="../../js/init.js" type="module"></script>
+</body>
+
+</html>

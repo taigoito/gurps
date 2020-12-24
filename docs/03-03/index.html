@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>部位狙い - GURPS.QWEL</title>
-  <meta name="description" content="上級戦闘 | 部位狙い | クリティカル">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,257 +20,232 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>上級戦闘</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
               <h3>部位狙い</h3>
-              <p>腕、足首、喉など、敵の特定の部位を狙うことを宣言できます。特定の部位を狙うと、いくぶん命中しにくくなるかわりに、有利な効果が生じる可能性があります。部位狙いは煩雑さを避けるため、記述されていない朦朧、転倒はありません。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    部位狙い表
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>部位</th>
-                      <th>修正</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>頭</td>
-                      <td>-3</td>
-                      <td>一度に最大HPの1/3以上のダメージで、自動的に朦朧状態に陥る。<br>
-                        1/2以上のダメージで、VT判定(「叩き」なら-1の修正)を行い、失敗すると気絶する。<br>
-                        （みね打ちや石突きなど、あえて攻撃型を「叩き」に変えて狙うことも可能。）</td>
-                    </tr>
-                    <tr>
-                      <td>耳</td>
-                      <td>-5</td>
-                      <td>2点以上のダメージで片耳を故障。</td>
-                    </tr>
-                    <tr>
-                      <td>目</td>
-                      <td>-7</td>
-                      <td>2点以上のダメージで片目を故障。</td>
-                    </tr>
-                    <tr>
-                      <td>腕</td>
-                      <td>-2</td>
-                      <td>一度に最大HPの1/2以上のダメージで、腕は故障。<br>
-                        1/2を超えるダメージは無視。</td>
-                    </tr>
-                    <tr>
-                      <td>手首</td>
-                      <td>-4</td>
-                      <td>一度に最大HPの1/3以上のダメージで、手首は故障。<br>
-                        1/3を超えるダメージは無視。</td>
-                    </tr>
-                    <tr>
-                      <td>脚</td>
-                      <td>-3</td>
-                      <td>一度に最大HPの1/2以上のダメージで、足は故障。<br>
-                        1/2を超えるダメージは無視。<br>
-                        小盾では「止め」できない。</td>
-                    </tr>
-                    <tr>
-                      <td>足首</td>
-                      <td>-5</td>
-                      <td>一度に最大HPの1/3以上のダメージで、足は故障。<br>
-                        1/3を超えるダメージは無視。<br>
-                        中盾では「止め」できない。</td>
-                    </tr>
-                    <tr>
-                      <td>肚</td>
-                      <td>-3</td>
-                      <td>DR(ダメージ抵抗)を抜けたダメージを、「叩き」なら1.5倍、「切り」なら2倍、「刺し」なら3倍にする。<br>
-                        一度に最大HPの1/2以上のダメージで、自動的に朦朧状態に陥り、転倒判定も行う。</td>
-                    </tr>
-                    <tr>
-                      <td>喉</td>
-                      <td>-5</td>
-                      <td>DR(ダメージ抵抗)を抜けたダメージを、「叩き」なら1.5倍、「切り」なら2倍、「刺し」なら3倍にする。<br>
-                        一度に最大HPの1/3以上のダメージで、自動的に朦朧状態に陥る。<br>
-                        1/2以上のダメージで、VT判定(「切り」か「刺し」なら-1の修正)を行い、失敗すると死亡する。</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover table-sm">
-                  <thead>
-                    <tr>
-                      <th>部位の故障</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>腕、手首の故障</td>
-                      <td>持っていた物は落とし、もはやその手で物を持つことはできない。<br>
-                        片手用武器を非利き手で扱たり、両手用武器を片手で扱うなら、技能値は-4の修正を受け、さらに後者は1ターン余分な引き戻しが必要になる。</td>
-                    </tr>
-                    <tr>
-                      <td>足、足首の故障</td>
-                      <td>地面に倒れ、杖のような物がなければ、もはや立ち上がることはできない。<br>
-                        技能値は-2、D-EV(よけ)は-1の修正を受ける(膝着きの姿勢と同じ)。</td>
-                    </tr>
-                    <tr>
-                      <td>耳の故障</td>
-                      <td>ほとんどの身体技能-1。</td>
-                    </tr>
-                    <tr>
-                      <td>目の故障</td>
-                      <td>ほとんどの身体技能-6。</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><small>※部位を故障した場合、戦闘後にVT判定を行い、これに成功すればその場で手当ののち回復するが、失敗すると、少なくともその冒険中には回復しない。失敗度が4以上だと、特殊な医療による処置を施さない限り、永久に回復しない！</small></p>
+              <p>腕、足首、喉など、敵の特定の部位を狙うことを宣言できます。</p>
+              <p>特定の部位を狙うと、いくぶん命中しにくくなるかわりに、有利な効果が生じる可能性があります。部位狙いは煩雑さを避けるため、記述されていない朦朧、転倒はありません。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>部位</th>
+                    <th>修正</th>
+                    <th class="th--desc">効果</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>頭</td>
+                    <td>-3</td>
+                    <td class="td--desc">一度に最大HPの1/3以上のダメージで、重い朦朧状態（転倒判定も行う）。
+                      <br>1/2以上のダメージで、ST判定(「叩」なら-2)を行い、失敗すると気絶する。
+                      <br>（みね打ちや石突きなど、攻撃型を「叩」に変えて狙うことも可能。）</td>
+                  </tr>
+                  <tr>
+                    <td>耳</td>
+                    <td>-5</td>
+                    <td class="td--desc">2点以上のダメージで片耳を故障。</td>
+                  </tr>
+                  <tr>
+                    <td>目</td>
+                    <td>-7</td>
+                    <td class="td--desc">2点以上のダメージで片目を故障。</td>
+                  </tr>
+                  <tr>
+                    <td>腕</td>
+                    <td>-2</td>
+                    <td class="td--desc">一度に最大HPの1/2以上のダメージで、腕は故障。</td>
+                  </tr>
+                  <tr>
+                    <td>手首 </td>
+                    <td>-4</td>
+                    <td class="td--desc">一度に最大HPの1/3以上のダメージで、手首は故障。</td>
+                  </tr>
+                  <tr>
+                    <td>脚</td>
+                    <td>-2</td>
+                    <td class="td--desc">一度に最大HPの1/2以上のダメージで、脚は故障。
+                      <br>小盾では「止め」できない。</td>
+                  </tr>
+                  <tr>
+                    <td>足首</td>
+                    <td>-4</td>
+                    <td class="td--desc">一度に最大HPの1/3以上のダメージで、足首は故障。
+                      <br>中盾では「止め」できない。</td>
+                  </tr>
+                  <tr>
+                    <td>肚</td>
+                    <td>-3</td>
+                    <td class="td--desc">DRを抜けたダメージを「叩」は1.5倍、「切」は2倍、「刺」は3倍。
+                      <br>一度に最大HPの1/2以上のダメージで、重い朦朧状態（転倒判定も行う）。</td>
+                  </tr>
+                  <tr>
+                    <td>喉</td>
+                    <td>-5</td>
+                    <td class="td--desc">DRを抜けたダメージを「叩」は1.5倍、「切」は2倍、「刺」は3倍。
+                      <br>一度に最大HPの1/3以上のダメージで、重い朦朧状態（転倒判定も行う）。
+                      <br>1/2以上のダメージで、ST判定(「切」か「刺」なら-2)を行い、失敗すると死亡する。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>部位の故障</h4>
+              <h5>腕、手首の故障</h5>
+              <p>持っていた物は落とし、もはやその手で物を持つことはできない。</p>
+              <p>片手用武器を非利き手で扱たり、両手用武器を片手で扱うなら、命中判定は-4の修正を受け、さらに後者は1ターン余分な引き戻しが必要になる。</p>
+              <h5>脚、足首の故障</h5>
+              <p>地面に倒れ、杖のような物がなければ、もはや立ち上がることはできない。</p>
+              <p>命中判定、回避判定ともに-2の修正を受ける(膝着きの姿勢と同じ)。</p>
+              <h5>耳の故障</h5>
+              <p>ほとんどの身体技能-1。</p>
+              <h5>目の故障</h5>
+              <p>ほとんどの身体技能-6。</p>
+              <h4>故障の期間</h4>
+              <p>部位の故障が治癒するまでの期間は、戦闘終了後に3dを振って決めます。</p>
+              <p>ダメージの大きさなどによって、GMは適宜に修正を課してください。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="th--head">出目</th>
+                    <th class="th--desc">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">3〜6</td>
+                    <td class="td--desc">処置をすれば数分間で治癒する。放置した場合は翌日また判定。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">7〜9</td>
+                    <td class="td--desc">処置をし、一晩安静にすれば治癒する。放置した場合は翌日また判定。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">10〜12</td>
+                    <td class="td--desc">数日間は処置をし続けなくてはならない。数日後にまた判定。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">13〜15</td>
+                    <td class="td--desc">数週間は処置をし続けなくてはならない。数週後にまた判定。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">16〜18</td>
+                    <td class="td--desc">もう治らない。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>クリティカル</h4>
+              <p>部位狙いを宣言しないで攻撃のクリティカルが発生したら、攻撃側が3dを振って下記表を参照します。敵が回避不能であることに加え、運良く敵の特定の部位に命中した可能性があります。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="th--head">出目</th>
+                    <th class="th--desc">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">3, 4</td>
+                    <td class="td--desc">DR無視。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">5</td>
+                    <td class="td--desc">手首に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">6</td>
+                    <td class="td--desc">腕に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">7</td>
+                    <td class="td--desc">喉に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">8</td>
+                    <td class="td--desc">頭に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">9〜12</td>
+                    <td class="td--desc">特殊効果無し。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">13</td>
+                    <td class="td--desc">頭に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">14</td>
+                    <td class="td--desc">肚に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">15</td>
+                    <td class="td--desc">脚に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">16</td>
+                    <td class="td--desc">足首に命中。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">17, 18</td>
+                    <td class="td--desc">DR無視。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination">
+                <a class="pagination__prev" href="../03-02/" data-role="navigate" data-target="/docs/03-02/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../03-04/" data-role="navigate" data-target="/docs/03-04/">next <small>&gt;&gt;</small></a>
               </div>
-              <h3>クリティカル</h3>
-              <p>部位狙いを宣言しないで攻撃のクリティカルが発生したら、攻撃側が3dを振って〈クリティカル表〉を参照します。敵の回避判定、ダメージ抵抗を無視する効果に加え、運良く敵の特定の部位に命中した可能性があります。</p>
-              <p>なお、クリティカルでは、ダメージダイスを振って0以下を算出しても、必ず1点（「刺し」ならダメージ変化を加えて2点）はダメージを与えます。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    クリティカル表
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>出目</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>3</td>
-                      <td>目に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>耳に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>頭に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td>手首に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>腕に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>8</td>
-                      <td>敵は武器を落とす。</td>
-                    </tr>
-                    <tr>
-                      <td>9～12</td>
-                      <td>特殊効果無し。</td>
-                    </tr>
-                    <tr>
-                      <td>13</td>
-                      <td>敵は転倒する。</td>
-                    </tr>
-                    <tr>
-                      <td>14</td>
-                      <td>脚に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>15</td>
-                      <td>足首に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>16</td>
-                      <td>肚に命中。</td>
-                    </tr>
-                    <tr>
-                      <td>17, 18</td>
-                      <td>喉に命中。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="pagination"> <a class="btn-prev float-left" href="../03-02/" data-role="navigate" data-target="/docs/03-02/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../03-04/" data-role="navigate" data-target="/docs/03-04/">next <small>&gt;&gt;</small></a> </div>
             </div>
           </section>
         </div>
@@ -278,7 +254,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

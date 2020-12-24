@@ -1,0 +1,59 @@
+/* Layout Docs
+------------------------------*/
+
+.document {
+  @include container();
+
+  &>.inner {
+    @include row();
+  }
+
+  &__navigation {
+    @include col("lg", 1);
+  }
+
+  &__article {
+    @include col("lg", 2);
+  }
+}
+
+.docs-nav {
+  list-style-type: upper-roman;
+  padding-left: 2rem;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  font-size: 1.17rem;
+
+  &>li:first-child,
+  &>li:last-child {
+    list-style-type: none;
+  }
+
+  &__item {
+    list-style-type: lower-roman;
+    margin-left: -1.5rem;
+    margin-bottom: .25rem;
+    padding-left: 3rem;
+    font-size: 1rem;
+    
+    &>li:first-child {
+      margin-top: .5rem;
+    }
+  }
+}
+
+.pagination {
+  @include clearfix();
+  margin: 1.5rem auto;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  letter-spacing: $small-letter-spacing;
+
+  &__prev {
+    float: left;
+  }
+
+  &__next {
+    float: right;
+  }
+}

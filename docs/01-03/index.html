@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>技能 - GURPS.QWEL</title>
-  <meta name="description" content="新しい技能一覧 | 戦闘能力値の算出">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,461 +20,281 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>キャラクター</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
-              <h3>技能</h3>
-              <h4>技能</h4>
-              <p>技能とは、「武術」、「鑑定」など、冒険を行う上で役に立つ、様々な経験・知識のことです。</p>
+              <h3>技能（スキル）</h3>
+              <p>技能とは「武術」、「鑑定」のような、冒険を行う上で役に立つ、人物の心得ている様々な経験・知識のことです。</p>
               <p>それぞれの技能には、より多くのCPを消費することで、その腕前・技量を表す「技能値」を上昇させることができます。技能値は、消費CPと、技能に関連する能力値によって決まります(下記表)。</p>
-              <p>技能は普通、ゲームが始まってから獲得するCP(経験点)によって熟練させていくものですから、総計10CPのキャラクターを作成する場合、技能には計1～3CP程度を振り分けるのが妥当と言えるでしょう。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="th--head">消費CP</th>
+                    <th class="th--desc">技能値</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">0</td>
+                    <td class="td--desc">基準能力値-2(技能無し)</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">1/2CP</td>
+                    <td class="td--desc">基準能力値-1</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">1CP</td>
+                    <td class="td--desc">基準能力値</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">2CP</td>
+                    <td class="td--desc">基準能力値+1</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">4CP</td>
+                    <td class="td--desc">基準能力値+2</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">8CP</td>
+                    <td class="td--desc">基準能力値+3</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">以降</td>
+                    <td class="td--desc">+8CPごとに+1</td>
+                  </tr>
+              </table>
+              <h4>主技能（メジャースキル）</h4>
+              <p>このゲームには、冒険（戦い）でいずれか必ず必要となる4つの技能を「主技能（メジャースキル）」、それ以外を「副技能（マイナースキル）」と呼び分けますが、技能の行使や修得のルール上は、特に区別する必要ありません。</p>
+              <p>技能は普通、ゲームが始まってから獲得するCP(経験点)で熟練していくものですから、総計10CPの人物作成の時点では、主技能に1～2CP程度を振り分ければ良いでしょう。</p>
+              <p>なお、敵と戦うには、主技能の技能値が12は欲しいところです。</p>
+              <p>以後、技能は「」付きで表記し、それをその技能の技能値を示すものとします。例えば「武術」と表記した場合、「武術」の技能値を示します。「武術」判定と表記した場合、「武術」の技能値で判定を行う、という意味になります。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>技能</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>武術</td>
+                    <td class="td--desc">戦斧・鉾槍・プレイトメイルなど、重装備で戦う技能。</td>
+                  </tr>
+                  <tr>
+                    <td>剣術</td>
+                    <td class="td--desc">剣・小盾・革鎧など、軽装備で戦う技能。</td>
+                  </tr>
+                  <tr>
+                    <td>弓術</td>
+                    <td class="td--desc">戦闘用の大型の弓矢で狙撃する技能。</td>
+                  </tr>
+                  <tr>
+                    <td>法術</td>
+                    <td class="td--desc">法術（魔法のようなもの）を扱う技能。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5>ロールと成長</h5>
+              <p>主技能に対して冒険でGMから経験点を付与されるためには、冒険のミッション（使命）ごとに、PCは自分のロール（役割）を予め宣言しておかなくてはなりません。</p>
+              <p>ロールは技能と対応する、ウォーリアロール（戦士:武術）、フェンサーロール（剣士:剣術）、スナイパーロール（弓使い:弓術）、ソーサラーロール（術士:法術）の4つのうちから選択します。</p>
+              <p>なお、ロールは、PC達の間で上記の順で、「危険を引き受ける順序」でもありますので、心得ておいてください。</p>
+              <p>ミッション達成によって付与される経験点は、普通1〜2点で、冒険に参加したPC全員に均等に付与します。さらにボーナスとして、</p>
+              <ul class="list-items">
+                <li>プレイヤーが優れた演技をした</li>
+                <li>賢明な行動を取った</li>
+              </ul>
+              <p>という行為も評価され、GMから次節に記載する副技能に対する経験点も付与されることがあります。</p>
+              <h4>副技能（マイナースキル）</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>技能</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+               <tbody>
+                 <tr>
+                   <td>怪力 (ST)</td>
+                   <td class="td--desc">力を振り絞って自身の体重より重たい物を持ち上げたり、動かしたりします。<br>人物の基本ダメージ(Dmg)の算出に関係します。</td>
+                 </tr>
+                 <tr>
+                   <td>格闘 (ST)</td>
+                   <td class="td--desc">拳と蹴りで戦います。囚われて武器を奪われたときに役に立つでしょう。<br>この技能をわずかでも取得していること、ないし技能値が15以上であることによって、拳と蹴りのダメージが+1、+2されます。</td>
+                 </tr>
+                 <tr>
+                   <td>柔術 (DX)</td>
+                   <td class="td--desc">素手で敵を押さえ込み、無力にします。<br>「格闘」と異なり、直接的なダメージを与えることはできません。<br>囚われて武器を奪われたときや、敵を無傷で捕えたいときに役に立つでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>探索 (DX)</td>
+                   <td class="td--desc">特定の範囲を特定の目的で調べ、目的の物品や何らかの痕跡などを探し出します。<br>冒険に赴くならばどのような人物でも、優先的に取得すべき技能の一つです。</td>
+                 </tr>
+                 <tr>
+                   <td>細工 (DX)</td>
+                   <td class="td--desc">機械の仕組みを理解し、修理したり、故障させたりします。罠や錠前の解除に役立ちます。<br>盗賊の必須技能の一つです。</td>
+                 </tr>
+                 <tr>
+                   <td>早業 (DX)</td>
+                   <td class="td--desc">相手に察知されないよう素早く手先を動かします。スリや手品に役立ちます。<br>盗賊の必須技能の一つです。</td>
+                 </tr>
+                 <tr>
+                   <td>技術 (DX)</td>
+                   <td class="td--desc">鍛冶、大工、調理、屠殺など、様々な職業の専門技術です。<br>この項目は、複数の技能をひとつの項目にまとめたものです。具体的に技能の内容を絞ってください。冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>演奏 (DX)</td>
+                   <td class="td--desc">音楽で聴衆を感心させます。<br>冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>運動 (AG)</td>
+                   <td class="td--desc">登攀、騎乗、水泳、ボート漕ぎの4種の運動と、戦闘において攻撃を回避したり、危険を察知して反応したりする能力です。人物のよけ(DEV)の算出に関係します。<br>冒険に赴くならばどのような人物でも、優先的に取得すべき技能の一つです。</td>
+                 </tr>
+                 <tr>
+                   <td>隠密 (AG)</td>
+                   <td class="td--desc">忍び足、聞き耳、尾行、潜伏などを行ったり、それを察知したりします。<br>盗賊の必須技能の一つです。</td>
+                 </tr>
+                 <tr>
+                   <td>軽業 (AG)</td>
+                   <td class="td--desc">綱渡り、空中ブランコ、高所からの着地などを試みます。逃走や追跡に役立ちます。<br>盗賊の必須技能の一つです。</td>
+                 </tr>
+                 <tr>
+                   <td>舞踏 (AG)</td>
+                   <td class="td--desc">踊りで観衆を感心させます。<br>冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>鑑定 (IN)</td>
+                   <td class="td--desc">物品の用途、性質、素材、製法、価値などに関する知識を示します。<br>幅広く使える技能ですが、対象は手に取れる大きさの物品に限り、建築物や構造物は別技能「知識」を用います。<br>同様に、素材として以外の動植物の知識や、文化的意味や価値に関する知識は含みません。</td>
+                 </tr>
+                 <tr>
+                   <td>治癒 (IN)</td>
+                   <td class="td--desc">薬草術を基盤とした、怪我や病気の治療を施します。<br>薬草そのものの栽培や採取に関する幅広い知識も含むため、化学や生物の知識を示すこともできます。</td>
+                 </tr>
+                 <tr>
+                   <td>歴史 (IN)</td>
+                   <td class="td--desc">地域の歴史や文化に関する幅広い知識を示します。<br>政治家や文化人などに関する時事情報、民話や神話などの伝承知識なども含みます。</td>
+                 </tr>
+                 <tr>
+                   <td>知識 (IN)</td>
+                   <td class="td--desc">法律、戦術、工学、天文学など、様々な職業の専門知識です。<br>この項目は、複数の技能をひとつの項目にまとめたものです。具体的に技能の内容を絞ってください。冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>礼法 (IN)</td>
+                   <td class="td--desc">領主、騎士、商人など、一定の権力を持つ階級を相手に、態度や振る舞いによって、好印象を与えます。<br>「援護要請」の型で反応判定を行えます。</td>
+                 </tr>
+                 <tr>
+                   <td>説得 (IN)</td>
+                   <td class="td--desc">対話の筋道を立て、相手の利益を明確に説明し、同意を得ます。<br>反応判定の際、この技能で代行して成功すれば、反応は「良い」になります。失敗しても、反応は悪くなりませんが、プレイヤーがきちんと論理を組み立てられなくてはなりません。</td>
+                 </tr>
+                 <tr>
+                   <td>商人 (IN)</td>
+                   <td class="td--desc">仕入先や販売先を開拓し、利益の得られる取引を行います。<br>鋭敏な金銭感覚を示す技能でもあります。<br>「通商」の型で反応判定を行えます。</td>
+                 </tr>
+                 <tr>
+                   <td>交渉 (IN)</td>
+                   <td class="td--desc">商人、情報屋、犯罪組織など、日常では接触し得ない人物を探し出します。<br>「情報収集」の型で反応判定を行えます。<br>Lawの人物はこの技能を修得できません!</td>
+                 </tr>
+                 <tr>
+                   <td>尋問 (IN)</td>
+                   <td class="td--desc">ゆすりや脅しによって、相手に正しい情報を吐き出させます。<br>「敵対反応」の型で反応判定を行えます。<br>ただし尋問の駆け引きは、なるべくPCとGMの対話によって行った方が、ゲームとして盛り上がるでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>演技 (IN)</td>
+                   <td class="td--desc">誇張して物事を話し、相手を言いくるめます。<br>反応判定の際、この技能で代行して成功すれば、反応は「良い」になりますが、失敗すれば「悪い」になります。</td>
+                 </tr>
+                 <tr>
+                   <td>言語 (WL)</td>
+                   <td class="td--desc">異邦の言語を話したり、読み書きしたりします。<br>言語に関するルールは、本ルールで厳密に定めていません。言語は共通で1つの技能とし、この技能値が高ければ複数の言語を話せるということにしても良いでしょう。</td>
+                 </tr>
+                 <tr>
+                   <td>歌唱 (WL)</td>
+                   <td class="td--desc">歌で聴衆を感心させます。<br>冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
+                 </tr>
+               </tbody>
+              </table>
               <p>本ルールの特徴として、1つの技能に複数の用途があったりしますので、注意してください。例えば、「運動」は、登攀、騎乗、水泳、ボート漕ぎの4種の運動の他、戦闘において攻撃を回避したり、危険を察知して反応したりする能力までも含まれます。これは、せっかくCPを消費して修得した技能を、なるべく冒険に役立てて欲しいという配慮です。</p>
-              <p>他方、多くのRPGでIN(知力)に割り当てられる「知覚」に関する能力は、能動的なものはDX(器用さ)、受動的なものはAG(素早さ)に割り当てられます。これは教養に優れる人物よりも、運動に優れる人物の方が、何かを発見したり、察知したりする能力に長けていると本ルールでは考えるためです。</p>
-              <p>どの技能を修得させたらよいか分からない場合、出自表を参考にして下さい。敵と戦うには、戦いに用いる技能値が12は欲しいところです。</p>
-              <p>以後、技能は「」付きで表記し、それをその技能の技能値を示すものとします。例えば「武術」と表記した場合、「武術」の技能値を示します。「武術」判定と表記した場合は、「武術」の技能値で判定を行う、という意味になります。</p>
-              <p>能力値、技能が決まったら、戦闘能力値を算出して下さい。</p>
-              <div class="row">
-                <div class="col-lg-12 table-responsive-lg">
-                  <table class="table table-hover">
-                    <caption>
-                      戦闘能力値の算出
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>戦闘能力値</th>
-                        <th>説明</th>
-                        <th>計算式</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Dmg(ダメージ)</td>
-                        <td>攻撃力を表します。</td>
-                        <td>Dmg = 「怪力」<small>(またはST(腕力)-2)</small> / 2 - 5<small>(0や負の値をとることもあります。)</small></td>
-                      </tr>
-                      <tr>
-                        <td>D-EV(よけ)</td>
-                        <td>回避率を表します。</td>
-                        <td>D-EV = 「運動」<small>(またはAG(素早さ)-2)</small> / 2 + 5</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-lg-5 table-responsive-lg">
-                  <table class="table table-hover">
-                    <caption>
-                      CPと技能値の関係表
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>消費CP</th>
-                        <th>技能値</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>0</td>
-                        <td>基準能力値-2(技能無し)</td>
-                      </tr>
-                      <tr>
-                        <td>1/2CP</td>
-                        <td>基準能力値-1</td>
-                      </tr>
-                      <tr>
-                        <td>1CP</td>
-                        <td>基準能力値</td>
-                      </tr>
-                      <tr>
-                        <td>2CP</td>
-                        <td>基準能力値+1</td>
-                      </tr>
-                      <tr>
-                        <td>4CP</td>
-                        <td>基準能力値+2</td>
-                      </tr>
-                      <tr>
-                        <td>8CP</td>
-                        <td>基準能力値+3</td>
-                      </tr>
-                      <tr>
-                        <td>16CP</td>
-                        <td>基準能力値+4</td>
-                      </tr>
-                      <tr>
-                        <td>以後+8CPごとに</td>
-                        <td>+1</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-lg-7 table-responsive-lg">
-                  <table class="table table-hover">
-                    <caption>
-                      出自表
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>出自</th>
-                        <th>推奨技能</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>狩人</td>
-                        <td>剣術または弓術、探索、生存、技術、運動、治癒</td>
-                      </tr>
-                      <tr>
-                        <td>学者</td>
-                        <td>鑑定、治癒、歴史、言語、知識、研究</td>
-                      </tr>
-                      <tr>
-                        <td>貴族</td>
-                        <td>武術、運動、礼儀作法、説得、尋問、趣味（演奏、舞踏、歌唱のうち1つ）</td>
-                      </tr>
-                      <tr>
-                        <td>傭兵</td>
-                        <td>武術、怪力、生存、運動、隠密、持久走</td>
-                      </tr>
-                      <tr>
-                        <td>商人</td>
-                        <td>細工、技術、鑑定、歴史、言語、商人</td>
-                      </tr>
-                      <tr>
-                        <td>悪党</td>
-                        <td>格闘または柔術、早業、隠密、軽業、演技、交渉</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="col-lg-12 table-responsive-lg">
-                  <table class="table table-hover">
-                    <caption>
-                      技能一覧
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>技能</th>
-                        <th>基準能力値</th>
-                        <th>説明</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>武術</td>
-                        <td>ST(腕力)</td>
-                        <td>戦斧や鉾槍など打撃力のある白兵武器を扱います。 <br>
-                          傭兵や騎士など戦いを生業とする者にとって最も重要な技能です。</td>
-                      </tr>
-                      <tr>
-                        <td>怪力</td>
-                        <td>ST(腕力)</td>
-                        <td>力を振り絞って、自分の体重より重たい物を押したり、持ち上げたりします。 <br>
-                          この技能値の半分から5を引いた値がDmg(ダメージ)となります。</td>
-                      </tr>
-                      <tr>
-                        <td>剣術</td>
-                        <td>DX(器用さ)</td>
-                        <td>剣や狩猟用の弓をはじめとする携帯用の武器を扱います。 <br>
-                          「武術」に比べ、扱える武器・防具が軽量なものに制限されます。 <br>
-                          DX(器用さ)を基準能力値とするため、盗賊や冒険家のような人物にとって「武術」に代わり修得し易い技能です。</td>
-                      </tr>
-                      <tr>
-                        <td>弓術</td>
-                        <td>DX(器用さ)</td>
-                        <td>戦闘用の弓（長弓）を扱います。 <br>
-                          史実に基づき、弓を専門とする人物は必須と言えるほどに、強力な武器です。</td>
-                      </tr>
-                      <tr>
-                        <td>探索</td>
-                        <td>DX(器用さ)</td>
-                        <td>特定の範囲内を、特定の目的で調べて、目的の物品や何らかの痕跡などを探し出します。 <br>
-                          冒険に赴くならばどのような人物でも、優先的に取得すべき技能の一つです。</td>
-                      </tr>
-                      <tr>
-                        <td>細工</td>
-                        <td>DX(器用さ)</td>
-                        <td>機械や装置の仕組みを理解し、修理したり、故障させたりします。 <br>
-                          罠など仕掛けを設置、解除したり、錠前を解除したりすることができるでしょう。 <br>
-                          盗賊の必須技能の一つです。</td>
-                      </tr>
-                      <tr>
-                        <td>早業</td>
-                        <td>DX(器用さ)</td>
-                        <td>相手に察知されないよう素早く手先を動かします。 <br>
-                          スリや手品に用いることができるでしょう。 <br>
-                          盗賊の必須技能の一つです。</td>
-                      </tr>
-                      <tr>
-                        <td>生存</td>
-                        <td>DX(器用さ)</td>
-                        <td>自然物あるいは街の廃棄物から、食糧を採集したり、簡易な道具を作り出します。 <br>
-                          この技能に長けていれば、金銭に頼らずどこでも生き延びることができるかも知れません。</td>
-                      </tr>
-                      <tr>
-                        <td>技術</td>
-                        <td>DX(器用さ)</td>
-                        <td>鍛冶、大工、調理、屠殺など、様々な職業の専門技術です。 <br>
-                          この項目は、複数の技能をひとつの項目にまとめたものです。具体的に技能の内容を絞ってください。 <br>
-                          冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>演奏</td>
-                        <td>DX(器用さ)</td>
-                        <td>音楽で聴衆を感心させます。 <br>
-                          冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>格闘</td>
-                        <td>AG(素早さ)</td>
-                        <td>拳や蹴りで戦います。 <br>
-                          技能値が高くなると拳や蹴りのダメージが増加する特典が得られます（装備の項を参照）。 <br>
-                          熟練しなければ、武器を構えた敵と戦うのは困難ですが、囚われて武器を奪われたときに役に立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>柔術</td>
-                        <td>AG(素早さ)</td>
-                        <td>素手で敵を押さえ込み、無力にします。 <br>
-                          「格闘」と異なり、直接的なダメージを与えることはできません。 <br>
-                          やはり囚われて武器を奪われたときや、敵を無傷で捕えたいときに役に立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>運動</td>
-                        <td>AG(素早さ)</td>
-                        <td>登攀、騎乗、水泳、ボート漕ぎの4種の運動と、戦闘において攻撃を回避したり、危険を察知して反応したりする能力です。 <br>
-                          この技能値の半分に5を足した値がD-EV(よけ)となります。 <br>
-                          冒険に赴くならばどのような人物でも、優先的に取得すべき技能の一つです。</td>
-                      </tr>
-                      <tr>
-                        <td>隠密</td>
-                        <td>AG(素早さ)</td>
-                        <td>忍び足、聞き耳、尾行、潜伏などを行ったり、それを察知したりします。 <br>
-                          相手に察知されたことを察知する判定も行います。 <br>
-                          盗賊の必須技能の一つです。</td>
-                      </tr>
-                      <tr>
-                        <td>軽業</td>
-                        <td>AG(素早さ)</td>
-                        <td>綱渡り、空中ブランコ、高所からの着地などを試みます。 <br>
-                          逃走や追跡に役立つだけでなく、上級戦闘ルールでは、高確率で成功する「よけ」を行うことができます。 <br>
-                          盗賊の必須技能の一つです。</td>
-                      </tr>
-                      <tr>
-                        <td>舞踏</td>
-                        <td>AG(素早さ)</td>
-                        <td>踊りで観衆を感心させます。 <br>
-                          冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>持久走</td>
-                        <td>VT(活力)</td>
-                        <td>長い距離を走ったり、持続的な負荷に耐えます。 <br>
-                          上級戦闘ルールでは、戦いが長引いた場合に、D-EV(よけ)への不利な修正を受けなくなります。</td>
-                      </tr>
-                      <tr>
-                        <td>歌唱</td>
-                        <td>VT(活力)</td>
-                        <td>歌で聴衆を感心させます。 <br>
-                          冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>蒼龍術</td>
-                        <td>IN(知力)</td>
-                        <td>風や樹を司る、蒼龍術を修得し、行使します。</td>
-                      </tr>
-                      <tr>
-                        <td>朱鳥術</td>
-                        <td>IN(知力)</td>
-                        <td>炎や生命を司る、朱鳥術を修得し、行使します。</td>
-                      </tr>
-                      <tr>
-                        <td>白虎術</td>
-                        <td>IN(知力)</td>
-                        <td>石や獣を司る、白虎術を修得し、行使します。</td>
-                      </tr>
-                      <tr>
-                        <td>玄武術</td>
-                        <td>IN(知力)</td>
-                        <td>水や時を司る、玄武術を修得し、行使します。</td>
-                      </tr>
-                      <tr>
-                        <td>陽術</td>
-                        <td>IN(知力)</td>
-                        <td>陽光や空間を司る、陽術を修得し、行使します。</td>
-                      </tr>
-                      <tr>
-                        <td>陰術</td>
-                        <td>IN(知力)</td>
-                        <td>月光や精神を司る、陰術を修得し、行使します。</td>
-                      </tr>
-                      <tr>
-                        <td>鑑定</td>
-                        <td>IN(知力)</td>
-                        <td>物品の用途、性質、素材、製法、価値などに関する知識を示します。 <br>
-                          幅広く使える技能ですが、対象は手に取れる大きさの物品に限り、建築物や構造物は別技能「知識」を用います。 <br>
-                          同様に、素材として以外の動植物の知識や、文化的意味や価値に関する知識は含みません。</td>
-                      </tr>
-                      <tr>
-                        <td>治癒</td>
-                        <td>IN(知力)</td>
-                        <td>主に薬草術を基盤とした、怪我や病気の治療を施します。 <br>
-                          この技能は、薬草そのものの栽培や採取に関する幅広い知識も含むため、化学や生物の知識を示すこともできます。 </td>
-                      </tr>
-                      <tr>
-                        <td>歴史</td>
-                        <td>IN(知力)</td>
-                        <td>地域の歴史や文化に関する幅広い知識を示します。 <br>
-                          政治家や文化人などに関する時事情報、民話や神話などの伝承知識なども含みます。</td>
-                      </tr>
-                      <tr>
-                        <td>言語</td>
-                        <td>IN(知力)</td>
-                        <td>異邦の言語を話したり、読み書きしたりします。 <br>
-                          言語に関するルールは、本ルールでは厳密に定めていません。 <br>
-                          言語は共通で1つの技能であり、この技能値が高ければ複数の異邦語を話せるということにしても良いでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>知識</td>
-                        <td>IN(知力)</td>
-                        <td>法律、戦術、工学、天文学など、様々な職業の専門知識です。 <br>
-                          この項目は、複数の技能をひとつの項目にまとめたものです。具体的に技能の内容を絞ってください。 <br>
-                          冒険で役に立つことは稀かも知れませんが、人物の個性が引き立つでしょう。</td>
-                      </tr>
-                      <tr>
-                        <td>研究</td>
-                        <td>IN(知力)</td>
-                        <td>実験、観察、調査などによって、未知の物事を追求します。 <br>
-                          図書館や研究施設などでGMが定めた期間、研究に専念すれば、失敗したIN判定をやり直すことができます。</td>
-                      </tr>
-                      <tr>
-                        <td>礼儀作法</td>
-                        <td>CM(魅力)</td>
-                        <td>態度や振る舞いによって、相手に好印象を与えます。 <br>
-                          状況によっては「援護要請」において、反応判定を代行できます。</td>
-                      </tr>
-                      <tr>
-                        <td>説得</td>
-                        <td>CM(魅力)</td>
-                        <td>物事を明快に説明し、相手を説き伏せて同意を得ます。 <br>
-                          状況によっては反応判定においてこの技能を試みて成功すれば、反応は「良い」になります。失敗しても、反応は悪くなりませんが、プレイヤーがきちんと論理を組み立てられなくてはなりません。</td>
-                      </tr>
-                      <tr>
-                        <td>演技</td>
-                        <td>CM(魅力)</td>
-                        <td>誇張して物事を話したり、嘘をついたりします。 <br>
-                          状況によっては反応判定においてこの技能を試みて成功すれば、反応は「良い」になりますが、失敗すれば「悪い」になります。</td>
-                      </tr>
-                      <tr>
-                        <td>商人</td>
-                        <td>CM(魅力)</td>
-                        <td>仕入先や販売先を開拓し、利益の得られる取引を行います。 <br>
-                          状況によっては「通商」において、反応判定を代行できます。</td>
-                      </tr>
-                      <tr>
-                        <td>交渉</td>
-                        <td>CM(魅力)</td>
-                        <td>有用な商人、情報屋、秘密組織などを探し出します。 <br>
-                          状況によっては「情報屋」において、反応判定を代行できます。</td>
-                      </tr>
-                      <tr>
-                        <td>尋問</td>
-                        <td>CM(魅力)</td>
-                        <td>ゆすりや脅しによって、相手に正しい情報を吐き出させます。 <br>
-                          状況によっては「敵対反応」において、反応判定を代行できます。 <br>
-                          ただし尋問の駆け引きは、なるべくPCとGMの対話によって行った方が、ゲームとして盛り上がるでしょう。</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <p>また、多くのRPGで知力などに割り当てられる「知覚」に関する能力は、能動的なものはDX(器用さ)、受動的なものはAG(素早さ)に割り当てられます。これは知性に優れる人物よりも、運動に優れる人物の方が、何かを発見したり、察知したりする能力に長けていると本ルールでは考えるためです。</p>
+              <h4>冒険前経験</h4>
+              <p>キャラクター作成は、初めて冒険に旅立つ20歳位の人物を作るのが前提です。冒険家としての経験を積む前に、何かしらの職業に数年以上就いていたという設定にする場合、最初からある程度の経験点を与えても良いでしょう。そのようなディテールを明確にするなら、年齢の半分位を初期CPとしてください。ただし、10CPを超える持ち点は、経験点として必ず技能に消費してください。</p>              
+              <h4>戦闘能力値の算出</h4>
+              <p>能力値と技能が決定したら、以下の戦闘に関係する値を算出しておいてください。</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th class="th--desc">Dmg(ダメージ)</th>
+                    <td class="th--desc">{ ST(体力) - 2 } または「怪力」 / 2 (端数切捨) - 5</td>
+                  </tr>
+                  <tr>
+                    <th class="th--desc">DEV(よけ)</th>
+                    <td class="td--desc">{ AG(敏捷さ) - 2 } または「運動」 / 2 (端数切捨) + 5</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination">
+                <a class="pagination__prev" href="../01-02/" data-role="navigate" data-target="/docs/01-02/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../01-04/" data-role="navigate" data-target="/docs/01-04/">next <small>&gt;&gt;</small></a>
               </div>
-              <div class="pagination"> <a class="btn-prev float-left" href="../01-02/" data-role="navigate" data-target="/docs/01-02/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../01-04/" data-role="navigate" data-target="/docs/01-04/">next <small>&gt;&gt;</small></a> </div>
             </div>
           </section>
         </div>
       </article>
     </div>
   </main>
-  </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

@@ -1,0 +1,700 @@
+@charset "UTF-8";
+/*
+ * Author: Taigo Ito
+ * Site: https://qwel.design
+ * Twitter: @taigoito
+ * Location: Fukui, Japan
+ */
+/* Foundation
+ * Normalize.css v8.0 | MIT License | github.com/necolas/normalize.css
+------------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+}
+
+@media (max-width: 575px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  color: #d9d9d9;
+  font-family: "游ゴシック", YuGothic, "ヒラギノゴシック ProN W3", "Hiragino Gothic ProN", Roboto, "Droid Sans", "メイリオ", Meiryo, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.15;
+  letter-spacing: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", Roboto, "Droid Sans", "メイリオ", Meiryo, serif;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+ol li, ul li {
+  margin-bottom: .5rem;
+}
+
+blockquote {
+  margin-left: 1rem;
+  padding-left: .75rem;
+  border-left: 0.25rem solid #d9d9d9;
+}
+
+blockquote p, blockquote cite {
+  font-style: italic;
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+}
+
+a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 0;
+}
+
+a:hover {
+  color: #999966;
+  text-decoration: none;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption {
+  color: #4d4d4d;
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: 500;
+  text-align: left;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Layout Title
+------------------------------*/
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 576px;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+#title {
+  position: relative;
+  z-index: 1000;
+  height: 144px;
+  margin-bottom: .5rem;
+  border-bottom: 2px solid #e6e6e6;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+h1 {
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 21rem;
+  font-size: 3rem;
+  line-height: 2rem;
+  text-align: center;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+h1 span {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    left: 12.5%;
+  }
+}
+
+.entrance #title {
+  height: 50vh;
+}
+
+.entrance h1 {
+  left: 50%;
+  margin-left: -10.5rem;
+}
+
+.main-menu {
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.main-menu__item {
+  list-style-type: none;
+  display: inline;
+}
+
+.main-menu__item:not(:first-child)::before {
+  content: "/";
+  margin-right: .65em;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.15rem;
+  padding-left: 0.65rem;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #e6e6e6;
+  line-height: 1;
+}
+
+h3 {
+  padding-left: .65rem;
+  border-left: 0.35rem solid #e6e6e6;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-top: 1.75rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h4::before {
+  content: "- ";
+  vertical-align: 8%;
+}
+
+h5, h6 {
+  font-family: "游ゴシック", YuGothic, "ヒラギノゴシック ProN W3", "Hiragino Gothic ProN", Roboto, "Droid Sans", "メイリオ", Meiryo, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: .25rem;
+  text-align: justify;
+  text-indent: .65em;
+}
+
+.list-items {
+  margin: 1rem auto;
+}
+
+.list-items li {
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+}
+
+.table {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.table tr {
+  border-top: 1px solid #b3b3b3;
+}
+
+.table th, .table td {
+  padding: .625rem 0;
+}
+
+.table tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.table th, .table td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+  text-align: center;
+}
+
+.table th.th--head, .table th.td--head, .table td.th--head, .table td.td--head {
+  width: 8rem;
+}
+
+.table th.th--desc, .table th.td--desc, .table td.th--desc, .table td.td--desc {
+  padding-left: .65rem;
+  padding-right: .65rem;
+  text-align: left;
+}
+
+caption {
+  caption-side: top;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: #cccccc;
+  font-style: italic;
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+  text-align: left;
+}
+
+#cover-image, #cover-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#cover-image {
+  background: url(./images/landscape00.jpg) center center/cover no-repeat scroll;
+}
+
+#cover-gradient {
+  background: radial-gradient(rgba(0, 0, 0, 0.5), black);
+}
+
+footer {
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .25s ease;
+  transition: height .25s ease;
+}
+
+.anim-show {
+  -webkit-animation: fadein .35s ease-out;
+          animation: fadein .35s ease-out;
+}
+
+.anim-hide {
+  -webkit-animation: fadeout .15s ease-out;
+          animation: fadeout .15s ease-out;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Layout Docs
+------------------------------*/
+.document {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 576px) {
+  .document {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .document {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .document {
+    max-width: 1152px;
+  }
+}
+
+.document > .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.document__navigation {
+  position: relative;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1152px) {
+  .document__navigation {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+.document__article {
+  position: relative;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 1152px) {
+  .document__article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+}
+
+.docs-nav {
+  list-style-type: upper-roman;
+  padding-left: 2rem;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", Roboto, "Droid Sans", "メイリオ", Meiryo, serif;
+  font-weight: 500;
+  font-size: 1.17rem;
+}
+
+.docs-nav > li:first-child,
+.docs-nav > li:last-child {
+  list-style-type: none;
+}
+
+.docs-nav__item {
+  list-style-type: lower-roman;
+  margin-left: -1.5rem;
+  margin-bottom: .25rem;
+  padding-left: 3rem;
+  font-size: 1rem;
+}
+
+.docs-nav__item > li:first-child {
+  margin-top: .5rem;
+}
+
+.pagination {
+  margin: 1.5rem auto;
+  font-size: 87.5%;
+  line-height: 1.8;
+  letter-spacing: 0.04rem;
+}
+
+.pagination::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.pagination__prev {
+  float: left;
+}
+
+.pagination__next {
+  float: right;
+}
+
+/* Component Evil icons
+------------------------------*/
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  fill: currentColor;
+}
+
+.icon__cnt {
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  fill: inherit;
+  pointer-events: none;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -ms-transform: translate(0.5px, -0.3px);
+}
+
+.icon--m {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon--l {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+/* Component No support
+------------------------------*/
+.no-support {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #000000;
+  color: #d9d9d9;
+  text-align: center;
+}
+
+/* Component Preloader
+------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out .5s;
+  transition: opacity ease-in-out .5s;
+}
+
+#preloader:not(.show) {
+  opacity: 0;
+}
+
+#spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+
+#spinner > span {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  display: block;
+  width: 4px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+#spinner > span:nth-child(1) {
+  background-color: rgba(217, 217, 217, 0.0714286);
+  -webkit-transform: rotate(0deg) translate(0, 16px);
+          transform: rotate(0deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(2) {
+  background-color: rgba(217, 217, 217, 0.142857);
+  -webkit-transform: rotate(30deg) translate(0, 16px);
+          transform: rotate(30deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(3) {
+  background-color: rgba(217, 217, 217, 0.214286);
+  -webkit-transform: rotate(60deg) translate(0, 16px);
+          transform: rotate(60deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(4) {
+  background-color: rgba(217, 217, 217, 0.285714);
+  -webkit-transform: rotate(90deg) translate(0, 16px);
+          transform: rotate(90deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(5) {
+  background-color: rgba(217, 217, 217, 0.357143);
+  -webkit-transform: rotate(120deg) translate(0, 16px);
+          transform: rotate(120deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(6) {
+  background-color: rgba(217, 217, 217, 0.428571);
+  -webkit-transform: rotate(150deg) translate(0, 16px);
+          transform: rotate(150deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(7) {
+  background-color: rgba(217, 217, 217, 0.5);
+  -webkit-transform: rotate(180deg) translate(0, 16px);
+          transform: rotate(180deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(8) {
+  background-color: rgba(217, 217, 217, 0.571429);
+  -webkit-transform: rotate(210deg) translate(0, 16px);
+          transform: rotate(210deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(9) {
+  background-color: rgba(217, 217, 217, 0.642857);
+  -webkit-transform: rotate(240deg) translate(0, 16px);
+          transform: rotate(240deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(10) {
+  background-color: rgba(217, 217, 217, 0.714286);
+  -webkit-transform: rotate(270deg) translate(0, 16px);
+          transform: rotate(270deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(11) {
+  background-color: rgba(217, 217, 217, 0.785714);
+  -webkit-transform: rotate(300deg) translate(0, 16px);
+          transform: rotate(300deg) translate(0, 16px);
+}
+
+#spinner > span:nth-child(12) {
+  background-color: rgba(217, 217, 217, 0.857143);
+  -webkit-transform: rotate(330deg) translate(0, 16px);
+          transform: rotate(330deg) translate(0, 16px);
+}
+/*# sourceMappingURL=style.css.map */

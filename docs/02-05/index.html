@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>起死回生・退却 - GURPS.QWEL</title>
-  <meta name="description" content="基本戦闘 | 起死回生 | 退却">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,115 +20,94 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>基本戦闘</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
               <h3>起死回生・退却</h3>
-              <p><strong>GURPS</strong>の戦いは、実力差が明確でも、クリティカルやファンブル、ちょっとした戦術ミスによって、突然のピンチに陥ることが多々あります。そういう状況に陥った場合、PCは、ターン開始時に、未消費のCPを1~3点消費して、以下のオプションを得ることができます。</p>
-              <table class="table table-hover table-sm">
-                <thead>
-                  <tr>
-                    <th>オプション</th>
-                    <th>効果</th>
-                    <th>消費CP</th>
-                  </tr>
-                </thead>
+              <p>GURPSの戦いは、実力差が明確でも、クリティカルやファンブル、ちょっとした戦術ミスによって、突然のピンチに陥ることが多々あります。そういう状況に陥った場合にPCは、ターン開始時に、未消費のCPを1~3点消費して、以下のオプションを得ることができます。</p>
+              <table class="table">
                 <tbody>
                   <tr>
                     <td>起死回生</td>
-                    <td>「衝撃」と「朦朧」が、全て無かったことになる。</td>
+                    <td>朦朧状態から自動的に復帰する。</td>
                     <td>1点</td>
                   </tr>
                   <tr>
                     <td>退却</td>
-                    <td>PCは安全な場所まで確実に逃げることができる。</td>
+                    <td>安全な場所まで確実に退却する。</td>
                     <td>1~3点</td>
                   </tr>
                 </tbody>
-              </table>
-              <p>消費するCPは、未消費のCPが無くても、「その冒険で獲得するCPを前借りする」、「怪我を負う」、「恐怖判定を行う」の3通りの方法で得ることができますが、どの方法で得られるかはGMと相談して決めます。</p>
-              <p>CPを前借りできるのは、その冒険中、既にそのPCが、何らかの賢明な行動をとっていたり、優れた演技をしていた場合に限られます。</p>
-              <p>怪我は、片目、片耳、片手、片足の負傷などが考えられます。これらは3CP得られます。恐怖判定は-4の修正、かつ最大目標値が9で行い、1CP得られます。怪我や恐怖判定の結果で、逆に窮地に陥るようなら、戦闘後、退却後から影響が現れることにしても良いでしょう。</p>
-              <p>一人のPCを助けるために、仲間がCPを提供することもできます。重要なNPCも、このルールによって、PC達から逃げることができます。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="../02-04/" data-role="navigate" data-target="/docs/02-04/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../02-06/" data-role="navigate" data-target="/docs/02-06/">next <small>&gt;&gt;</small></a> </div>
+              </table>   
+              <p>消費するCPは、未消費のCPが無くても、</p>
+              <ul class="list-items">
+                <li>その冒険で獲得するCPを前借りする</li>
+                <li>恐怖判定を行う</li>
+                <li>怪我を負う</li>
+              </ul>
+              <p>の3通りの方法で得ることができますが、どの方法で得られるかはGMとの相談です。</p>
+              <p>CPを前借りできるのは、その冒険中、既にPCが優れた演技をしているか、何らかの賢明な行動をとっている場合に限られます。</p>
+              <p>恐怖判定は、-4の修正かつ最大目標値が10で行い、1点得られます。</p>
+              <p>怪我は、片目、片耳、片手、片足の負傷などが考えられます。これらは3点得られます。</p>
+              <p>恐怖判定や怪我の結果で、逆に窮地に陥るようなら、戦闘後（退却後）から影響が現れることにしても良いでしょう。</p>
+              <p>仲間を助けるために、CPを提供することもできます。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../02-04/" data-role="navigate" data-target="/docs/02-04/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../02-06/" data-role="navigate" data-target="/docs/02-06/">next <small>&gt;&gt;</small></a>
+              </div>
             </div>
           </section>
         </div>
@@ -136,7 +116,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 
