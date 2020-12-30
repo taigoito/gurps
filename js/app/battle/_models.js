@@ -17,7 +17,7 @@ class Summary extends Model {
       isPlayer: true, // プレイヤー側か否か
       position: 'back', // 戦闘配置('back'(後衛), 'left'(左翼), 'center'(中央), 'right'(右翼))
       posture: 'standing', // 姿勢('standing'(直立), 'bow'(屈み), 'kneeStanding'(膝立), 'falling'(転倒))
-      condition: 'good', // HPの減少具合('good', 'bad', 'worse', 'worst')
+      condition: 'good', // STの減少具合('good', 'bad', 'worse', 'worst')
       action: '', // 直前の行動
     }
     this.attributes = Object.assign(defaults, this.attributes);
@@ -92,14 +92,14 @@ class Health extends Model {
     // コンディション属性の更新
     const changeInjury = () => {
       const injury = this.get('injury');
-      const maxHP = this._actor.getParamValue('HP');
-      const HP = Math.max(maxHP - injury, -maxHP);
+      const maxST = this._actor.getParamValue('ST');
+      const ST = Math.max(maxST - injury, -maxST);
       let condition = 'worst';
-      if (HP > maxHP) {
+      if (ST > maxST) {
         condition = 'worse';
-      } else if (HP > maxHP / 3) {
+      } else if (ST > maxST / 3) {
         condition = 'bad';
-      } else if (HP > maxHP * 2 / 3) {
+      } else if (ST > maxST * 2 / 3) {
         condition = 'good';
       }
       this._actor.setAttr('condition', condition);

@@ -8,7 +8,7 @@
 import App from './app/_init.js';
 import Router from './_router.js';
 
-const HOST = 'http://localhost';
+const HOST = 'http://localhost:8080';
 const ROOT = '/gurps/';
 
 // App and Router
@@ -26,8 +26,8 @@ const docsNav = () => {
   document.addEventListener(myTouch, (event) => {
     if (event.srcElement.dataset.role === 'toggle-item') {
       event.preventDefault();
-      const panel = event.target.parentNode.querySelector('.docs-nav-item');
-      const h = panel.querySelectorAll('li').length * 27 + 'px';
+      const panel = event.target.parentNode.querySelector('.docs-nav__item');
+      const h = panel.querySelectorAll('li').length * 28.8 + 'px';
       if (panel.classList.contains('show')) {
         panel.classList.remove('show');
         panel.style.height = 0;

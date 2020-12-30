@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>装備 - GURPS.QWEL</title>
-  <meta name="description" content="新しい装備一覧">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,431 +20,162 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>キャラクター</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
-              <h3>装備</h3>
-              <p>装備一覧から技能に応じた好きな武器、防具を選び、必要な数値を書き写して下さい。必要腕力のような概念はありません。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    武器
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>値</th>
-                      <th>説明</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Dmg(ダメージ)</td>
-                      <td>攻撃力を表します。dはダイスの数です。武器の基本ダメージに、本人の腕力によるダメージを足した値です。</td>
-                    </tr>
-                    <tr>
-                      <td>LV(技能値)</td>
-                      <td>命中率を表します。</td>
-                    </tr>
-                    <tr>
-                      <td>P-EV(受け)</td>
-                      <td>「受け」を試みるとき、武器によって有利に補正される回避率を表します。</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover">
-                  <caption>
-                    防具
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>値</th>
-                      <th>説明</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>DR(ダメージ抵抗)</td>
-                      <td>防御力を表します。</td>
-                    </tr>
-                    <tr>
-                      <td>B-EV(止め)</td>
-                      <td>「止め」を試みるとき、盾によって有利に補正される回避率を表します。</td>
-                    </tr>
-                    <tr>
-                      <td>WT(重量)</td>
-                      <td>「よけ」を試みるとき、重量によって不利に補正される回避率を表します。</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <h3>意志と宿星</h3>
+              <p>このゲームでは、人物の性格（主に嘘をつくか、つかないか）をLaw(秩序)とChaos(混沌)に予め分けておきます。これを「意志」と呼ぶことにします。</p>
+              <p>また、キャラクター作成は、能力、技能、装備のような設定だけでは完了し得ません。なぜ生まれたのか、何のために生まれたのか、そのために何ができるのか、そのような問いかけこそが、必要な背景設定を導き、人物に心魂を吹き込むのです。そういった人物の背景設定の手助けとして、「宿星」というルールがあります。</p>
+              <h4>意志</h4>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Law(秩序)</td>
+                    <td>嘘をつかない。法律や約束を尊守しようとする性格。</td>
+                  </tr>
+                  <tr>
+                    <td>Chaos(混沌)</td>
+                    <td>意図的に嘘をつく。法律や約束をかい潜る知恵を持つ性格。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Lawの人物は、意図的に嘘をつく場合にWL判定(-4)に成功しなければなりません。逆に、相手の意図的な嘘を見抜くこともできます。これは騙す側のIN(知性)と、見抜く側のWL(意志力)とで即決勝負（ただし、NPC側はクローズで）します。ただし即決勝負に勝っても、相手の方がIN(知性)が高い場合、GMは真偽の判断ができなかったと告げることができます。PC達のリーダーは、必ずLawを選択してください。</p>
+              <p>Chaosの人物は、嘘をつくことに対する縛りが無いと同時に、相手の嘘を見抜くこともできません。Chaosを選択する場合、キャラクター作成時のポイントを10点でなく、3d点にすることもできます。この判定は1回だけ振り直しを認めます（目が悪い方に転がっても、元の目には戻せません！）。</p>
+              <h4>宿星</h4>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>太白</td>
+                    <td>将軍、傭兵、用心棒のような、命を賭す生業の性。ウォーリアロールに対応。</td>
+                  </tr>
+                  <tr>
+                    <td>辰星</td>
+                    <td>職人、商人のような、経済社会で自身を練磨する性。フェンサーロールに対応。</td>
+                  </tr>
+                  <tr>
+                    <td>歳星</td>
+                    <td>農夫、漁師、樵、羊飼いなど、天地と一体に生きる性。スナイパーロールに対応。</td>
+                  </tr>
+                  <tr>
+                    <td>熒惑</td>
+                    <td>学者、芸術家など、真理の探求者の性。ソーサラーロールに対応。</td>
+                  </tr>
+                  <tr>
+                    <td>鎮星</td>
+                    <td> 王族など、権力の略奪に運命を翻弄される性。ロールを2つ設定できる。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>「意志」がLawの人物の多くは、上記に従った生まれであり、そのことに肯定的です。しかし、Chaosの人物はそのことに否定的であるか、そもそも生まれと宿星の設定が元々ずれています。いずれにしても、GMはPCが宿星に導かれるような物語を描きますが、それに従うも抗うも、未来はPC次第です。</p>
+              <p>宿星を決めておくと、現在のロールと宿星に対応するロールが一致する場合に、技能値を+1します（これを「ロールボーナス」と呼びます）。</p>
+              <p>「鎮星」を選択したキャラクターは、ロールを2つ設定でき、ミッション終了時に得た経験点は、半分ずつ両技能に入ります。獲得した経験点が割り切れない場合など、前後の冒険の経験点や副技能への経験点と合わせ、上手く調整してください。</p>
+              <h4>選択例</h4>
+              <p>前節で作成した6名の人物は、下記表のように意志と宿星を選択しました。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>名前</th>
+                    <th>意志</th>
+                    <th>宿星</th>
+                    <th class="th--desc">技能</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ウォーラス</td>
+                    <td>Law</td>
+                    <td>太白</td>
+                    <td>武術 (14)</td>
+                  </tr>
+                  <tr>
+                    <td>リチャード</td>
+                    <td>Law</td>
+                    <td>辰星</td>
+                    <td>剣術 (14)</td>
+                  </tr>
+                  <tr>
+                    <td>ヘンリー</td>
+                    <td>Law</td>
+                    <td>歳星</td>
+                    <td>弓術 (14)</td>
+                  </tr>
+                  <tr>
+                    <td>アリエス</td>
+                    <td>Law</td>
+                    <td>熒惑</td>
+                    <td>法術 (14)</td>
+                  </tr>
+                  <tr>
+                    <td>オライオン</td>
+                    <td>Chaos</td>
+                    <td>鎮星</td>
+                    <td>武術 (13)</td>
+                  </tr>
+                  <tr>
+                    <td>クロウ</td>
+                    <td>Chaos</td>
+                    <td>辰星</td>
+                    <td>剣術 (13)</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination">
+                <a class="pagination__prev" href="../01-04/" data-role="navigate" data-target="/docs/01-04/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../01-06/" data-role="navigate" data-target="/docs/01-06/">next <small>&gt;&gt;</small></a>
               </div>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    武器一覧
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>武器</th>
-                      <th>Dmg</th>
-                      <th>P-EV</th>
-                      <th>技能</th>
-                      <th>1H/2H</th>
-                      <th>用法</th>
-                      <th>価格</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>短剣</td>
-                      <td>1d+2</td>
-                      <td>0</td>
-                      <td>剣術</td>
-                      <td>1H</td>
-                      <td>投擲可 近接戦闘可</td>
-                      <td>50</td>
-                    </tr>
-                    <tr>
-                      <td>剣</td>
-                      <td>2d</td>
-                      <td>1</td>
-                      <td>剣術</td>
-                      <td>1H</td>
-                      <td>&nbsp;</td>
-                      <td>400</td>
-                    </tr>
-                    <tr>
-                      <td>長剣</td>
-                      <td>2d+1</td>
-                      <td>2</td>
-                      <td>武術</td>
-                      <td>2H</td>
-                      <td>片手でも使用可→剣</td>
-                      <td>600</td>
-                    </tr>
-                    <tr>
-                      <td>大剣</td>
-                      <td>2d+2</td>
-                      <td>2</td>
-                      <td>武術</td>
-                      <td>2H</td>
-                      <td>&nbsp;</td>
-                      <td>800</td>
-                    </tr>
-                    <tr>
-                      <td>手斧</td>
-                      <td>2d+1</td>
-                      <td>1</td>
-                      <td>剣術</td>
-                      <td>1H</td>
-                      <td>引き戻しに1ターン 投擲可</td>
-                      <td>120</td>
-                    </tr>
-                    <tr>
-                      <td>戦斧</td>
-                      <td>2d+2</td>
-                      <td>1</td>
-                      <td>武術</td>
-                      <td>1H</td>
-                      <td>引き戻しに1ターン</td>
-                      <td>240</td>
-                    </tr>
-                    <tr>
-                      <td>フレイル</td>
-                      <td>2d</td>
-                      <td>1</td>
-                      <td>剣術</td>
-                      <td>1H</td>
-                      <td>引き戻しに1ターン<br>
-                        敵は「受け」、「止め」-1</td>
-                      <td>120</td>
-                    </tr>
-                    <tr>
-                      <td>杖</td>
-                      <td>2d-1</td>
-                      <td>3</td>
-                      <td>剣術</td>
-                      <td>2H</td>
-                      <td>&nbsp;</td>
-                      <td>60</td>
-                    </tr>
-                    <tr>
-                      <td>手槍</td>
-                      <td>2d</td>
-                      <td>3</td>
-                      <td>剣術</td>
-                      <td>2H</td>
-                      <td>投擲可</td>
-                      <td>120</td>
-                    </tr>
-                    <tr>
-                      <td>鉾槍</td>
-                      <td>3d/2d</td>
-                      <td>3</td>
-                      <td>武術</td>
-                      <td>2H</td>
-                      <td>前者は引き戻しに1ターン</td>
-                      <td>240</td>
-                    </tr>
-                    <tr>
-                      <td>狩人の弓</td>
-                      <td>2d-1</td>
-                      <td>-</td>
-                      <td>剣術</td>
-                      <td>2H</td>
-                      <td>準備に1ターン</td>
-                      <td>100</td>
-                    </tr>
-                    <tr>
-                      <td>長弓</td>
-                      <td>2d</td>
-                      <td>-</td>
-                      <td>弓術</td>
-                      <td>2H</td>
-                      <td>準備に1ターン</td>
-                      <td>200</td>
-                    </tr>
-                    <tr>
-                      <td>ボウガン</td>
-                      <td>2d+1</td>
-                      <td>-</td>
-                      <td>剣術</td>
-                      <td>2H</td>
-                      <td>準備に2ターン<br>
-                        使用者のDmg補正を受けない</td>
-                      <td>200</td>
-                    </tr>
-                    <tr>
-                      <td>クロスボウ</td>
-                      <td>2d+2</td>
-                      <td>-</td>
-                      <td>剣術</td>
-                      <td>2H</td>
-                      <td>準備に3ターン<br>
-                        使用者のDmg補正を受けない</td>
-                      <td>400</td>
-                    </tr>
-                    <tr>
-                      <td>拳</td>
-                      <td>1d-1</td>
-                      <td>-</td>
-                      <td>格闘</td>
-                      <td>-</td>
-                      <td>&nbsp;</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>蹴り</td>
-                      <td>1d+1</td>
-                      <td>-</td>
-                      <td>格闘</td>
-                      <td>-</td>
-                      <td>威力があるぶん命中判定-2</td>
-                      <td>-</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><small>※拳や蹴りのダメージは、「格闘」に4CP以上消費していれば+1、技能値が16に達していれば+2。さらに拳のダメージは、石ころや貨幣の束を握っていれば+1、メタルナックルや手甲を着けていれば+2。蹴りのダメージは、固いブーツ(革鎧以上)を履いていれば+1。</small></p>
-              </div>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    盾一覧
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>盾</th>
-                      <th>Dmg</th>
-                      <th>B-EV</th>
-                      <th>技能</th>
-                      <th>用法</th>
-                      <th>価格</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>小盾</td>
-                      <td>1d+1</td>
-                      <td>2</td>
-                      <td>剣術</td>
-                      <td>&nbsp;</td>
-                      <td>40</td>
-                    </tr>
-                    <tr>
-                      <td>中盾</td>
-                      <td>1d+1</td>
-                      <td>3</td>
-                      <td>武術</td>
-                      <td>&nbsp;</td>
-                      <td>60</td>
-                    </tr>
-                    <tr>
-                      <td>大盾</td>
-                      <td>1d+1</td>
-                      <td>4</td>
-                      <td>武術</td>
-                      <td>戦闘技能値-1</td>
-                      <td>80</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><small>※盾を用いて攻撃することもできる。盾の大きさに従い、技能値は「止め」に等しいマイナスの修正を受ける。敵はこの攻撃を「受け」できない。盾を攻撃に用いたターンは、「止め」が行えない。</small></p>
-              </div>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <caption>
-                    服・鎧一覧
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th>服・鎧</th>
-                      <th>DR</th>
-                      <th>WT</th>
-                      <th>技能</th>
-                      <th>用法</th>
-                      <th>価格</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>服</td>
-                      <td>1(0)</td>
-                      <td>0</td>
-                      <td>-</td>
-                      <td>&nbsp;</td>
-                      <td>10</td>
-                    </tr>
-                    <tr>
-                      <td>革服</td>
-                      <td>1</td>
-                      <td>0</td>
-                      <td>-</td>
-                      <td>&nbsp;</td>
-                      <td>160</td>
-                    </tr>
-                    <tr>
-                      <td>革鎧</td>
-                      <td>2</td>
-                      <td>1</td>
-                      <td>-</td>
-                      <td>&nbsp;</td>
-                      <td>320</td>
-                    </tr>
-                    <tr>
-                      <td>チェインメイル</td>
-                      <td>3(1)</td>
-                      <td>2</td>
-                      <td>武術</td>
-                      <td>&nbsp;</td>
-                      <td>480</td>
-                    </tr>
-                    <tr>
-                      <td>ブリガンディ</td>
-                      <td>3</td>
-                      <td>3</td>
-                      <td>武術</td>
-                      <td>DX(器用さ),AG(素早さ)-1</td>
-                      <td>640</td>
-                    </tr>
-                    <tr>
-                      <td>ハーフ・プレイト</td>
-                      <td>4(2)</td>
-                      <td>3</td>
-                      <td>武術</td>
-                      <td>DX(器用さ),AG(素早さ)-1</td>
-                      <td>1280</td>
-                    </tr>
-                    <tr>
-                      <td>プレイトメイル</td>
-                      <td>4</td>
-                      <td>4</td>
-                      <td>武術</td>
-                      <td>DX(器用さ),AG(素早さ)-2</td>
-                      <td>2560</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><small>※カッコ内は「刺し」に対する値を示す。布製の服やチェインメイルなど繊維状の構造は、切り裂く攻撃に強いが、突き刺す攻撃に弱い特性を持つ。ハーフ・プレイトは、チェインメイルにプレイトアーマーの胸当てを着用したもの。</small></p>
-                <p><small>※鎧の重量は、「よけ」を行うときの回避判定にマイナスの修正を与えるが、「運動」、「軽業」、「隠密」の技能判定にも同様の修正を与える。</small></p>
-              </div>
-              <div class="pagination"> <a class="btn-prev float-left" href="../01-04/" data-role="navigate" data-target="/docs/01-04/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../01-06/" data-role="navigate" data-target="/docs/01-06/">next <small>&gt;&gt;</small></a> </div>
             </div>
           </section>
         </div>
@@ -452,7 +184,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

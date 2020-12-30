@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>負傷効果 - GURPS.QWEL</title>
-  <meta name="description" content="基本戦闘 | 負傷効果 | 衝撃 | 朦朧 | 転倒 | 気絶と死亡">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,105 +20,77 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>基本戦闘</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
-              <h3>負傷効果</h3>
-              <h4>衝撃</h4>
-              <p>ダメージを受けると、その瞬間から「次のターンの終わり」まで、ST(腕力)、DX(器用さ)、AG(素早さ)、またそれらに伴う技能値が全て、受けたダメージ分だけ低下します。Dmg(ダメージ)とD-EV(よけ)も、受けたダメージの半分(端数切捨)だけ低下します。</p>
-              <p>大きなダメージを受けたターンは行動しても失敗することが多く、連続して攻撃を受ける可能性も高いので、「全力防御」で凌ぐのが賢明かも知れません。</p>
+              <h3>ダメージ効果</h3>
               <h4>朦朧</h4>
-              <p>一度に最大HPの半分以上のダメージを受けると、朦朧状態に陥ります。</p>
-              <p>この状態では、ターン開始時の回復判定(VT判定)に成功するまで、一切行動できない上、D-EVに-4の修正を受けます。</p>
-              <p>衝撃と朦朧状態のD-EVへの修正は重複しません。修正の大きい方を適用します。が、ダメージを受けてすぐ次のターンに朦朧状態から回復したとしても、衝撃による修正は受けています。</p>
+              <p>一度にST(体力)の3分の1ないし半分以上のダメージを受けると、朦朧状態に陥ります。前者は軽い朦朧状態、後者は重い朦朧状態と呼びます。</p>
+              <p>この状態では、ターン開始時の回復判定(ST判定)に成功するまで一切行動できない上、回避も試みることができません。重い朦朧状態の場合は、回復判定に-4の修正を受けます。</p>
               <h4>転倒</h4>
-              <p>一度に最大HPの半分以上のダメージを受けると、転倒判定(VT判定)を行います(成功しても朦朧状態です)。</p>
-              <p>基本ルールでは、転倒したら、起き上がったターンの終わりまで、D-EVに-2の修正を受けます。</p>
-              <p>つまり、最大HPの半分以上のダメージを受けて転倒したら、朦朧状態から回復するまでのターンは-6の修正で、朦朧状態から回復して起き上がったターンは-2の修正で、回避判定を行います。行動できるのは、朦朧状態から回復した次のターンからです。</p>
+              <p>一度にST(体力)の半分以上のダメージを受けると、転倒判定(-2の修正でST判定)を行います(成功しても朦朧状態です)。</p>
+              <p>転倒したら、起き上がったターンの終わりまで、D-EV(よけ)に-4の修正を受けます。</p>
               <h4>気絶と死亡</h4>
-              <p>HPが0以下になっても、即座に死亡するわけではなく、HPの減少は-最大値になるまで記録を続けます。</p>
-              <p>HPが0、-最大値の3分の1、-最大値の3分の2になるとき、それぞれ気絶判定(VT判定)を行います。これに成功し続ければ、まだ話したり戦ったりすることができます。</p>
-              <p>HPが-最大値になると、死亡判定(VT判定)を行います。これに成功すれば自動的に気絶、失敗すれば死亡します。</p>
-              <p>例えばHPが10なら、0、-4、-7になったときにそれぞれ気絶判定を行い、-10になったときに死亡判定を行うわけです。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="../02-02/" data-role="navigate" data-target="/docs/02-02/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../02-04/" data-role="navigate" data-target="/docs/02-04/">next <small>&gt;&gt;</small></a> </div>
+              <p>一度にST(体力)以上のダメージを受けると、気絶します。</p>
+              <p>さらにこのとき、ダメージがSTを超えた分をマイナスの修正としてWL(意志力)判定を行い、これに失敗すると、人物は死亡します。いわゆるゲームオーバーですので、GMと相談してどこかのタイミングで新しいPCを作成し、再度合流を図ってください。</p>
+              <p>このルールだと厳しすぎると判断する場合、上級ルールの部位の「故障の期間」を参考にしてください。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../02-02/" data-role="navigate" data-target="/docs/02-02/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../02-04/" data-role="navigate" data-target="/docs/02-04/">next <small>&gt;&gt;</small></a>
+              </div>
             </div>
           </section>
         </div>
@@ -126,7 +99,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

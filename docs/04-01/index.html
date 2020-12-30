@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>術法 - GURPS.QWEL</title>
-  <meta name="description" content="術法 | 術法とは | 術の修得 | 術の行使">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,105 +20,127 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
-          <h2>術法</h2>
-          <section class="section">
+          <h2>法術</h2>
+          <section class="document--section">
             <div class="inner">
               <h3>概要</h3>
-              <h4>術法とは</h4>
-              <p><strong>GURPS.QWEL</strong>の冒険の舞台となる世界には、いわゆる「魔法」といった概念は存在しません。あるのは火や水など、自然界の力を少しだけ操作する「術」のみになります。</p>
-              <p>万物には不可視な霊魂（のようなもの）が宿っていると考えられ、それに一定の指向性を与え、何か具体的な現象（術）を引き起こす技術を、「術法」と呼んでいます。</p>
-              <h4>術の修得</h4>
-              <p>術法の道は、哲学と信仰の道でもあります。術法を扱う者は、自然を畏怖し、常に己を高めることを意識しなければなりません。</p>
-              <p>術法は全部で6系統あり、1つの系統を1つの技能として扱います。</p>
-              <p>技能を有していれば、PCは思い付く限り、その術法の系統が司る事象に、何か一定の指向性を与えることができます。例えば、炎を司る術法なら、炎を起こすとか、獣を司る術法なら、獣をなだめる、といった具合です。しかし大概のことは、ほとんど冒険の役に立つほど大きな効果はもたらしません。</p>
-              <p>冒険の役に立つ大きな効果を持つ術は、技能値の上昇に伴い、自動的に修得できます。技能として保有している術系統ごとに、技能値が10を上回るたびに、ルールで定められた術のうち、新しい術をどれか1つ、好きなのを選んで修得できます。ただし、「上位術」は「下位術」を全て修得しなければ修得できません。上位術の中でも「最上位術」があり、これは他の上位術を全て修得してから、最後に修得できます（※）。</p>
-              <p><small>（※次節の効果一覧表の上記4つが「下位術」、下記4つが「上位術」、最後に記されている術が「最上位術」です。）</small></p>
+              <h4>法術とは</h4>
+              <p>GURPS.QWELの冒険の舞台となる世界には、いわゆる「魔法」といった概念は存在しません。あるのは風や熱など、自然界の力を少しだけ操作する「法術」のみになります。</p>
+              <p>万物には不可視な霊魂（のようなもの）が宿っていると考えられ、それに一定の指向性を与え、何か具体的な現象（術）を引き起こす技術を、「法術」と呼んでいます。</p>
+              <h4>術の所持</h4>
+              <p>GURPS.QWELでは、現在行使できる（別の言い方をすると「所持する」）法術を、ダイスでランダムに決める、という特徴があります。</p>
+              <p>法術は全部で6つの系統があり、蒼龍、朱鳥、白虎、玄武の4つの系統を「地術」、陰と陽の2つの系統を「天術」と呼びます。地術と天術は、それぞれ1つの系統のものしか所持できません。</p>
+              <p>法術は誰でも所持することができますが、所持できる容量（「法力」）は、</p>
+              <ul class="list-items">
+                <li>法力 = 「法術」 - 10</li>
+              </ul>
+              <p>です。この数だけ、法術の「カード」を手元に持っておける、と考えてください。</p>
+              <p>ゲーム開始時（あるいは最初の戦闘開始時でも良い）に、好きな術の系統を選んで、法力の回数だけ3dを振ります。出目に対応したランクの術を所持していることになります。</p>
+              <p>術を行使したとき、そのカードを捨て、新しいカードを引く、と考えてください。つまり3dを振り、新しい術を所持できるのです。このとき、新しい術の系統を、地術か天術か選べる、という点はよく覚えておいてください。</p>
+              <p>術士は、無闇に術を行使して、手持ちの術を入れ替えていくような行為を禁止とします。</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="th--head">出目</th>
+                    <th>術ランク</th>
+                    <th>確率</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10,11</td>
+                    <td>ランク1</td>
+                    <td>54 / 216</td>
+                  </tr>
+                  <tr>
+                    <td>9,12</td>
+                    <td>ランク2</td>
+                    <td>50 / 216</td>
+                  </tr>
+                  <tr>
+                    <td>8,13</td>
+                    <td>ランク3</td>
+                    <td>42 / 216</td>
+                  </tr>
+                  <tr>
+                    <td>7,14</td>
+                    <td>ランク4</td>
+                    <td>30 / 216</td>
+                  </tr>
+                  <tr>
+                    <td>6,15</td>
+                    <td>ランク5</td>
+                    <td>20 / 216</td>
+                  </tr>
+                  <tr>
+                    <td>3〜5,16〜18</td>
+                    <td>ランク6</td>
+                    <td>20 / 216</td>
+                  </tr>
+                </tbody>
+              </table>
               <h4>術の行使</h4>
-              <p>術は1～3ターンの集中の後、技能判定に成功すれば、発動させることができます。</p>
-              <p>MPのような概念はありませんが、呪文の言葉と共に、利き手で印を切る必要があります。上位術では両手が必要です。棒状の物ならば持っていても、印を切る妨げになりません。</p>
-              <p>射撃とある術は、術の発動後、射撃の解決のように、対象が「止め」-2か「よけ」で回避判定を行います。</p>
-              <p>範囲攻撃とある術は、術の発動後、複数の対象が「止め」-2か「よけ」で回避判定を行います。</p>
-              <p>意志抵抗とある術は、術の発動後、普通、下位術なら-2、上位術なら-4の修正で相手が意志判定か「瞑想」判定を行い、成功すれば術は発動しないか、ダメージが半減します（端数切り上げ）。</p>
-              <p>HP(耐久点)を回復する術は、回復量だけ衝撃の効果を緩和させ、衝撃を最大HPの半分未満に緩和させた場合、朦朧状態も回復します。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="../03-06/" data-role="navigate" data-target="/docs/03-06/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../04-02/" data-role="navigate" data-target="/docs/04-02/">next <small>&gt;&gt;</small></a> </div>
+              <p>術は1～3ターンの精神集中の後、詠唱判定に成功すれば、発動させることができますが、このとき目標と離れているなら、距離による修正があります。</p>
+              <p>MPのような概念はありませんが、呪文の言葉と共に、手で印を切る必要があります。棒状の物ならば持っていても、印を切る妨げになりません。</p>
+              <p>射撃呪文（射撃と記してある術）は、術の発動後、射撃の解決のように、対象が「受け」-4、「止め」-2、「よけ」のいずれかで回避判定を行います。</p>
+              <p>抵抗呪文（抵抗と記してある術）は、下位術なら-2、上位術なら-4の修正で相手がWL(意志力)判定を行い、これに成功すれば術が発動しないか、ダメージなど効果が半減します（端数切り上げ）。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="../03-06/" data-role="navigate" data-target="/docs/03-06/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../04-02/" data-role="navigate" data-target="/docs/04-02/">next <small>&gt;&gt;</small></a>
+              </div>
             </div>
           </section>
         </div>
@@ -126,7 +149,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

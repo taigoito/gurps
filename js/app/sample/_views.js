@@ -114,24 +114,21 @@ class ListView {
 
     this.collection.models.forEach((model) => {
       const row = document.importNode(template.content, true);
-      row.querySelector(`.${this._prefix}-list-row`).dataset.index = model.id + 1;
-      row.querySelector(`.${this._prefix}-list-row-no`).textContent = model.id + 1;
-      row.querySelector(`.${this._prefix}-list-row-name`).textContent = model.getProfile('name');
-      row.querySelector(`.${this._prefix}-list-row-gender`).textContent = model.getProfile('gender');
-      row.querySelector(`.${this._prefix}-list-row-st`).textContent = model.getParamValue('ST');
-      row.querySelector(`.${this._prefix}-list-row-dx`).textContent = model.getParamValue('DX');
-      row.querySelector(`.${this._prefix}-list-row-ag`).textContent = model.getParamValue('AG');
-      row.querySelector(`.${this._prefix}-list-row-vt`).textContent = model.getParamValue('VT');
-      row.querySelector(`.${this._prefix}-list-row-in`).textContent = model.getParamValue('IN');
-      row.querySelector(`.${this._prefix}-list-row-wl`).textContent = model.getParamValue('WL');
-      row.querySelector(`.${this._prefix}-list-row-cm`).textContent = model.getParamValue('CM');
-      row.querySelector(`.${this._prefix}-list-row-hp`).textContent = model.getParamValue('HP');
+      row.querySelector(`.${this._prefix}-list-inner`).dataset.index = model.id + 1;
+      row.querySelector(`.${this._prefix}-list-inner-no`).textContent = model.id + 1;
+      row.querySelector(`.${this._prefix}-list-inner-name`).textContent = model.getProfile('name');
+      row.querySelector(`.${this._prefix}-list-inner-gender`).textContent = model.getProfile('gender');
+      row.querySelector(`.${this._prefix}-list-inner-st`).textContent = model.getParamValue('ST');
+      row.querySelector(`.${this._prefix}-list-inner-dx`).textContent = model.getParamValue('DX');
+      row.querySelector(`.${this._prefix}-list-inner-ag`).textContent = model.getParamValue('AG');
+      row.querySelector(`.${this._prefix}-list-inner-in`).textContent = model.getParamValue('IN');
+      row.querySelector(`.${this._prefix}-list-inner-wl`).textContent = model.getParamValue('WL');
 
       const battleSkill = model.getProfile('mainSkill') || {};
       const mainSkill = model.getProfile('sorcery') || battleSkill;
       const mainWeapon = model.getProfile('mainWeapon') || {};
-      row.querySelector(`.${this._prefix}-list-row-skill`).textContent = Object.keys(mainSkill).length ? mainSkill.get('name') : '-';
-      row.querySelector(`.${this._prefix}-list-row-equip`).textContent = Object.keys(mainWeapon).length ? mainWeapon.get('name') : '-';
+      row.querySelector(`.${this._prefix}-list-inner-skill`).textContent = Object.keys(mainSkill).length ? mainSkill.get('name') : '-';
+      row.querySelector(`.${this._prefix}-list-inner-equip`).textContent = Object.keys(mainWeapon).length ? mainWeapon.get('name') : '-';
 
       tbody.appendChild(row);
     });

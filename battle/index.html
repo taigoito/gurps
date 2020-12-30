@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>模擬戦闘 - GURPS.QWEL</title>
   <meta name="description" content="模擬戦闘">
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/rpg-awesome.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <link href="../rpg-awesome.css" rel="stylesheet">
+  <link href="../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,18 +20,18 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <div id="battle" class="col-lg-12">
+  <main id="main" class="document">
+    <div class="inner">
+      <div id="battle">
         <div>In development...</div>
-        <div class="row">
+        <div class="inner">
           <div id="battle-formation" class="order-1">
             <h5 class="caption">Formation</h5>
-            <div id="battle-formation-row">
+            <div id="battle-formation-inner">
               <div id="battle-formation-col-pc-back">
                 <div id="battle-formation-pc-back-1">&nbsp;</div>
                 <div id="battle-formation-pc-back-2">&nbsp;</div>
@@ -343,25 +344,22 @@
           </div>
         </div>
       </div>
-      <div id="battle-info" class="col-lg-12">
+      <div id="battle-info">
         <div id="battle-list">
-          <div class="table-responsive-lg">
-            <table class="table table-hover">
+          <div class="table-fluid">
+            <table class="table">
               <thead>
                 <tr>
-                  <th class="text-center">No.</th>
-                  <th class="text-center">Name</th>
-                  <th class="text-center">Gender</th>
-                  <th class="text-center">ST</th>
-                  <th class="text-center">DX</th>
-                  <th class="text-center">AG</th>
-                  <th class="text-center">VT</th>
-                  <th class="text-center">IN</th>
-                  <th class="text-center">WL</th>
-                  <th class="text-center">CM</th>
-                  <th class="text-center">HP</th>
-                  <th class="text-center">Skill</th>
-                  <th class="text-center">Equip</th>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>ST</th>
+                  <th>DX</th>
+                  <th>AG</th>
+                  <th>IN</th>
+                  <th>WL</th>
+                  <th>Skill</th>
+                  <th>Equip</th>
                 </tr>
               </thead>
               <tbody>
@@ -371,51 +369,48 @@
           <div id="battle-list-overlay"></div>
         </div>
         <template id="battle-list-template">
-          <tr class="battle-list-row">
-            <th class="battle-list-row-no text-center">&nbsp;</th>
-            <td class="battle-list-row-name text-center">&nbsp;</td>
-            <td class="battle-list-row-gender text-center">&nbsp;</td>
-            <td class="battle-list-row-st text-center">&nbsp;</td>
-            <td class="battle-list-row-dx text-center">&nbsp;</td>
-            <td class="battle-list-row-ag text-center">&nbsp;</td>
-            <td class="battle-list-row-vt text-center">&nbsp;</td>
-            <td class="battle-list-row-in text-center">&nbsp;</td>
-            <td class="battle-list-row-wl text-center">&nbsp;</td>
-            <td class="battle-list-row-cm text-center">&nbsp;</td>
-            <td class="battle-list-row-hp text-center">&nbsp;</td>
-            <td class="battle-list-row-skill text-center">&nbsp;</td>
-            <td class="battle-list-row-equip text-center">&nbsp;</td>
+          <tr class="battle-list-inner">
+            <th class="battle-list-inner-no">&nbsp;</th>
+            <td class="battle-list-inner-name">&nbsp;</td>
+            <td class="battle-list-inner-gender">&nbsp;</td>
+            <td class="battle-list-inner-st">&nbsp;</td>
+            <td class="battle-list-inner-dx">&nbsp;</td>
+            <td class="battle-list-inner-ag">&nbsp;</td>
+            <td class="battle-list-inner-in">&nbsp;</td>
+            <td class="battle-list-inner-wl">&nbsp;</td>
+            <td class="battle-list-inner-skill">&nbsp;</td>
+            <td class="battle-list-inner-equip">&nbsp;</td>
           </tr>
         </template>
-        <div id="battle-unit" class="row"></div>
+        <div id="battle-unit" class="inner"></div>
         <template id="battle-unit-template">
-          <div class="col-md-6 col-lg-4">
-            <div class="battle-unit-profile table-responsive-lg">
-              <table class="table table-sm table-hover">
+          <div class="battle-unit-body-1">
+            <div class="battle-unit-profile table-fluid">
+              <table class="table">
                 <caption>Profile</caption>
                 <thead>
                 </thead>
                 <tbody>
                   <tr>
                     <th>Name</th>
-                    <td class="battle-unit-profile-name text-left">&nbsp;</td>
+                    <td class="battle-unit-profile-name">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <th>Gender</th>
-                    <td class="battle-unit-profile-gender text-left">&nbsp;</td>
+                    <td class="battle-unit-profile-gender">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <th>CP</th>
-                    <td class="battle-unit-profile-cp text-left">&nbsp;</td>
+                    <td class="battle-unit-profile-cp">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="battle-unit-ability table-responsive-lg">
-              <table class="table table-sm table-hover">
+            <div class="battle-unit-ability table-fluid">
+              <table class="table">
                 <caption>Ability</caption>
                 <thead>
                 </thead>
@@ -424,9 +419,9 @@
               </table>
             </div>
           </div>
-          <div class="col-md-12 col-lg-8">
-            <div class="battle-unit-skills table-responsive-lg">
-              <table class="table table-sm table-hover">
+          <div class="battle-unit-body-2">
+            <div class="battle-unit-skills table-fluid">
+              <table class="table">
                 <caption>Skills</caption>
                 <thead>
                 </thead>
@@ -435,9 +430,9 @@
               </table>
             </div>
           </div>
-          <div class="col-lg-12">
-            <div class="battle-unit-equips table-responsive-lg">
-              <table class="table table-sm table-hover">
+          <div class="battle-unit-body-3">
+            <div class="battle-unit-equips table-fluid">
+              <table class="table">
                 <caption>Equipmets</caption>
                 <thead>
                 </thead>
@@ -459,7 +454,7 @@
             <th class="battle-unit-skill-name-1">&nbsp;</th>
             <td class="battle-unit-skill-value-1">&nbsp;</td>
             <td class="battle-unit-skill-cp-1">&nbsp;</td>
-            <td class="border-bottom-0">&nbsp;</td>
+            <td class="border--none">&nbsp;</td>
             <th class="battle-unit-skill-name-2">&nbsp;</th>
             <td class="battle-unit-skill-value-2">&nbsp;</td>
             <td class="battle-unit-skill-cp-2">&nbsp;</td>
@@ -478,11 +473,11 @@
         </template>
       </div>
     </div>
-    <div id="developing-progress" class="col-lg-12">
-      <h5><small>開発完了率</small> <span id="progress" class="mx-1">0</span><small>%</small></h5>
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          <table id="table-1" class="table table-sm small">
+    <div id="developing-progress">
+      <h5><small>開発完了率</small> <span id="progress">0</span><small>%</small></h5>
+      <div class="inner">
+        <div class="developing-progress-table">
+          <table id="table-1" class="table">
             <thead>
               <tr>
                 <th>項目</th>
@@ -493,8 +488,8 @@
             </tbody>
           </table>
         </div>
-        <div class="col-12 col-lg-4">
-          <table id="table-2" class="table table-sm small">
+        <div class="developing-progress-table">
+          <table id="table-2" class="table">
             <thead>
               <tr>
                 <th>項目</th>
@@ -505,8 +500,8 @@
             </tbody>
           </table>
         </div>
-        <div class="col-12 col-lg-4">
-          <table id="table-3" class="table table-sm small">
+        <div class="developing-progress-table">
+          <table id="table-3" class="table">
             <thead>
               <tr>
                 <th>項目</th>
@@ -528,7 +523,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer role="contentinfo"><small>&copy; 2020 QWEL</small></footer>
   <script src="../js/init.js" type="module"></script>
 </body>
 

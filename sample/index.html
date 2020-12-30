@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>サンプル・キャラクター - GURPS.QWEL</title>
   <meta name="description" content="サンプル・キャラクター">
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/rpg-awesome.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+  <link href="../rpg-awesome.css" rel="stylesheet">
+  <link href="../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,17 +20,17 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <div id="sample" class="col-lg-12">
+  <main id="main" class="document">
+    <div class="inner">
+      <div id="sample">
         <div id="sample-select">
-          <div class="row">
-            <div class="form-group col-6">
-              <label class="col-form-label">CP</label>
+          <form class="form inner">
+            <div class="form-group">
+              <label class="form-label">CP</label>
               <select id="sample-select-cp" name="cp" class="form-control">
                 <option value="10">10</option>
                 <option value="12">12</option>
@@ -39,42 +40,36 @@
                 <option value="56">56</option>
               </select>
             </div>
-            <div class="form-group col-6">
-              <label class="col-form-label">SORT</label>
+            <div class="form-group">
+              <label class="form-label">SORT</label>
               <select id="sample-select-sort" name="sort" class="form-control">
                 <option value="">なし</option>
                 <option value="ST">ST</option>
                 <option value="DX">DX</option>
                 <option value="AG">AG</option>
-                <option value="VT">VT</option>
                 <option value="IN">IN</option>
                 <option value="WL">WL</option>
-                <option value="CM">CM</option>
-                <option value="HP">HP</option>
                 <option value="skill">Skill</option>
                 <option value="equip">Equip</option>
               </select>
             </div>
-          </div>
+          </form>
         </div>
         <div id="sample-list">
-          <div class="table-responsive-lg">
-            <table class="table table-hover">
+          <div class="table-fluid">
+            <table class="table">
               <thead>
                 <tr>
-                  <th class="text-center">No.</th>
-                  <th class="text-center">Name</th>
-                  <th class="text-center">Gender</th>
-                  <th class="text-center">ST</th>
-                  <th class="text-center">DX</th>
-                  <th class="text-center">AG</th>
-                  <th class="text-center">VT</th>
-                  <th class="text-center">IN</th>
-                  <th class="text-center">WL</th>
-                  <th class="text-center">CM</th>
-                  <th class="text-center">HP</th>
-                  <th class="text-center">Skill</th>
-                  <th class="text-center">Equip</th>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>ST</th>
+                  <th>DX</th>
+                  <th>AG</th>
+                  <th>IN</th>
+                  <th>WL</th>
+                  <th>Skill</th>
+                  <th>Equip</th>
                 </tr>
               </thead>
               <tbody>
@@ -84,51 +79,48 @@
           <div id="sample-list-overlay"></div>
         </div>
         <template id="sample-list-template">
-          <tr class="sample-list-row">
-            <th class="sample-list-row-no text-center">&nbsp;</th>
-            <td class="sample-list-row-name text-center">&nbsp;</td>
-            <td class="sample-list-row-gender text-center">&nbsp;</td>
-            <td class="sample-list-row-st text-center">&nbsp;</td>
-            <td class="sample-list-row-dx text-center">&nbsp;</td>
-            <td class="sample-list-row-ag text-center">&nbsp;</td>
-            <td class="sample-list-row-vt text-center">&nbsp;</td>
-            <td class="sample-list-row-in text-center">&nbsp;</td>
-            <td class="sample-list-row-wl text-center">&nbsp;</td>
-            <td class="sample-list-row-cm text-center">&nbsp;</td>
-            <td class="sample-list-row-hp text-center">&nbsp;</td>
-            <td class="sample-list-row-skill text-center">&nbsp;</td>
-            <td class="sample-list-row-equip text-center">&nbsp;</td>
+          <tr class="sample-list-inner">
+            <th class="sample-list-inner-no">&nbsp;</th>
+            <td class="sample-list-inner-name">&nbsp;</td>
+            <td class="sample-list-inner-gender">&nbsp;</td>
+            <td class="sample-list-inner-st">&nbsp;</td>
+            <td class="sample-list-inner-dx">&nbsp;</td>
+            <td class="sample-list-inner-ag">&nbsp;</td>
+            <td class="sample-list-inner-in">&nbsp;</td>
+            <td class="sample-list-inner-wl">&nbsp;</td>
+            <td class="sample-list-inner-skill">&nbsp;</td>
+            <td class="sample-list-inner-equip">&nbsp;</td>
           </tr>
         </template>
-        <div id="sample-unit" class="row"></div>
+        <div id="sample-unit" class="inner"></div>
         <template id="sample-unit-template">
-          <div class="col-md-6 col-lg-4">
-            <div class="sample-unit-profile table-responsive-lg">
-              <table class="table table-sm table-hover">
+          <div class="sample-unit-body-1">
+            <div class="sample-unit-profile table-fluid">
+              <table class="table">
                 <caption>Profile</caption>
                 <thead>
                 </thead>
                 <tbody>
                   <tr>
                     <th>Name</th>
-                    <td class="sample-unit-profile-name text-left">&nbsp;</td>
+                    <td class="sample-unit-profile-name td--desc">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <th>Gender</th>
-                    <td class="sample-unit-profile-gender text-left">&nbsp;</td>
+                    <td class="sample-unit-profile-gender td--desc">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <th>CP</th>
-                    <td class="sample-unit-profile-cp text-left">&nbsp;</td>
+                    <td class="sample-unit-profile-cp td--desc">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <div class="sample-unit-ability table-responsive-lg">
-              <table class="table table-sm table-hover">
+            <div class="sample-unit-ability table-fluid">
+              <table class="table">
                 <caption>Ability</caption>
                 <thead>
                 </thead>
@@ -137,9 +129,9 @@
               </table>
             </div>
           </div>
-          <div class="col-md-12 col-lg-8">
-            <div class="sample-unit-skills table-responsive-lg">
-              <table class="table table-sm table-hover">
+          <div class="sample-unit-body-2">
+            <div class="sample-unit-skills table-fluid">
+              <table class="table">
                 <caption>Skills</caption>
                 <thead>
                 </thead>
@@ -148,9 +140,9 @@
               </table>
             </div>
           </div>
-          <div class="col-lg-12">
-            <div class="sample-unit-equips table-responsive-lg">
-              <table class="table table-sm table-hover">
+          <div class="sample-unit-body-3">
+            <div class="sample-unit-equips table-fluid">
+              <table class="table">
                 <caption>Equipmets</caption>
                 <thead>
                 </thead>
@@ -172,7 +164,7 @@
             <th class="sample-unit-skill-name-1">&nbsp;</th>
             <td class="sample-unit-skill-value-1">&nbsp;</td>
             <td class="sample-unit-skill-cp-1">&nbsp;</td>
-            <td class="border-bottom-0">&nbsp;</td>
+            <td class="border--none">&nbsp;</td>
             <th class="sample-unit-skill-name-2">&nbsp;</th>
             <td class="sample-unit-skill-value-2">&nbsp;</td>
             <td class="sample-unit-skill-cp-2">&nbsp;</td>
@@ -194,7 +186,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer role="contentinfo"><small>&copy; 2020 QWEL</small></footer>
   <script src="../js/init.js" type="module"></script>
 </body>
 

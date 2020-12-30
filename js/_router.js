@@ -50,7 +50,7 @@ export default class Router {
           const scrolling = new Scrolling({
             offset: 10
           });
-          scrolling.scroll('.article');
+          scrolling.scroll('.document__article');
         } else if (typeof this._launch === 'function') {
           this._launch(this._parsePart(url));
         }
@@ -113,15 +113,15 @@ export default class Router {
         return this._show(elem);
       });
     } else if (diff === 'article') {
-      const elem = document.querySelector('.article');
+      const elem = document.querySelector('.document__article');
       return this._hide(elem).then(() => {
-        elem.innerHTML = html.querySelector('.article').innerHTML;
+        elem.innerHTML = html.querySelector('.document__article').innerHTML;
         return this._show(elem);
       });
     } else if (diff === 'section') {
-      const elem = document.querySelector('.section');
+      const elem = document.querySelector('.document--section');
       return this._hide(elem).then(() => {
-        elem.innerHTML = html.querySelector('.section').innerHTML;
+        elem.innerHTML = html.querySelector('.document--section').innerHTML;
         return this._show(elem);
       });
     }

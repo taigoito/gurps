@@ -1,0 +1,235 @@
+/* Layout Title
+------------------------------*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 576px;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+
+// Title
+
+#title {
+  position: relative;
+  z-index: 1000;
+  height: 144px;
+  margin-bottom: .5rem;
+  border-bottom: 2px solid darken(#ffffff, 10%);
+  transition: 1s all ease-in-out;
+}
+
+h1 {
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 21rem;
+  font-size: 3rem;
+  line-height: 2rem;
+  text-align: center;
+  transition: 1s all ease-in-out;
+  
+  span {
+    font-size: 1rem;
+  }
+
+  @media (min-width: breakpoint("md")) {
+    left: 12.5%;
+  }
+}
+
+.entrance {
+  #title {
+    height: 50vh;
+  }
+    
+  h1 {
+    left: 50%;
+    margin-left: -10.5rem;
+  }
+}
+
+.main-menu {
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+
+  &__item {
+    list-style-type: none;
+    display: inline;
+
+    &:not(:first-child)::before {
+      content: "/";
+      margin-right: .65em
+    }
+  }
+}
+
+
+// Common
+
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.15rem;
+  padding-left: 0.65rem;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted darken(#ffffff, 10%);
+  line-height: 1
+}
+
+h3 {
+  padding-left: .65rem;
+  border-left: 0.35rem solid darken(#ffffff, 10%);
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-top: 1.75rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  
+  &::before {
+    content: "- ";
+    vertical-align: 8%;
+  }
+}
+
+h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: .25rem;
+  text-align: justify;
+  text-indent: .65em;
+}
+
+
+// List
+
+.list-items {
+  margin: 1rem auto;
+
+  li {
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+    letter-spacing: $small-letter-spacing;
+  }
+}
+
+
+// Table
+
+.table {
+  @include table();
+  margin: 1rem auto;
+
+  tr:hover {
+    background: rgba(255, 255, 255, .15);
+  }
+
+  th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+    letter-spacing: $small-letter-spacing;
+    text-align: center;
+
+    &.th--head, &.td--head {
+      width: 8rem;
+    }
+
+    &.th--desc, &.td--desc {
+      padding-left: .65rem;
+      padding-right: .65rem;
+      text-align: left;
+    }
+  }
+}
+
+caption {
+  caption-side: top;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: darken(#ffffff, 20%);
+  font-style: italic;
+  font-size: $small-font-size;
+  line-height: $small-line-height;
+  letter-spacing: $small-letter-spacing;
+  text-align: left;
+}
+
+
+// Background
+
+#cover-image, #cover-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#cover-image {
+  background: url(./images/landscape00.jpg) center center / cover no-repeat scroll;
+}
+
+#cover-gradient {
+  background: radial-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 1));
+}
+
+
+// Copyright
+
+footer {
+  margin: 6rem auto;
+  text-align: center;
+}
+
+
+// Transition
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .25s ease;
+}
+
+
+// Animation
+
+.anim-show {
+	animation: fadein .35s ease-out;
+}
+.anim-hide {
+	animation: fadeout .15s ease-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

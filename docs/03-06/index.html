@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>防御効果 - GURPS.QWEL</title>
-  <meta name="description" content="上級戦闘 | 防御効果">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,93 +20,237 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>上級戦闘</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
-              <h3>防御効果</h3>
-              <p>基本戦闘では「受け」や「止め」に成功すれば、ダメージは全くありませんが、このルールを適用すると、「受け」や「止め」は、ダメージを軽減させるだけになります。</p>
-              <p>「受け」や「止め」に成功すると、攻撃のダメージは半分（端数切捨）になります。そこから、防御に用いた武器（盾）のP-EV（B-EV）の値をダメージから引くことができます。このダメージはほとんど衝撃であるため、攻撃型が「切り」、「刺し」の武器でも、裂傷によるダメージ変化はありません。</p>
-              <p>例えば剣による攻撃を小盾で止めたとします。ダメージダイスを振って剣のダメージが7点だったとすると、それを半分にした値は3点で、さらに小盾のB-EVの2点を引き、ダメージは1点となります。ダメージそのものは小さいですが、衝撃による技能値の低下によって、次の攻撃やフェイントが少し成功し易くなるでしょう。</p>
-              <p>このルールは計算がやや煩雑なため、選択ルールとします。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="../03-05/" data-role="navigate" data-target="/docs/03-05/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../04-01/" data-role="navigate" data-target="/docs/04-01/">next <small>&gt;&gt;</small></a> </div>
+              <h3>反応判定</h3>
+              <p>シティアドベンチャーの醍醐味である交渉事は、基本的にはGMとPCの対話で上手く進めてください。しかし最終的に、真実を正しく伝えられるか、というところはダイスで決めるのが面白いでしょう。</p>
+              <p>反応判定に用いることができるのは、「礼法」、「説得」、「商人」、「交渉」、「尋問」、「演技」の6つの技能ですが、技能が無い場合は、技能無しとみなして、IN(知性)-2で判定してください。</p>
+              <h4>援護要請</h4>
+              <p>NPCに何らかの援助を求めるときは、この項目を参照します。修正は以下の通りです。</p>
+              <ul class="list-items">
+                <li>簡単な援助(+1〜+2)</li>
+                <li>複雑な援助(-1〜-2)</li>
+                <li>NPCに肉体的な不便や危険を強いたり、金銭的な負担を与える(-1)</li>
+                <li>NPCの職業や社会的な地位をおびやかす(-2)</li>
+              </ul>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>反応</th>
+                    <th class="th--desc">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>-8以下<br>最悪</td>
+                    <td class="td--desc">要請は拒否される。<br>-4の修正でただちに敵対反応を決める（良くても「中立」まで）。</td>
+                  </tr>
+                  <tr>
+                    <td>-7～-5<br>悪い</td>
+                    <td class="td--desc">要請は拒否される。<br>ただちに敵対反応を決める（良くても「中立」まで）。</td>
+                  </tr>
+                  <tr>
+                    <td>-4～-2<br>良くない</td>
+                    <td class="td--desc">要請は拒否されるが、賄賂、懇願、脅しなどで変わるかも知れない。<br>-2の修正で反応を決め直しても良い。</td>
+                  </tr>
+                  <tr>
+                    <td>-1〜+1<br>中立</td>
+                    <td class="td--desc">簡単な要請なら引き受けてもらえる。<br>困難なものは拒否されるが、-2の修正で反応を決め直しても良い。</td>
+                  </tr>
+                  <tr>
+                    <td>+2～+4<br>良い</td>
+                    <td class="td--desc">無理の無い要請なら引き受けてもらえる。<br>NPCは協力的で、困難な要請を断る場合には有用な情報を教えてくれたりする。</td>
+                  </tr>
+                  <tr>
+                    <td>+5以上<br>最良</td>
+                    <td class="td--desc">まったく無理な要請でない限り引き受けてもらえる。<br>NPCの側から積極的に有用な情報を教えてくれる。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>通商</h4>
+              <p>NPCとの間で物品を売買したり、雇用関係を結ぼうとしているときは、この項目を参照します。修正は以下の通りです。</p>
+              <ul class="list-items">
+                <li>PCに利益を出す気は無い(+1〜+2)</li>
+                <li>PCに利益を出す気が有る(-1〜-2)</li>
+                <li>PCに良い噂話が流れている(+1)</li>
+                <li>PCの行動目的がNPCと一致している(+2)</li>
+              </ul>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>反応</th>
+                    <th class="th--desc">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>-8以下<br>最悪</td>
+                    <td class="td--desc">取引はほぼ不可能。<br>NPCは標準価格の3倍で品物を売りつけ、3分の1で品物を買おうとする。<br>雇用関係なら裏切りの機会をひたすら待っている。<br>-2の修正でただちに敵対反応を決める（良くても「中立」まで）。</td>
+                  </tr>
+                  <tr>
+                    <td>-7～-5<br>悪い</td>
+                    <td class="td--desc">取引はうまくいかない。<br>NPCは標準価格の2倍で品物を売りつけ、2分の1で品物を買おうとする。<br>雇用関係なら何らかの誘惑や恐怖で、逃げ出したり裏切ったりする。</td>
+                  </tr>
+                  <tr>
+                    <td>-4～-2<br>良くない</td>
+                    <td class="td--desc">取引で利益を上げることはできない。<br>NPCは標準価格の2割増しで品物を売りつけ、6分の5で品物を買おうとする。</td>
+                  </tr>
+                  <tr>
+                    <td>-1〜+1<br>中立</td>
+                    <td class="td--desc">取引は普通に行われる。NPCは標準価格で売買しようとする。</td>
+                  </tr>
+                  <tr>
+                    <td>+2～+4<br>良い</td>
+                    <td class="td--desc">取引はうまく進む。<br>NPCはちょっとした情報や手助けをおまけしてくれるかも知れない。<br>雇用関係ならPCの受け入れる危険ならある程度受け入れてくれる。</td>
+                  </tr>
+                  <tr>
+                    <td>+5以上<br>最良</td>
+                    <td class="td--desc">取引は大変うまく進む。NPCはPCの言い値に従う。<br>限界を超える要求がなされていたら、限界の値段を持ちかける。<br>雇用関係ならPCのために自らの身を危険に身をさらすさえある。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>情報収集</h4>
+              <p>NPCから情報や助言を得ようとするときは、この項目を参照します。NPCは当然知っていること以外は話さないし、間違ったことを事実だと思い込んでいる場合もあります。修正は以下の通りです。</p>
+              <ul class="list-items">
+                <li>複雑な質問(-1〜-2)</li>
+                <li>NPCにとって関心の無い話(-2)</li>
+                <li>質問に答えることで、NPCの身を危険にさらす可能性がある(-4)</li>
+                <li>何らかの対価を上手く渡せそうな状況(+1〜+2)</li>
+              </ul>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>反応</th>
+                    <th class="th--desc">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>-8以下<br>最悪</td>
+                    <td class="td--desc">NPCは悪意に満ちた嘘をつく。<br>-2の修正でただちに敵対反応を決める（良くても「中立」まで）。</td>
+                  </tr>
+                  <tr>
+                    <td>-7～-5<br>悪い</td>
+                    <td class="td--desc">NPCは悪意に満ちた嘘をつくか、あるいは料金を請求する。<br>料金を支払った場合、嘘はつかないが、不完全な情報だけ。</td>
+                  </tr>
+                  <tr>
+                    <td>-4～-2<br>良くない</td>
+                    <td class="td--desc">NPCは乗り気でない。何も知らないと言ったり、不完全な情報だけ。<br>賄賂を渡せば何か思い出すかも知れない（もう一度反応を決める）。</td>
+                  </tr>
+                  <tr>
+                    <td>-1〜+1<br>中立</td>
+                    <td class="td--desc">NPCはそれが面倒なものでなければ、知っていることを教えてくれる。<br>複雑なことなら、大雑把な説明だけで済ませようとする。</td>
+                  </tr>
+                  <tr>
+                    <td>+2～+4<br>良い</td>
+                    <td class="td--desc">NPCは正確な情報を教えてくれる。</td>
+                  </tr>
+                  <tr>
+                    <td>+5以上<br>最良</td>
+                    <td class="td--desc">NPCは聞かれたことについて詳しく答えてくれる。<br>さらに関連する情報を自分から話してくれるかも知れない。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>敵対反応</h4>
+              <p>NPCと明らかに利害が反し合い、戦闘が発生する可能性があるときは、この項目を参照します。修正は以下の通りです。</p>
+              <ul class="list-items">
+                <li>NPCの方が弱そう（人数や装備）(+1〜+4)</li>
+                <li>NPCの方が強そう（人数や装備）(-1〜-4)</li>
+                <li>PCがNPCの知らない地域の言葉で話しかけた(-1)</li>
+                <li>PCがNPCの領土に侵入している(-2)</li>
+              </ul>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>反応</th>
+                    <th class="th--desc">内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>-8以下<br>最悪</td>
+                    <td class="td--desc">NPCは攻撃をしかけてくる。</td>
+                  </tr>
+                  <tr>
+                    <td>-7～-5<br>悪い</td>
+                    <td class="td--desc">NPCは人数で負けていなければ攻撃をしかけてくる。<br>人数で負けていれば逃走する(おそらく、後で闇討ちしようとする)。</td>
+                  </tr>
+                  <tr>
+                    <td>-4～-2<br>良くない</td>
+                    <td class="td--desc">NPCは脅しや屈辱の言葉を投げつけ、その場を立ち去るように命じる。<br>PCが動こうとしなければ反応は「悪い」に。</td>
+                  </tr>
+                  <tr>
+                    <td>-1〜+1<br>中立</td>
+                    <td class="td--desc">NPCは自分達の道を進もうとする。<br>利害が反しないなら、PCを無視する。</td>
+                  </tr>
+                  <tr>
+                    <td>+2～+4<br>良い</td>
+                    <td class="td--desc">NPCは仲良くやっていけると思うか、戦うには強すぎると感じる。<br>援護要請や情報収集を+1の修正で試みることができる。</td>
+                  </tr>
+                  <tr>
+                    <td>+5以上<br>最良</td>
+                    <td class="td--desc">NPCは友好的。援護要請や情報収集を+3の修正で試みることができる。<br>明らかな敵でさえ、この場は見逃してくれるかも知れない。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination">
+                <a class="pagination__prev" href="../03-05/" data-role="navigate" data-target="/docs/03-05/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../04-01/" data-role="navigate" data-target="/docs/04-01/">next <small>&gt;&gt;</small></a>
+              </div>
             </div>
           </section>
         </div>
@@ -114,7 +259,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 

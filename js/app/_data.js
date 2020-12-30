@@ -151,15 +151,6 @@ export const data = {
     },
     {
       'id': 3,
-      'name': 'VT',
-      'parameterType': 0,
-      'learnPriority': 0,
-      'baseId': false,
-      'baseFix': 0,
-      'min': 1
-    },
-    {
-      'id': 4,
       'name': 'IN',
       'parameterType': 0,
       'learnPriority': 0,
@@ -168,7 +159,7 @@ export const data = {
       'min': 2
     },
     {
-      'id': 5,
+      'id': 4,
       'name': 'WL',
       'parameterType': 0,
       'learnPriority': 0,
@@ -177,25 +168,7 @@ export const data = {
       'min': 1
     },
     {
-      'id': 6,
-      'name': 'CM',
-      'parameterType': 0,
-      'learnPriority': 0,
-      'baseId': false,
-      'baseFix': 0,
-      'min': 1
-    },
-    {
-      'id': 7,
-      'name': 'HP',
-      'parameterType': 0,
-      'learnPriority': 0,
-      'baseId': 0,
-      'baseFix': 0,
-      'min': 0.5
-    },
-    {
-      'id': 8,
+      'id': 5,
       'name': '武術',
       'parameterType': 1,
       'learnPriority': 0,
@@ -204,16 +177,7 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 9,
-      'name': '怪力',
-      'parameterType': 1,
-      'learnPriority': 4,
-      'baseId': 0,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 10,
+      'id': 6,
       'name': '剣術',
       'parameterType': 1,
       'learnPriority': 2,
@@ -222,7 +186,7 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 11,
+      'id': 10,
       'name': '弓術',
       'parameterType': 1,
       'learnPriority': 2,
@@ -231,56 +195,65 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 12,
-      'name': '探索',
+      'id': 11,
+      'name': '蒼龍術',
       'parameterType': 1,
-      'learnPriority': 6,
-      'baseId': 1,
+      'learnPriority': 0,
+      'baseId': 3,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 12,
+      'name': '朱鳥術',
+      'parameterType': 1,
+      'learnPriority': 0,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 13,
-      'name': '細工',
+      'name': '白虎術',
       'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 1,
+      'learnPriority': 0,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 14,
-      'name': '早業',
+      'name': '玄武術',
       'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 1,
+      'learnPriority': 0,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 15,
-      'name': '生存',
+      'name': '陽術',
       'parameterType': 1,
-      'learnPriority': 4,
-      'baseId': 1,
+      'learnPriority': 0,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 16,
-      'name': '技術',
+      'name': '陰術',
       'parameterType': 1,
       'learnPriority': 0,
-      'baseId': 1,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 17,
-      'name': '演奏',
+      'name': '怪力',
       'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 1,
+      'learnPriority': 4,
+      'baseId': 0,
       'baseFix': -2,
       'min': 0.5
     },
@@ -289,7 +262,7 @@ export const data = {
       'name': '格闘',
       'parameterType': 1,
       'learnPriority': 0,
-      'baseId': 2,
+      'baseId': 0,
       'baseFix': -2,
       'min': 0.5
     },
@@ -298,12 +271,57 @@ export const data = {
       'name': '柔術',
       'parameterType': 1,
       'learnPriority': 2,
-      'baseId': 2,
+      'baseId': 1,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 20,
+      'name': '探索',
+      'parameterType': 1,
+      'learnPriority': 6,
+      'baseId': 1,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 21,
+      'name': '細工',
+      'parameterType': 1,
+      'learnPriority': 2,
+      'baseId': 1,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 22,
+      'name': '早業',
+      'parameterType': 1,
+      'learnPriority': 2,
+      'baseId': 1,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 23,
+      'name': '演奏',
+      'parameterType': 1,
+      'learnPriority': 0,
+      'baseId': 1,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 24,
+      'name': '技術',
+      'parameterType': 1,
+      'learnPriority': 0,
+      'baseId': 1,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 25,
       'name': '運動',
       'parameterType': 1,
       'learnPriority': 6,
@@ -312,7 +330,7 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 21,
+      'id': 26,
       'name': '隠密',
       'parameterType': 1,
       'learnPriority': 4,
@@ -321,7 +339,7 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 22,
+      'id': 27,
       'name': '軽業',
       'parameterType': 1,
       'learnPriority': 4,
@@ -330,7 +348,7 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 23,
+      'id': 28,
       'name': '舞踏',
       'parameterType': 1,
       'learnPriority': 0,
@@ -339,106 +357,97 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 24,
-      'name': '持久走',
+      'id': 29,
+      'name': '鑑定',
       'parameterType': 1,
       'learnPriority': 4,
       'baseId': 3,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 25,
-      'name': '歌唱',
-      'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 3,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 26,
-      'name': '蒼龍術',
-      'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 4,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 27,
-      'name': '朱鳥術',
-      'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 4,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 28,
-      'name': '白虎術',
-      'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 4,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 29,
-      'name': '玄武術',
-      'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 4,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 30,
-      'name': '陽術',
+      'name': '治癒',
       'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 4,
+      'learnPriority': 4,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 31,
-      'name': '陰術',
+      'name': '歴史',
       'parameterType': 1,
-      'learnPriority': 0,
-      'baseId': 4,
+      'learnPriority': 4,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 32,
-      'name': '鑑定',
+      'name': '知識',
       'parameterType': 1,
-      'learnPriority': 4,
-      'baseId': 4,
+      'learnPriority': 2,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 33,
-      'name': '治癒',
+      'name': '礼法',
       'parameterType': 1,
-      'learnPriority': 4,
-      'baseId': 4,
+      'learnPriority': 6,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 34,
-      'name': '歴史',
+      'name': '説得',
       'parameterType': 1,
       'learnPriority': 4,
-      'baseId': 4,
+      'baseId': 3,
       'baseFix': -2,
       'min': 0.5
     },
     {
       'id': 35,
+      'name': '商人',
+      'parameterType': 1,
+      'learnPriority': 2,
+      'baseId': 3,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 36,
+      'name': '交渉',
+      'parameterType': 1,
+      'learnPriority': 2,
+      'baseId': 3,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 37,
+      'name': '尋問',
+      'parameterType': 1,
+      'learnPriority': 2,
+      'baseId': 3,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 38,
+      'name': '演技',
+      'parameterType': 1,
+      'learnPriority': 4,
+      'baseId': 3,
+      'baseFix': -2,
+      'min': 0.5
+    },
+    {
+      'id': 39,
       'name': '言語',
       'parameterType': 1,
       'learnPriority': 2,
@@ -447,74 +456,11 @@ export const data = {
       'min': 0.5
     },
     {
-      'id': 36,
-      'name': '知識',
-      'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 4,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 37,
-      'name': '研究',
-      'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 4,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 38,
-      'name': '礼儀作法',
-      'parameterType': 1,
-      'learnPriority': 6,
-      'baseId': 6,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 39,
-      'name': '説得',
-      'parameterType': 1,
-      'learnPriority': 4,
-      'baseId': 6,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
       'id': 40,
-      'name': '演技',
+      'name': '歌唱',
       'parameterType': 1,
-      'learnPriority': 4,
-      'baseId': 6,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 41,
-      'name': '商人',
-      'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 6,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 42,
-      'name': '交渉',
-      'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 6,
-      'baseFix': -2,
-      'min': 0.5
-    },
-    {
-      'id': 43,
-      'name': '尋問',
-      'parameterType': 1,
-      'learnPriority': 2,
-      'baseId': 6,
+      'learnPriority': 0,
+      'baseId': 4,
       'baseFix': -2,
       'min': 0.5
     }
@@ -545,235 +491,235 @@ export const data = {
     },
     {
       'itemId': 1,
-      'name': 'ブロードソード',
-      'secondName': 'バスタードソード(片手)',
+      'name': 'ダガー',
       'equipmentType': 2,
-      'baseDmg': 6,
-      'dmgType': 2,
-      'skill': 10,
+      'baseDmg': 4,
+      'dmgType': 1,
+      'skill': 6,
       'ready': 0,
       'ev': 1,
       'usualUsage': 1
     },
     {
       'itemId': 2,
-      'name': 'バスタードソード',
-      'secondName': 'バスタードソード(両手)',
-      'equipmentType': 4,
-      'baseDmg': 7,
+      'name': 'ショートソード',
+      'equipmentType': 2,
+      'baseDmg': 5,
       'dmgType': 2,
-      'skill': 8,
+      'skill': 6,
       'ready': 0,
-      'ev': 2,
-      'usualUsage': 1
+      'ev': 1,
+      'usualUsage': 2
     },
     {
       'itemId': 3,
-      'name': 'グレートソード',
-      'equipmentType': 4,
-      'baseDmg': 8,
-      'dmgType': 2,
-      'skill': 8,
+      'name': 'スモールソード',
+      'equipmentType': 2,
+      'baseDmg': 5,
+      'dmgType': 1,
+      'skill': 6,
       'ready': 0,
-      'ev': 2,
+      'ev': 1,
       'usualUsage': 3
     },
     {
       'itemId': 4,
-      'name': '三日月刀',
-      'secondName': '青龍刀(片手)',
+      'name': 'ブロードソード',
+      'secondName': 'バスタードソード(片手)',
       'equipmentType': 2,
       'baseDmg': 6,
       'dmgType': 2,
-      'skill': 10,
+      'skill': 6,
       'ready': 0,
       'ev': 1,
       'usualUsage': 4
     },
     {
       'itemId': 5,
-      'name': '青竜刀',
-      'secondName': '青龍刀(両手)',
+      'name': 'バスタードソード',
+      'secondName': 'バスタードソード(両手)',
       'equipmentType': 4,
-      'baseDmg': 7,
+      'baseDmg': 8,
       'dmgType': 2,
-      'skill': 8,
+      'skill': 5,
       'ready': 0,
       'ev': 2,
-      'usualUsage': 4
+      'usualUsage': 3
     },
     {
       'itemId': 6,
-      'name': 'レイピア',
-      'equipmentType': 2,
-      'baseDmg': 5,
-      'dmgType': 1,
-      'skill': 10,
+      'name': 'グレートソード',
+      'equipmentType': 4,
+      'baseDmg': 9,
+      'dmgType': 2,
+      'skill': 5,
       'ready': 0,
-      'ev': 1,
+      'ev': 2,
       'usualUsage': 6
     },
     {
       'itemId': 7,
-      'name': 'エストック',
-      'equipmentType': 4,
+      'name': '三日月刀',
+      'secondName': '蒼龍刀(片手)',
+      'equipmentType': 2,
       'baseDmg': 6,
-      'dmgType': 1,
-      'skill': 8,
+      'dmgType': 2,
+      'skill': 6,
+      'ready': 0,
+      'ev': 1,
+      'usualUsage': 7
+    },
+    {
+      'itemId': 8,
+      'name': '蒼龍刀',
+      'secondName': '蒼龍刀(両手)',
+      'equipmentType': 4,
+      'baseDmg': 8,
+      'dmgType': 2,
+      'skill': 5,
       'ready': 0,
       'ev': 2,
       'usualUsage': 7
     },
     {
-      'itemId': 8,
-      'name': '手斧',
-      'equipmentType': 2,
-      'baseDmg': 7,
-      'dmgType': 2,
-      'skill': 10,
-      'ready': 1,
-      'ev': 1,
-      'usualUsage': 8
-    },
-    {
       'itemId': 9,
-      'name': 'ウォーハンマー',
-      'equipmentType': 2,
-      'baseDmg': 9,
+      'name': 'モーニングスター',
+      'equipmentType': 3,
+      'baseDmg': 8,
       'dmgType': 3,
-      'skill': 8,
+      'skill': 6,
       'ready': 1,
       'ev': 1,
       'usualUsage': 9
     },
     {
       'itemId': 10,
-      'name': '戦斧',
+      'name': '手斧',
       'equipmentType': 2,
       'baseDmg': 8,
       'dmgType': 2,
-      'skill': 8,
+      'skill': 6,
       'ready': 1,
       'ev': 1,
       'usualUsage': 10
     },
     {
       'itemId': 11,
-      'name': 'モーニングスター',
-      'equipmentType': 3,
-      'baseDmg': 8,
+      'name': '戦鎚',
+      'equipmentType': 2,
+      'baseDmg': 10,
       'dmgType': 3,
-      'skill': 10,
+      'skill': 5,
       'ready': 1,
       'ev': 1,
       'usualUsage': 11
     },
     {
       'itemId': 12,
-      'name': 'クォータースタッフ',
-      'equipmentType': 5,
-      'baseDmg': 7,
-      'dmgType': 3,
-      'skill': 10,
-      'ready': 0,
-      'ev': 3,
+      'name': '戦斧',
+      'equipmentType': 2,
+      'baseDmg': 9,
+      'dmgType': 2,
+      'skill': 5,
+      'ready': 1,
+      'ev': 1,
       'usualUsage': 12
     },
     {
       'itemId': 13,
-      'name': 'スピア',
-      'secondName': 'ハルバード(突き)',
+      'name': 'スタッフ',
       'equipmentType': 5,
-      'baseDmg': 5,
-      'dmgType': 1,
-      'skill': 10,
+      'baseDmg': 6,
+      'dmgType': 3,
+      'skill': 6,
       'ready': 0,
       'ev': 3,
       'usualUsage': 13
     },
     {
       'itemId': 14,
-      'name': 'グレイヴ',
+      'name': 'スピア',
+      'secondName': 'ハルバード(突き)',
       'equipmentType': 5,
-      'baseDmg': 7,
-      'dmgType': 2,
-      'skill': 8,
+      'baseDmg': 5,
+      'dmgType': 1,
+      'skill': 6,
       'ready': 0,
       'ev': 3,
       'usualUsage': 14
     },
     {
       'itemId': 15,
-      'name': 'ハルバード',
-      'secondName': 'ハルバード(振り)',
+      'name': 'グレイヴ',
       'equipmentType': 5,
-      'baseDmg': 9,
+      'baseDmg': 8,
       'dmgType': 2,
-      'skill': 8,
-      'ready': 1,
+      'skill': 5,
+      'ready': 0,
       'ev': 3,
-      'usualUsage': 13
+      'usualUsage': 15
     },
     {
       'itemId': 16,
-      'name': '狩人の弓',
-      'equipmentType': 6,
-      'baseDmg': 4,
-      'dmgType': 1,
-      'skill': 10,
+      'name': 'ハルバード',
+      'secondName': 'ハルバード(振り)',
+      'equipmentType': 5,
+      'baseDmg': 12,
+      'dmgType': 2,
+      'skill': 5,
       'ready': 1,
-      'ev': 0,
-      'usualUsage': 16
+      'ev': 3,
+      'usualUsage': 14
     },
     {
       'itemId': 17,
-      'name': '長弓',
+      'name': 'ボウガン',
       'equipmentType': 6,
-      'baseDmg': 5,
+      'baseDmg': 6,
       'dmgType': 1,
-      'skill': 11,
-      'ready': 1,
+      'skill': 6,
+      'ready': 2,
       'ev': 0,
       'usualUsage': 17
     },
     {
       'itemId': 18,
-      'name': 'ボウガン',
+      'name': 'クロスボウ',
       'equipmentType': 6,
-      'baseDmg': 6,
+      'baseDmg': 7,
       'dmgType': 1,
-      'skill': 10,
+      'skill': 6,
       'ready': 2,
       'ev': 0,
       'usualUsage': 18
     },
     {
       'itemId': 19,
-      'name': 'クロスボウ',
+      'name': '狩人の弓',
       'equipmentType': 6,
-      'baseDmg': 7,
+      'baseDmg': 4,
       'dmgType': 1,
-      'skill': 10,
-      'ready': 2,
+      'skill': 6,
+      'ready': 1,
       'ev': 0,
       'usualUsage': 19
     },
     {
       'itemId': 20,
-      'name': 'パンチ',
-      'equipmentType': 1,
-      'baseDmg': 3,
-      'dmgType': 3,
-      'skill': 18,
-      'ready': 0,
+      'name': '長弓',
+      'equipmentType': 6,
+      'baseDmg': 5,
+      'dmgType': 1,
+      'skill': 10,
+      'ready': 1,
       'ev': 0,
       'usualUsage': 20
     },
     {
       'itemId': 21,
-      'name': 'キック',
+      'name': 'パンチ',
       'equipmentType': 1,
-      'baseDmg': 5,
+      'baseDmg': 4,
       'dmgType': 3,
       'skill': 18,
       'ready': 0,
@@ -782,9 +728,9 @@ export const data = {
     },
     {
       'itemId': 22,
-      'name': 'レザーグローブ',
+      'name': 'キック',
       'equipmentType': 1,
-      'baseDmg': 4,
+      'baseDmg': 6,
       'dmgType': 3,
       'skill': 18,
       'ready': 0,
@@ -793,9 +739,9 @@ export const data = {
     },
     {
       'itemId': 23,
-      'name': 'レザーブーツ',
+      'name': 'パンチ',
       'equipmentType': 1,
-      'baseDmg': 6,
+      'baseDmg': 5,
       'dmgType': 3,
       'skill': 18,
       'ready': 0,
@@ -804,9 +750,9 @@ export const data = {
     },
     {
       'itemId': 24,
-      'name': 'メタルナックル',
+      'name': 'キック',
       'equipmentType': 1,
-      'baseDmg': 5,
+      'baseDmg': 7,
       'dmgType': 3,
       'skill': 18,
       'ready': 0,
@@ -815,10 +761,10 @@ export const data = {
     },
     {
       'itemId': 25,
-      'name': 'カイザーナックル',
+      'name': 'パンチ',
       'equipmentType': 1,
-      'baseDmg': 3,
-      'dmgType': 1,
+      'baseDmg': 6,
+      'dmgType': 3,
       'skill': 18,
       'ready': 0,
       'ev': 0,
@@ -826,41 +772,52 @@ export const data = {
     },
     {
       'itemId': 26,
-      'name': '小盾',
-      'equipmentType': 7,
-      'baseDmg': 5,
+      'name': 'キック',
+      'equipmentType': 1,
+      'baseDmg': 8,
       'dmgType': 3,
-      'skill': 10,
-      'ready': 1,
-      'ev': 2,
+      'skill': 18,
+      'ready': 0,
+      'ev': 0,
       'usualUsage': 26
     },
     {
       'itemId': 27,
-      'name': '中盾',
+      'name': '小盾',
       'equipmentType': 7,
-      'baseDmg': 5,
+      'baseDmg': 4,
       'dmgType': 3,
-      'skill': 8,
+      'skill': 6,
       'ready': 1,
-      'ev': 3,
+      'ev': 2,
       'usualUsage': 27
     },
     {
       'itemId': 28,
-      'name': '大盾',
+      'name': '中盾',
       'equipmentType': 7,
-      'baseDmg': 5,
+      'baseDmg': 4,
       'dmgType': 3,
-      'skill': 8,
+      'skill': 5,
       'ready': 1,
-      'ev': 4,
+      'ev': 3,
       'usualUsage': 28
     },
     {
       'itemId': 29,
+      'name': '大盾',
+      'equipmentType': 7,
+      'baseDmg': 4,
+      'dmgType': 3,
+      'skill': 5,
+      'ready': 1,
+      'ev': 4,
+      'usualUsage': 29
+    },
+    {
+      'itemId': 30,
       'name': [
-        'バンダナ',
+        '帽子',
         '服',
         'バンデージ',
         'サンダル'
@@ -872,7 +829,7 @@ export const data = {
       'wt': 0
     },
     {
-      'itemId': 30,
+      'itemId': 31,
       'name': [
         '革の帽子',
         '革服',
@@ -886,7 +843,7 @@ export const data = {
       'wt': 0
     },
     {
-      'itemId': 31,
+      'itemId': 32,
       'name': [
         'ヘッドギア',
         '革鎧',
@@ -900,7 +857,7 @@ export const data = {
       'wt': 1
     },
     {
-      'itemId': 32,
+      'itemId': 33,
       'name': [
         'チェインコイフ',
         'チェインメイル',
@@ -914,7 +871,7 @@ export const data = {
       'wt': 2
     },
     {
-      'itemId': 33,
+      'itemId': 34,
       'name': [
         'オープンヘルム',
         'ブリガンディ',
@@ -925,20 +882,6 @@ export const data = {
       'dr': '3',
       'sdr': 3,
       'tdr': 3,
-      'wt': 3
-    },
-    {
-      'itemId': 34,
-      'name': [
-        false,
-        'ハーフ・プレイト',
-        false,
-        false
-      ],
-      'equipmentType': 8,
-      'dr': '4 (2)',
-      'sdr': 4,
-      'tdr': 2,
       'wt': 3
     },
     {

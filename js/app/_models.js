@@ -174,7 +174,7 @@ class Parameters extends Collection {
 
   // 現CPの合計を取得
   getTotal() {
-    let total = -2 // 「特徴」ルール分
+    let total = 0
     this.models.forEach((elem) => total += elem.get('cp'));
     return total;
   }
@@ -265,14 +265,14 @@ class Equipment extends Model {
     // 'dmg'
     const params = this.get('parameters');
     const baseDmg = this.get('baseDmg');
-    const muscle = params.getValue('9'); // 怪力
+    const muscle = params.getValue('17'); // 怪力
     const dmgId = baseDmg + Math.floor((muscle - 10) / 2);
     const dmg = data.dmg[dmgId];
     const dmgType = data.dmgType[this.get('dmgType')];
     this.set('dmg', dmg);
     this.set('dmgType', dmgType);
     // 'level'
-    const skill = this.id === 1 ? 8 : this.get('skill'); // 武術(副用途)
+    const skill = this.id === 1 ? 5 : this.get('skill'); // 武術(副用途)
     this.set('skill', skill);
     const level = params.getValue(skill);
     this.set('level', level);
@@ -284,7 +284,7 @@ class Equipment extends Model {
   _mathArmor() {
     // 'ev'
     const params = this.get('parameters');
-    const athletics = params.getValue(20); // 運動
+    const athletics = params.getValue(25); // 運動
     const ev = Math.floor((athletics + 10) / 2);
     this.set('ev', ev);
     // モデル自身を返す

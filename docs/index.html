@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>序章 - GURPS.QWEL</title>
-  <meta name="description" content="GURPS.QWELについて | テーブルトークRPGとは | 作者について">
-  <link href="../css/bootstrap.css" rel="stylesheet">
-  <link href="../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../style.css" rel="stylesheet">
+  <link href="../rpg-awesome.css" rel="stylesheet">
+  <link href="../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,113 +20,95 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="./01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="./01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="./01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="./01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="./01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="./01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="./01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="./col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="./01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="./01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="./01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="./02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="./02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="./02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="./02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="./02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="./02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="./02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="./02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="./col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="./03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="./03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="./03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="./03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="./03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="./03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="./03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="./col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="./03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="./04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="./04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="./04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="./04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="./04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="./col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="./05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="./05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="./05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="./05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="./col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="./06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="./06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="./06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="./col-06/" data-role="navigate" data-target="/docs/col-06">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="./07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="./07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="./07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="./col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="./04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="./04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
           <h2>序章</h2>
-          <section class="section">
+          <section class="document--section">
             <div class="inner">
-              <h3><strong>GURPS.QWEL</strong>について</h3>
+              <h3>GURPS.QWELについて</h3>
               <h4>テーブルトークRPGとは</h4>
               <p>テーブルトークRPGとは、簡単に言えば、青年のための「ごっこ遊び」です。プレイヤーが戦士や魔術師といった冒険家になりきって、主催者の描く世界観の中で、冒険の旅をするのです。</p>
-              <p>テーブルトークRPGは2人～6人で遊ぶのがふさわしいと言われています。最低でも、世界観を伝えるゲームの管理人「ゲームマスター」と、冒険家を演じるプレイヤーが数人必要です。プレイヤーの演じる冒険家は、「プレイヤーキャラクター」と呼びます。</p>
-              <p>以下、ゲームマスターはGM、プレイヤーキャラクターはPCと呼びますが、PCは単に人物、誰かと書く場合もあります。</p>
-              <h4>GURPS（ガープス）とは</h4>
-              <p>ガープス(<strong>GURPS</strong>)とは、「包括的で凡庸的なロールプレイングシステム」と訳されます。実際にその命題をクリアするため、現行ルールは魅力的でありながらも、かなり煩雑です。</p>
-              <p>そこで、本ルールはより簡単に作成し直しました。主な改良点は以下の通りです。</p>
-              <ul>
-                <li>100CPでのキャラクター作成を、10CPで行えるようにした。</li>
-                <li>能力値を独自の7つ、ST(腕力)、DX(器用さ)、AG(素早さ)、VT(活力)、IN(知力)、WL(意志力)、CM(魅力)に代えた。</li>
-                <li>攻撃に用いる技能は、武器ならST(腕力)かDX(器用さ)、格闘ならAG(素早さ)が司る。防御に用いる技能は、AG(素早さ)が司る。</li>
-                <li>HP(耐久点)に関しては気絶、生死の判定がシンプルになった。キャラクターは死にやすいかもしれないが、降伏や逃走に導かれる。</li>
-                <li>技能の総数を減らし、技能無し値は、能力値-2とした。技能が無くても、何とかなる場合も多い。</li>
-                <li>特徴は精神的なもののみとし、全て1/2CPの獲得。身体的・社会的な特徴は上級ルールで定められる。</li>
-                <li>能動防御の概念を簡易化した。D-EV(よけ)が、現行ルールの移動力で、人物の身のこなしを示す。</li>
-                <li>武器はそれぞれ短所、長所があり、打撃武器、両手武器や射撃武器が、現行ルールよりも強い。</li>
-                <li>射撃武器の扱い方を変えた。現行ルールよりも素早い射撃が行える。</li>
-                <li>全力攻撃のリスクを変えた。現行ルールよりも全力攻撃を行い易い。</li>
-                <li>上級ルールと初級ルールを分けて、RPG初心者が馴染み易い工夫をした。上級ルールはかなり独特。</li>
-                <li>コンピュータRPGのゲーマーが馴染みやすいよう、魔法は某有名RPGシリーズより抜擢（すみません）。</li>
+              <p>テーブルトークRPGは4～6人で遊ぶのがふさわしいと言われています。最低でも、世界観を伝えるゲームの管理人「ゲームマスター」が1人と、冒険家を演じるプレイヤーが数人必要です。プレイヤーの演じる冒険家は、「プレイヤーキャラクター」と呼びます。</p>
+              <p>一般にゲームマスターはGM、プレイヤーキャラクターはPCと呼びますが、PCは単に人物、誰かと書く場合もあります。</p>
+              <h4>本システムの誕生</h4>
+              <p>GURPS.QWELは、私が考案する新しいテーブルトークRPGのシステムです。</p>
+              <p>そもそもGURPS（ガープス）とは、「包括的で凡庸的なロールプレイングシステム」と訳されます。実際にその命題をクリアするため、現行ルールは魅力的でありながらも、かなり煩雑です。そこで、本ルールはより簡単に作成し直しました。</p>
+              <ul class="list-items">
+                <li>キャラクター作成を10ポイントで行えるようにした。</li>
+                <li>能力値を独自の5つ、ST(体力)、DX(器用さ)、AG(敏捷さ)、IN(知性)、WL(意志力)に代えた。</li>
+                <li>HP(ヒットポイント)を廃止。まとまったダメージを一度に与えないと敵は倒せない。</li>
+                <li>技能の総数を大幅に減らし、修得難易度も廃止した。技能が無くても何とかなる場合も多い。</li>
+                <li>能動防御の概念を簡易化した。D-EV(よけ)が、現行ルールの移動力を示す。</li>
+                <li>精神的な特徴のルールを全体的に「意志と宿星」のルールへ切り替えた。</li>
+                <li>武器にそれぞれ一長一短を設けた。両手・殴打・射撃の各武器が、より扱い易くなった。</li>
+                <li>ルールを再度体系化して、様々な仕組みを選択ルール化できる。それでRPG初心者にとって、より馴染み易くなったと思う。</li>
               </ul>
+              <p>以上の変更を施し、呼称に私の屋号を加え、GURPS.QWELです。</p>
+              <h4>何が面白いのか</h4>
+              <p>本システムは、複数のプレイヤーで物語を共有して作っていく喜びを味わうことと、尊い命を賭す者達の終わりなき戦いに対し何か問いかけを抱くことを、システムの柱として据えています。</p>
+              <p>ですから、敵を次々と薙ぎ倒していく爽快感はありません。むしろ緻密なルールの中で、知恵を絞って、誰も命を落とさないように考え抜くのが、このゲームの醍醐味です。</p>
+              <p>また、母体となっている本家GURPSに準じた純粋な戦闘ゲームのような側面がありつつ、GMとPC達とが一体感を持って物語を作れるように、PCの意志と運命をある程度ルールとして縛る仕組み（「意志と宿星」）もあります。</p>
+              <p>特にその仕組み作りに関しては、現スクエア・エニックス社の「ロマンシング・サガ3」を参考にしていますが、本作は二次創作で、原作とは無関係ですのでご了承ください。</p>
               <h4>作者について</h4>
-              <p>作者は、テーブルトークRPGをやったことがありません。でも、ゲームを作ることは、子供の頃からの密かな夢でした。</p>
-              <p>作者が惹かれるテーブルトークRPGの魅力は、ダイスの力を借りるだけで、全てを想像力で解決していくことです。素晴らしい可能性を秘めている遊びなんだな、と思っています。想像の力は無限大ですからね。</p>
-              <div class="pagination"> <a class="btn-prev float-left" href="/" data-role="navigate" data-target="/">Top</a> <a class="btn-next float-right" href="./01-01/" data-role="navigate" data-target="/docs/01-01/">next <small>&gt;&gt;</small></a> </div>
+              <p>私は、テーブルトークRPGをやったことがありません。でも、ゲームを作ることは、子供の頃からの密かな夢でした。</p>
+              <p>私が惹かれるテーブルトークRPGの魅力は、ダイスの力を借りるだけで、全てを想像力で解決していくことです。素晴らしい可能性を秘めている遊びなんだな、と思っています。</p>
+              <p>想像の力は無限ですからね。</p>
+              <p>このゲームがいつか誰かの手に渡って楽しんで貰えることを、ただただ希望します。</p>
+              <div class="pagination">
+                <a class="pagination__prev" href="/" data-role="navigate" data-target="/">Top</a>
+                <a class="pagination__next" href="./01-01/" data-role="navigate" data-target="/docs/01-01/">next <span>&gt;&gt;</span></a>
+              </div>
             </div>
           </section>
         </div>
@@ -134,7 +117,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../js/init.js" type="module"></script>
 </body>
 

@@ -6,50 +6,50 @@ import { Unit, Units } from '../_models.js';
 
 const base = [
   { // DX, AG優先
-    ability: [-4, 8, 4, 0, -4, 1, 0, -0.5],
+    ability: [-2, 4, 2, 0, 1],
     skills: ['剣術'],
-    equips: [1, 8, 13],
-    missile: [19, 18]
+    equips: [3, 9, 13],
+    missile: [18, 17]
   },
   { // DX, IN優先
-    ability: [-4, 8, 0, 1, 2, 0, 0, -0.5],
+    ability: [-4, 4, 4, -2, 1],
     skills: ['剣術', 's'],
-    equips: [[1, 8, 13], [6, 11, 12]]
+    equips: [1, 10, 14]
   },
   { // DX, ST優先
-    ability: [2, 8, 2, 1, -4, 0, 0, -0.5],
-    skills: [['弓術', '武術'], ['剣術']],
-    equips: [[5], [4]],
-    missile: [17, 16]
+    ability: [0, 4, 2, -2, 1],
+    skills: ['剣術'],
+    equips: [7, 10, 14],
+    missile: [19]
   },
   { // ST, DX優先
-    ability: [4, 2, 0, 2, -4, 1, 0, -0.5],
+    ability: [4, 0, 0, -2, 1],
     skills: ['武術', '弓術'],
-    equips: [[10, 15], [2, 9, 14]],
-    missile: 17
+    equips: [8, 12, 16],
+    missile: [20]
   },
   { // ST, AG優先
-    ability: [4, -4, 4, 1, -4, 0, 2, -0.5],
+    ability: [4, -2, 2, -2, 1],
     skills: ['武術'],
-    equips: [[3], [7]]
+    equips: [6, 12, 16]
   },
   { // ST, IN優先
-    ability: [4, -4, 0, 2, 2, 1, 0, -0.5],
+    ability: [4, -2, 0, 0, 1],
     skills: ['武術', 's'],
-    equips: [[10, 15], [2, 9, 14]]
+    equips: [5, 11, 15]
   },
   { // IN, ST優先
-    ability: [2, -4, 2, 1, 8, 0, 0, -0.5],
+    ability: [0, -2, 2, 4, 1],
     skills: ['s', '武術'],
-    equips: [2, 9, 14]
+    equips: [4, 11, 15]
   },
   { // IN, DX優先
-    ability: [-4, 2, 0, 1, 8, 0, 0, -0.5],
+    ability: [-4, -2, 4, 4, 1],
     skills: ['s', '剣術'],
-    equips: [6, 11, 12]
+    equips: [3, 9, 13]
   },
   { // IN, AG優先
-    ability: [-4, -4, 4, 0, 8, 1, 0, -0.5],
+    ability: [-2, 0, 2, 4, 1],
     skills: ['s', '柔術'],
     equips: [0]
   }
@@ -62,51 +62,50 @@ const fixArrs = [
   ],
   [
     [ // DX優先
-      [['IN', true]],
-      [['CM', true], ['CM', true]]
-    ],
-    [ // ST優先
-      [['DX', true]],
+      [['ST', true]],
+      [['WL', false], ['DX', true]],
       [['IN', true]]
     ],
-    [ // IN優先
-      [['CM', true], ['CM', true]],
+    [ // ST優先
+      [['IN', true]],
+      [['WL', true], ['WL', true]],
       [['DX', true]]
     ],
+    [ // IN優先
+      [['DX', true]],
+      [['WL', false], ['IN', true]],
+      [['ST', true]]
+    ],
   ],
-  [
-    [['HP', true]],
-    [['WL', true]],
-    [['WL', false], ['CM', true]]
-  ]
 ];
 
 const sorceryArr = [
   '蒼龍術',
   '朱鳥術',
-  '陽術',
   '白虎術',
   '玄武術',
-  '陰術',
+  '陽術',
+  '陰術'
 ];
 
 const equipsArrs = [
   [0, 0, 0, 30],
-  [1, 0, 26, 31],
+  [1, 0, 27, 31],
   [2, 0, 27, 31],
-  [3, 0, 0, 30],
-  [4, 0, 26, 31],
-  [5, 0, 27, 31],
-  [6, 0, 26, 31],
-  [7, 0, 0, 32],
-  [8, 0, 26, 31],
-  [9, 0, 27, 33],
-  [10, 0, 27, 33],
-  [11, 0, 26, 31],
-  [12, 0, 0, 31],
-  [13, 0, 0, 31],
+  [3, 0, 27, 32],
+  [4, 0, 27, 32],
+  [5, 0, 28, 32],
+  [6, 0, 0, 32],
+  [7, 0, 27, 32],
+  [8, 0, 28, 32],
+  [9, 0, 27, 32],
+  [10, 0, 27, 32],
+  [11, 0, 28, 34],
+  [12, 0, 28, 34],
+  [13, 0, 0, 32],
   [14, 0, 0, 32],
-  [15, 0, 0, 32],
+  [15, 0, 0, 33],
+  [16, 0, 0, 33]
 ];
 
 class SampleUnit extends Unit {
@@ -121,26 +120,25 @@ class SampleUnit extends Unit {
     const g = this.sid === undefined ? Math.floor(Math.random() * 2) : Math.floor(this.sid / 54) % 2;
     const a = i % 9;
     const a1 = Math.floor(i / 3) % 3;
-    const a2 = Math.floor(i / 9) % 2;
-    const a3 = Math.floor(i / 18) % 3;
+    const a2 = Math.floor(i / 9) % 3;
     const b = (i + Math.floor(i / 18)) % 6;
-    this._born(g, a, a1, a2, a3);
+    this._born(g, a, a1, a2);
     this._grow(g, a, b);
     this._equip(g, a, b);
   }
 
   // 能力値の決定
-  _born(g, a, a1, a2, a3) {
+  _born(g, a, a1, a2) {
     // baseArrの添え字をid、値をcpとし、順次パラメータとして追加
     const baseArr = base[a].ability.slice();
     baseArr.forEach((value, index) => this.setParam(index, value));
 
     // fixArrを作成し、配列の要素を引数として、順次パラメータを更新
-    const fixArr = this._makeBirthArr(g, a1, a2, a3);
+    const fixArr = this._makeBirthArr(g, a1, a2);
     const len = fixArr.length;
     for (let i = 0; i < len; i++) {
       if (this.getParamTotal() < 10) {
-        this.putParam(fixArr[i][0], fixArr[i][1], 9.5); // capacity:10
+        this.putParam(fixArr[i][0], fixArr[i][1], 10); // capacity:10
       } else {
         break;
       }
@@ -231,11 +229,10 @@ class SampleUnit extends Unit {
   }
 
   // 能力値の決定のための配列を作成
-  _makeBirthArr(g, a1, a2, a3) {
+  _makeBirthArr(g, a1, a2) {
     const arr1 = fixArrs[0][g];
     const arr2 = fixArrs[1][a1][a2];
-    const arr3 = fixArrs[2][a3];
-    return arr1.concat(arr2.concat(arr3));
+    return arr1.concat(arr2);
   }
 
   // 技能の決定のための配列を作成
@@ -249,8 +246,8 @@ class SampleUnit extends Unit {
 
     // 優先度を修正
     const skillsArr = [];
-    const start = 8 // 能力値総数
-    const len = 36; // 技能総数
+    const start = 5 // 能力値総数
+    const len = 33; // 技能総数
     for (let i = start; i < start + len; i++) {
       const param = this.setParam(i);
       let priority = param.get('learnPriority');
@@ -290,7 +287,7 @@ class SampleUnit extends Unit {
   }
 
   getMainSkill() {
-    const arr = [8, 10, 11, 18];
+    const arr = [5, 6, 10, 18];
     let max = 0;
     let skill = null;
     this.parameters.models.forEach((param) => {
@@ -303,7 +300,7 @@ class SampleUnit extends Unit {
   }
 
   getSorcery() {
-    const arr = [26, 27, 28, 29, 30, 31];
+    const arr = [11, 12, 13, 14, 15, 16];
     let sorcery = null;
     this.parameters.models.forEach((param) => {
       if (arr.includes(param.id) && param.get('cp') > 0) {

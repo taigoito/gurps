@@ -1,9 +1,0 @@
-// Type custom
-
-html {
-  font-size: 16px;
-
-  @include media-breakpoint-up("md") {
-    font-size: 18px;
-  }
-}

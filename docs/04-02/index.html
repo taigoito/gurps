@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>効果一覧 - GURPS.QWEL</title>
-  <meta name="description" content="術法 | 効果一覧">
-  <link href="../../css/bootstrap.css" rel="stylesheet">
-  <link href="../../css/rpg-awesome.css" rel="stylesheet">
+  <title>GURPS.QWEL - QWELによって再構成を遂げた新しいGURPS</title>
+  <meta name="description" content="GURPS.QWELとは、既成のゲームシステム(GURPS)を母体に、カード式の魔法システムや、プレイヤーの意志と命運を縛る仕組みを加え、QWELによって再構成を遂げた、新しいテーブルトークRPGのシステムです。">
+  <link href="../../style.css" rel="stylesheet">
+  <link href="../../rpg-awesome.css" rel="stylesheet">
+  <link href="../../favicon.ico" rel="favicon">
 </head>
 
 <body>
@@ -19,435 +20,287 @@
   <script>
     const preloader = new Preloader();
   </script>
-  <header id="title" role="banner">
+  <header id="title">
     <h1><a href="/" data-role="navigate" data-target="/">GURPS.QWEL
-        <br><span>GURPSの幻想を追い続けた新しいGURPS</span></a></h1>
+        <br><span>QWELによって再構成を遂げた新しいGURPS</span></a></h1>
   </header>
-  <main id="main" class="container" role="main">
-    <div class="row inner">
-      <nav id="navigation" class="col-lg-3" role="navigation">
+  <main id="main" class="document">
+    <div class="inner">
+      <nav id="navigation" class="document__navigation">
         <h2>目次</h2>
         <ol class="docs-nav" start="0">
           <li><a href="../../docs/" data-role="navigate" data-target="/docs/">序章</a></li>
           <li><a href="../01-01/" data-role="toggle-item">キャラクター</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../01-01/" data-role="navigate" data-target="/docs/01-01/">判定</a></li>
               <li><a href="../01-02/" data-role="navigate" data-target="/docs/01-02/">CPと能力値</a></li>
               <li><a href="../01-03/" data-role="navigate" data-target="/docs/01-03/">技能</a></li>
-              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">特徴</a></li>
-              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">装備</a></li>
-              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">経験点・報酬</a></li>
-              <li><a href="../col-01/" data-role="navigate" data-target="/docs/col-01/">コラムⅠ</a></li>
+              <li><a href="../01-04/" data-role="navigate" data-target="/docs/01-04/">装備</a></li>
+              <li><a href="../01-05/" data-role="navigate" data-target="/docs/01-05/">意志と宿星</a></li>
+              <li><a href="../01-06/" data-role="navigate" data-target="/docs/01-06/">ランダム作成</a></li>
             </ol>
           </li>
           <li><a href="../02-01/" data-role="toggle-item">基本戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../02-01/" data-role="navigate" data-target="/docs/02-01/">戦闘の流れ</a></li>
               <li><a href="../02-02/" data-role="navigate" data-target="/docs/02-02/">行動の解決</a></li>
-              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">負傷効果</a></li>
+              <li><a href="../02-03/" data-role="navigate" data-target="/docs/02-03/">ダメージ効果</a></li>
               <li><a href="../02-04/" data-role="navigate" data-target="/docs/02-04/">疲労・一時異状</a></li>
               <li><a href="../02-05/" data-role="navigate" data-target="/docs/02-05/">起死回生・退却</a></li>
               <li><a href="../02-06/" data-role="navigate" data-target="/docs/02-06/">ファンブル</a></li>
-              <li><a href="../col-02/" data-role="navigate" data-target="/docs/col-02/">コラムⅡ</a></li>
             </ol>
           </li>
           <li><a href="../03-01/" data-role="toggle-item">上級戦闘</a>
-            <ol class="docs-nav-item collapsing">
+            <ol class="docs-nav__item collapsing">
               <li><a href="../03-01/" data-role="navigate" data-target="/docs/03-01/">攻撃型</a></li>
               <li><a href="../03-02/" data-role="navigate" data-target="/docs/03-02/">姿勢・距離</a></li>
               <li><a href="../03-03/" data-role="navigate" data-target="/docs/03-03/">部位狙い</a></li>
               <li><a href="../03-04/" data-role="navigate" data-target="/docs/03-04/">部分防具</a></li>
               <li><a href="../03-05/" data-role="navigate" data-target="/docs/03-05/">近接戦闘</a></li>
-              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">防御効果</a></li>
-              <li><a href="../col-03/" data-role="navigate" data-target="/docs/col-03/">コラムⅢ</a></li>
+              <li><a href="../03-06/" data-role="navigate" data-target="/docs/03-06/">反応判定</a></li>
             </ol>
           </li>
-          <li><a href="../04-01/" data-role="toggle-item">術法</a>
-            <ol class="docs-nav-item collapsing">
+          <li><a href="../04-01/" data-role="toggle-item">法術</a>
+            <ol class="docs-nav__item collapsing">
               <li><a href="../04-01/" data-role="navigate" data-target="/docs/04-01/">概要</a></li>
               <li><a href="../04-02/" data-role="navigate" data-target="/docs/04-02/">効果一覧</a></li>
-              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">術法ファンブル</a></li>
-              <li><a href="../col-04/" data-role="navigate" data-target="/docs/col-04/">コラムⅣ</a></li>
-            </ol>
-          </li>
-          <li><a href="../05-01/" data-role="toggle-item">NPC</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../05-01/" data-role="navigate" data-target="/docs/05-01/">ランダム作成</a></li>
-              <li><a href="../05-02/" data-role="navigate" data-target="/docs/05-02/">反応判定</a></li>
-              <li><a href="../05-03/" data-role="navigate" data-target="/docs/05-03/">恐怖判定</a></li>
-              <li><a href="../col-05/" data-role="navigate" data-target="/docs/col-05/">コラムⅤ</a></li>
-            </ol>
-          </li>
-          <li><a href="../06-01/" data-role="toggle-item">アーツ</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../06-01/" data-role="navigate" data-target="/docs/06-01/">概要</a></li>
-              <li><a href="../06-02/" data-role="navigate" data-target="/docs/06-02/">アーツ一覧</a></li>
-              <li><a href="../col-06/" data-role="navigate" data-target="/docs/col-06/">コラムⅥ</a></li>
-            </ol>
-          </li>
-          <li><a href="../07-01/" data-role="toggle-item">世界観</a>
-            <ol class="docs-nav-item collapsing">
-              <li><a href="../07-01/" data-role="navigate" data-target="/docs/07-01/">魔物</a></li>
-              <li><a href="../07-02/" data-role="navigate" data-target="/docs/07-02/">地域</a></li>
-              <li><a href="../col-07/" data-role="navigate" data-target="/docs/col-07/">コラムⅦ</a></li>
+              <li><a href="../04-03/" data-role="navigate" data-target="/docs/04-03/">ファンブル</a></li>
+              <li><a href="../04-04/" data-role="navigate" data-target="/docs/04-04/">魔物</a></li>
             </ol>
           </li>
           <li><a href="/" data-role="navigate" data-target="/">戻る</a></li>
         </ol>
       </nav>
-      <article class="article col-lg-9">
+      <article class="document__article">
         <div class="inner">
-          <h2>術法</h2>
-          <section class="section">
+          <h2>法術</h2>
+          <section class="document--section">
             <div class="inner">
               <h3>効果一覧</h3>
-              <h4>蒼龍術</h4>
-              <p>風と樹を司る系統です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>術</th>
-                      <th>集中</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ウインドカッター</td>
-                      <td>n</td>
-                      <td>風の刃を敵に放つ（射撃）。1集中ターンにつきダメージ1d-1(切)。</td>
-                    </tr>
-                    <tr>
-                      <td>ナップ</td>
-                      <td>2</td>
-                      <td>敵一人を幻惑（意識はあるが積極的な行動を何もできない）状態にさせる（意志抵抗）。10ターン持続。</td>
-                    </tr>
-                    <tr>
-                      <td>ダンシングリーフ</td>
-                      <td>1</td>
-                      <td>誰か一人に舞う木の葉のような素早さを付与する。10ターンの間、AG(素早さ)+1で、効果が累積（+3まで）。</td>
-                    </tr>
-                    <tr>
-                      <td>ソーンバインド</td>
-                      <td>2</td>
-                      <td>茨が敵一人の足首に絡まり、足首にダメージ2d-2(切)。敵は「よけ」可能。</td>
-                    </tr>
-                    <tr>
-                      <td>ミサイルガード</td>
-                      <td>1</td>
-                      <td>気流を操作して1ターンの間、弓矢など、攻撃型が「刺し」の射撃を、敵味方構わず全て無効にする。</td>
-                    </tr>
-                    <tr>
-                      <td>風と樹の唄</td>
-                      <td>1</td>
-                      <td>敵対心を退け、安らぎを与える唄。1ターンの詠唱ごとに傍聴者全ての敵対反応+1で、効果が累積（+3まで）。</td>
-                    </tr>
-                    <tr>
-                      <td>竜巻</td>
-                      <td>3</td>
-                      <td>小竜巻を起こす（範囲攻撃）。直径10mの範囲の者全てにダメージ2d-2(切)。</td>
-                    </tr>
-                    <tr>
-                      <td>幻竜術</td>
-                      <td>3</td>
-                      <td>白い霧の竜を召喚して、戦わせる。その間、術者は戦ったり、話をしたり、他の術を使ったりできない。<br>
-                        白竜は毎ターン、ダメージ2d-2(切)の風の刃を飛ばすことができる。</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <ul class="list-items">
+                <li>術ランクの順番で掲載しています。</li>
+                <li>術の名前の横の()内は、精神集中に必要なターン数です。</li>
+              </ul>
+              <h4>蒼龍の系統</h4>
+              <p>風と樹を司ります。</p>
+              <table class="table table--spell-list">
+                <thead>
+                  <tr>
+                    <th class="th--head">術</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">ウインドダート (1〜3)</td>
+                    <td class="td--desc">風の矢を敵に放つ（射撃）。1集中ターンにつきダメージ1d-1(刺)。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ナップ (2)</td>
+                    <td class="td--desc">敵1人を幻惑（意識はあるが積極的な行動を何もできない）状態にさせる（-2の修正で抵抗）。抵抗の失敗度ターン持続。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ダンシングリーフ (1)</td>
+                    <td class="td--desc">術者に舞う木の葉のような素早さを付与。10ターンの間、DEV(よけ)+1。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ソーンバインド (2)</td>
+                    <td class="td--desc">茨を敵1人の足首に絡め、足首にダメージ2d-2(刺)。敵は「よけ」可能。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ミサイルガード (1)</td>
+                    <td class="td--desc">気流を操作してそのターン中、弓矢など攻撃型が「刺」の射撃を、敵味方構わず全て無効にする。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">風と樹の唄 (1)</td>
+                    <td class="td--desc">敵対心を退け、安らぎを与える唄。1ターンの詠唱ごとに傍聴者の反応+1で、効果累積（+3まで）。唄を止めると1ターンごとに効果が消える。詠唱を止めるまで術は捨てなくても良い（連続使用可）。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>朱鳥の系統</h4>
+              <p>熱と生命を司ります。</p>
+              <table class="table table--spell-list">
+                <thead>
+                  <tr>
+                    <th class="th--head">術</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">エアスラッシュ (1〜3)</td>
+                    <td class="td--desc">寒暖の差で風の刃を敵に放つ（射撃）。1集中ターンにつきダメージ1d(切)。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ハードファイア (1)</td>
+                    <td class="td--desc">味方1人の戦意を向上。10ターンの間、技能値+1で、効果累積（+3まで）。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">セルフバーニング (2)</td>
+                    <td class="td--desc">術者を炎の膜で包み、10ターンの間、直接攻撃に失敗した敵に反撃。2d(叩)のダメージ。一度反撃すると術が解ける。術がかかっている間、熱や冷気による攻撃を無効にする。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">黒点波 (2)</td>
+                    <td class="td--desc">敵1人へ生命波動による直接攻撃。敵は-2の修正でWL(意志力)抵抗に失敗すると、身体的な重い朦朧状態に陥る。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">魂の歌 (1)</td>
+                    <td class="td--desc">味方の戦意を向上させる歌。1ターンの詠唱ごとに傍聴者の技能値+1で、効果累積（+3まで）。歌を止めると1ターンごとに効果が消える。詠唱を止めるまで術は捨てなくても良い（連続使用可）。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">火の鳥 (3)</td>
+                    <td class="td--desc">敵1人の肉体を発火し、燃焼させる。3dのダメージで、-4の修正による抵抗によりダメージ半減。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>白虎の系統</h4>
+              <p>石と獣を司ります。</p>
+              <table class="table table--spell-list">
+                <thead>
+                  <tr>
+                    <th class="th--head">術</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">ストーンバレット (1〜3)</td>
+                    <td class="td--desc">石粒を敵に放つ（射撃）。1集中ターンにつきダメージ1d+1(叩)。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ベルセルク (1)</td>
+                    <td class="td--desc">敵か味方1人のST(体力)を+1し、10ターン持続。効果累積（+3まで）。-2の修正で抵抗判定し、失敗すると狂戦士化。抵抗の失敗度ターン持続。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">カムフラージュ (2)</td>
+                    <td class="td--desc">術者を視覚的に背景に溶け込ます。他の行為に集中するなど、集中が乱れると術が解ける。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">アースハンド (2)</td>
+                    <td class="td--desc">敵1人の脚を、大地に鷲づかみされたかのように動けなくする（脚の故障）。-2の修正で抵抗判定し、抵抗の失敗度ターン持続。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ストーンスキン (0)</td>
+                    <td class="td--desc">瞬間的に自分自身の皮膚を硬くする。詠唱判定の目標値で、「止め」を行うのと同じ。それまでの精神集中は無効になる。1ターンに一度だけ。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ジェントルタッチ (0)</td>
+                    <td class="td--desc">素手で額に触れた敵を石化させる（死亡と同じ）。-4の修正で抵抗。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>玄武の系統</h4>
+              <p>水と時間を司ります。</p>
+              <table class="table table--spell-list">
+                <thead>
+                  <tr>
+                    <th class="th--head">術</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">生命の水 (1〜3)</td>
+                    <td class="td--desc">味方1人の身体的な朦朧状態を回復。1集中ターンにつき1d点の力を持つ水で、味方のST(体力)の半分を上回る出目を出せば成功。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">神秘の水 (2)</td>
+                    <td class="td--desc">味方1人の幻惑、狂戦士、混乱、精神的な朦朧状態などを回復。対象となる味方がWL(意志力)-2の判定に成功する必要がある。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ウォーターポール (1)</td>
+                    <td class="td--desc">術者に水の鎧を付与。10ターンの間、DR(ダメージ抵抗)+1。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">タイムリープ (2)</td>
+                    <td class="td--desc">敵1人の次のターンを強制的に終了させる。回避、抵抗不能。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">スパークリングミスト (3)</td>
+                    <td class="td--desc">急激に濃霧を発生させる。敵味方とも距離による修正が倍になる。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">召雷 (3)</td>
+                    <td class="td--desc">敵1人にダメージ3d(叩)（射撃）。金属鎧を身につけていると回避判定-2。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>陰の系統</h4>
+              <p>月光と精神を司ります。</p>
+              <table class="table table--spell-list">
+                <thead>
+                  <tr>
+                    <th class="th--head">術</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">ムーンシャイン (1〜3)</td>
+                    <td class="td--desc">味方1人の精神的な異常を回復。1集中ターンにつき1d点の力を持つ光で、味方のWL(意志力)の半分を上回る出目を出せば成功。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ムーングロウ (1)</td>
+                    <td class="td--desc">術者の集中力を高める。10ターンの間、WL(意志力)+1。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ソウルフリーズ (2)</td>
+                    <td class="td--desc">敵1人を恐怖で凍りつかせる。-2の修正で恐怖判定。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">サクション (2)</td>
+                    <td class="td--desc">敵1人の体力を奪取し、永久的にST(体力)が1減じる。-2の修正で抵抗。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">月読の鐘 (3)</td>
+                    <td class="td--desc">敵1人に狂気を付与。-4の修正で抵抗。効果は以下からGMが決める(※)。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">リインカネーション (3)</td>
+                    <td class="td--desc">今の肉体を捨て、新しい肉体へと輪廻転生する。過去や未来に誕生する任意の人物に宿り、何かのきっかけで記憶が戻る。技能、意志、宿星、冒険の記憶を引き継ぎ、新しいキャラクターを作成して再び冒険に参加できる。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>陽の系統</h4>
+              <p>陽光と空間を司ります。</p>
+              <table class="table table--spell-list">
+                <thead>
+                  <tr>
+                    <th class="th--head">術</th>
+                    <th class="th--desc">説明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td--head">サンシャイン (1〜3)</td>
+                    <td class="td--desc">眩しい閃光を放つ。1ターンの集中につき、閃光を浴びた者に命中判定に-2の修正を与え、これは毎ターン2ずつ回復。完全回復するまで回避判定も-1の修正を受ける。目を覆えば（武器や盾で）よけられるので、射撃扱い。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">ヒートウェイブ (2)</td>
+                    <td class="td--desc">熱風を起こし、周囲の敵に2d-2(叩)のダメージ。射撃扱いだが、「受け」は不能。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">スターフィクサー (2)</td>
+                    <td class="td--desc">光の鎖で敵1人の腕を縛る（腕の故障）。-2の修正で抵抗判定し、抵抗の失敗度ターン持続。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">デイブレイク (2)</td>
+                    <td class="td--desc">敵1人をどこか無作為の場所（術者の記憶にある場所）へ瞬間移動させ、戦闘から離脱させる。-2の修正で抵抗判定。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">太陽風 (3)</td>
+                    <td class="td--desc">陽炎を起こし、周囲の敵に3d-3(叩)のダメージ。射撃扱いだが、「受け」は不能。</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">光の剣 (3)</td>
+                    <td class="td--desc">基本ダメージ3d(切)の剣を創り出す。盾も同時に扱えるが、軽くて長いのでPEVは2（両手剣と同じ）。その素材的な性質は、固体として考えて良い。</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination">
+                <a class="pagination__prev" href="../04-01/" data-role="navigate" data-target="/docs/04-01/"><span>&lt;&lt;</span> back</a>
+                <a class="pagination__next" href="../04-03/" data-role="navigate" data-target="/docs/04-03/">next <small>&gt;&gt;</small></a>
               </div>
-              <h4>朱鳥術</h4>
-              <p>炎と生命を司る系統です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>術</th>
-                      <th>集中</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ファイアボール</td>
-                      <td>n</td>
-                      <td>小さな火球を敵に放つ（射撃）。1集中ターンにつきダメージ1d(叩)。</td>
-                    </tr>
-                    <tr>
-                      <td>ハードファイア</td>
-                      <td>1</td>
-                      <td>誰か一人の戦意を向上させる。10ターンの間、戦闘技能値+1で、効果が累積（+3まで）。</td>
-                    </tr>
-                    <tr>
-                      <td>セルフバーニング</td>
-                      <td>2</td>
-                      <td>術者を炎の膜で包む。10ターンの間、直接攻撃に失敗した敵に反撃し、2d(叩)のダメージ。<br>
-                        術がかかっている間、熱や冷気による攻撃のダメージを無効にする。また一度反撃すると術が解ける。</td>
-                    </tr>
-                    <tr>
-                      <td>生命の息吹</td>
-                      <td>2</td>
-                      <td>気絶している者を覚醒させる。HP(耐久点)が-最大値まで達している場合は無効。</td>
-                    </tr>
-                    <tr>
-                      <td>ファイアウォール</td>
-                      <td>1</td>
-                      <td>炎の壁を起こす。1ターンの間、味方全員へのセルフバーニングの効果。</td>
-                    </tr>
-                    <tr>
-                      <td>魂の歌</td>
-                      <td>1</td>
-                      <td>戦意を向上させる歌。1ターンの詠唱ごとに味方全員へのハードファイアの効果。<br>
-                        （ハードファイア、魂の歌の効果は、足し合わせて+3まで累積。）</td>
-                    </tr>
-                    <tr>
-                      <td>イニシレイション</td>
-                      <td>3</td>
-                      <td>大きな火球を放つ（射撃）。ダメージ4d(叩)。「止め」に用いた盾は炎上する。</td>
-                    </tr>
-                    <tr>
-                      <td>リヴァイヴァ</td>
-                      <td>3</td>
-                      <td>気絶または死亡している者のHP(耐久点)を完全回復し、蘇生させる。死後1時間経過しているごとに-1の修正。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h4>白虎術</h4>
-              <p>石と獣を司る系統です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>術</th>
-                      <th>集中</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ストーンバレット</td>
-                      <td>n</td>
-                      <td>その辺に転がっている石粒などを敵に放つ（射撃）。1集中ターンにつき一石を投じ、ダメージ1d+1(叩)。</td>
-                    </tr>
-                    <tr>
-                      <td>ベルセルク</td>
-                      <td>1</td>
-                      <td>誰か一人のST(腕力)とVT(活力)を+1するが、意志抵抗に失敗すると、狂戦士化。10ターン持続し、効果が累積（+3まで）。</td>
-                    </tr>
-                    <tr>
-                      <td>カムフラージュ</td>
-                      <td>1</td>
-                      <td>誰か一人の姿を消す。積極的な行動をとると意志判定-4を行い、失敗すると術が解けてしまう。</td>
-                    </tr>
-                    <tr>
-                      <td>アースハンド</td>
-                      <td>2</td>
-                      <td>敵一人の脚を、大地に鷲づかみされたかのように、動けなくする。10ターンの間、足の故障と同じ（意志抵抗）。</td>
-                    </tr>
-                    <tr>
-                      <td>ストーンスキン</td>
-                      <td>0</td>
-                      <td>瞬間的に自分自身の皮膚を堅くする。白虎術の技能値で、「止め」を行うのと同じ。1ターンに一度だけ。この術を使うと、それまでの精神集中は無効になる。</td>
-                    </tr>
-                    <tr>
-                      <td>タッチゴールド</td>
-                      <td>0</td>
-                      <td>近接戦闘中、触れた敵にこの術を使うと、敵は金塊になる（意志抵抗）。術者がもう一度触れると元に戻る。</td>
-                    </tr>
-                    <tr>
-                      <td>クラック</td>
-                      <td>3</td>
-                      <td>敵一人の足元に地割れを起こし、戦闘から離脱させる。敵は「よけ」可能。 <br>
-                        戦闘後は誰かの手助けによって、這い上がって出ることができる。</td>
-                    </tr>
-                    <tr>
-                      <td>光の壁</td>
-                      <td>1</td>
-                      <td>味方全員を守る光の壁を作り出す。1ターンの間、味方全員のDR(ダメージ抵抗)+3。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h4>玄武術</h4>
-              <p>水と時を司る系統です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>術</th>
-                      <th>集中</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>生命の水</td>
-                      <td>n</td>
-                      <td>誰か一人のHP(耐久点)を、1ターンの集中につき最大値の3分の1（端数切り上げ）回復する。 <br>
-                        3ターンの集中で、身体の一時異常も同時に治す。</td>
-                    </tr>
-                    <tr>
-                      <td>神秘の水</td>
-                      <td>2</td>
-                      <td>誰か一人の身体と精神の一時異状を治す。</td>
-                    </tr>
-                    <tr>
-                      <td>ウォーターポール</td>
-                      <td>1</td>
-                      <td>誰か一人に水の鎧を作る。10ターンの間、DR(ダメージ抵抗)+1で、効果が累積（+3まで）。</td>
-                    </tr>
-                    <tr>
-                      <td>スパークリングミスト</td>
-                      <td>2</td>
-                      <td>濃霧を発生させる。敵味方ともに距離による修正が倍になる。10分ほど持続する。</td>
-                    </tr>
-                    <tr>
-                      <td>スコール</td>
-                      <td>3</td>
-                      <td>豪雨を降らせる。敵味方ともに距離による修正が倍になり、炎のダメージが半減する。10分ほど持続する。</td>
-                    </tr>
-                    <tr>
-                      <td>召雷</td>
-                      <td>3</td>
-                      <td>雷を起こす（射撃）。ダメージ3d-3(叩)だが、金属性の装備を身につけているとDRは0、回避判定-2。</td>
-                    </tr>
-                    <tr>
-                      <td>時間遡行</td>
-                      <td>3</td>
-                      <td>時の流れを遡行し、直前の誰かの行動を無効にする。この術は3ターン目の集中を開始していれば、いつでも発動できる。</td>
-                    </tr>
-                    <tr>
-                      <td>クイックタイム</td>
-                      <td>3</td>
-                      <td>時の流れを歪める。1ターン、PC（術者と親しい者数名）のみが行動可能。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h4>陽術</h4>
-              <p>陽光と空間を司る系統です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>術</th>
-                      <th>集中</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>サンシャイン</td>
-                      <td>2</td>
-                      <td>眩しい閃光を放つ（範囲攻撃）。見た者全員の技能値-6、D-EV(よけ)-2。 <br>
-                        次ターン以降、ターン開始時にVT(活力)によるD-EV(よけ)の回復判定を行う。技能値の修正は必ず1ターン持続。</td>
-                    </tr>
-                    <tr>
-                      <td>ヒートウェイブ</td>
-                      <td>2</td>
-                      <td>熱風を起こす（範囲攻撃）。直径10mの範囲の者全てにダメージ2d-2(叩)。</td>
-                    </tr>
-                    <tr>
-                      <td>スターフィクサー</td>
-                      <td>2</td>
-                      <td>敵一人の腕を痺れさせる。腕にDR無視のダメージ2d-2。意志抵抗によりダメージ半減。</td>
-                    </tr>
-                    <tr>
-                      <td>デイブレイク</td>
-                      <td>2</td>
-                      <td>誰か一人を瞬間移動させ、戦闘から離脱させる。不利な修正無しで、意志抵抗により効果消滅。 <br>
-                        デイブレイクで瞬間移動させられる場所は、術者の記憶にある場所のうちの何処か。PCの場合、戦闘後すぐに再会できる。</td>
-                    </tr>
-                    <tr>
-                      <td>光の剣</td>
-                      <td>1</td>
-                      <td>術者の手にソード+2(最上質)と同等の性能の光の剣を作り出す。 <br>
-                        光の剣は、術者の意思で伸縮自在で、ダガー、バスタードソードの性能でも扱うことができる。 <br>
-                        光の剣は決して落とすことはなく、また他人に譲渡はできない。</td>
-                    </tr>
-                    <tr>
-                      <td>太陽風</td>
-                      <td>3</td>
-                      <td>太陽風を起こす（範囲攻撃）。直径10mの範囲の者全てにダメージ3d-3(叩)。</td>
-                    </tr>
-                    <tr>
-                      <td>再生光</td>
-                      <td>3</td>
-                      <td>誰か一人のHP(耐久点)を完全回復し、身体の一時異常と、部位の故障も治す。</td>
-                    </tr>
-                    <tr>
-                      <td>幻日</td>
-                      <td>3</td>
-                      <td>術者の分身を作り出す。分身によって、1ターンに同じ行動を2ターン分行える。10ターン持続。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <h4>陰術</h4>
-              <p>月光と精神を司る系統です。</p>
-              <div class="table-responsive-lg">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>術</th>
-                      <th>集中</th>
-                      <th>効果</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ムーンシャイン</td>
-                      <td>n</td>
-                      <td>誰か一人のHP(耐久点)を、1ターンの集中につき最大値の3分の1（端数切り上げ）回復する。 <br>
-                        3ターンの集中で、精神の一時異常も同時に治す。</td>
-                    </tr>
-                    <tr>
-                      <td>ムーングロウ</td>
-                      <td>1</td>
-                      <td>誰か一人の精神力を高める。10ターンの間、WL(意志力+1で、効果が累積（+3まで）。</td>
-                    </tr>
-                    <tr>
-                      <td>ソウルフリーズ</td>
-                      <td>2</td>
-                      <td>敵を恐怖で凍りつかせる。敵はWL(意志力)-2で恐怖判定を行う。</td>
-                    </tr>
-                    <tr>
-                      <td>サクション</td>
-                      <td>n</td>
-                      <td>敵のHP(耐久点)を奪う。1集中ターンにつき1d-2。意志抵抗によりダメージ半減。アンデッドには逆効果。</td>
-                    </tr>
-                    <tr>
-                      <td>月読の鐘</td>
-                      <td>1</td>
-                      <td>気絶している者を意のままに操る。1ターンの集中につき、1ターン分の命令を下せる。</td>
-                    </tr>
-                    <tr>
-                      <td>幻惑光</td>
-                      <td>3</td>
-                      <td>敵一人に、1dの出目に従い、以下のような狂気を起こす（意志抵抗）。10ターン持続。<br>
-                        1.幻惑/宙をみつめ、ぼーっとする。周囲の出来事にまるで気が付かない。傷を負ったりすると我に返る。（蒼龍術「ナップ」と同じ。）<br>
-                        2.狂戦士/最も近くにいる者に、ひたすら全力攻撃を繰り返す。射撃武器は、狙いをつけずに矢が無くなるまで乱射する。<br>
-                        3.恐怖/恐怖で凍りつく。WL(意志力)-4で恐怖判定を行う。<br>
-                        4.混乱/げらげら笑ったり、冗談を飛ばしたり、くすくすほくそ笑んだりする。危険に直面すると、50%の確率で愚かな行動をとる。<br>
-                        5.魅了/術者の命令に何でも従う。命令が下されなくても、術者が一番喜びそうな行動をとる。ただし危険を伴う行為はしない。<br>
-                        6.忠実/魅了とほとんど同じだが、危険を顧みずに術者の命令に従い、術者が一番喜びそうな行動をとる。</td>
-                    </tr>
-                    <tr>
-                      <td>アンティマジック</td>
-                      <td>3</td>
-                      <td>誰か一人に働いている、持続時間のある術の効果を打ち消す。</td>
-                    </tr>
-                    <tr>
-                      <td>シャドウサーバント</td>
-                      <td>3</td>
-                      <td>誰か一人の分身を作り出す。「幻日」とほとんど同じだが、他者に本人と分身の判別が可能。</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="pagination"> <a class="btn-prev float-left" href="../04-01/" data-role="navigate" data-target="/docs/04-01/"><small>&lt;&lt;</small> prev</a> <a class="btn-next float-right" href="../04-03/" data-role="navigate" data-target="/docs/04-03/">next <small>&gt;&gt;</small></a> </div>
             </div>
           </section>
         </div>
@@ -456,7 +309,7 @@
   </main>
   <div id="cover-image"></div>
   <div id="cover-gradient"></div>
-  <footer role="contentinfo"><small>&copy; 2019 QWEL</small></footer>
+  <footer><small>&copy; 2020 QWEL</small></footer>
   <script src="../../js/init.js" type="module"></script>
 </body>
 
