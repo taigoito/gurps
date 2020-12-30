@@ -1,0 +1,18 @@
+/* Layout Progress
+------------------------------*/
+
+#developing-progress {
+  @include col("lg", 12);
+
+  &>.inner {
+    @include row();
+  }
+}
+
+#progress {
+  margin: 0 1rem;
+}
+
+.developing-progress-table {
+  @include col("lg", 4);
+}

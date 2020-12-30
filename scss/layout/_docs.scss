@@ -9,11 +9,11 @@
   }
 
   &__navigation {
-    @include col("lg", 1);
+    @include col("lg", 4);
   }
 
   &__article {
-    @include col("lg", 2);
+    @include col("lg", 8);
   }
 }
 

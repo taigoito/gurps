@@ -216,7 +216,7 @@ class Summary {
       const actorId = this.model.at(order).id;
       if (actorId === i) tr.querySelector('tr').style.background = 'rgba(153, 204, 153, .5)'; // 行動者のセルをマーク
       tr.querySelector('.battle-summary-name').textContent = dt.name;
-      tr.querySelector('.battle-summary-hp').textContent = `${dt.HP} / ${dt.maxHP}`;
+      tr.querySelector('.battle-summary-hp').textContent = `${dt.ST} / ${dt.maxST}`;
       tr.querySelector('.battle-summary-disadvantage').textContent = dt.disadvantage;
       tr.querySelector('.battle-summary-action').textContent = dt.action;
       tbody.appendChild(tr);
@@ -228,8 +228,8 @@ class Summary {
     this.model.units.forEach((unit) => {
       result.push({
         name: unit.name,
-        HP: Math.max(unit.getParamValue('HP') - unit.getStatus('injury'), -unit.getParamValue('HP')),
-        maxHP: unit.getParamValue('HP'),
+        ST: Math.max(unit.getParamValue('ST') - unit.getStatus('injury'), -unit.getParamValue('ST')),
+        maxST: unit.getParamValue('ST'),
         disadvantage: this._parseDisadvantage(unit),
         action: unit.getStatus('action')
       });
