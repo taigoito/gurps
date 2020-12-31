@@ -797,6 +797,9 @@ footer {
 
 #battle .caption {
   line-height: 2rem;
+  font-weight: 500;
+  font-size: 87.5%;
+  letter-spacing: 0.04rem;
 }
 
 #battle-formation,
@@ -912,6 +915,7 @@ footer {
   height: 2rem;
   line-height: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 #battle-formation-col-pc-forward {
@@ -1063,6 +1067,16 @@ footer {
             flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+#battle-info > .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 #battle-list {

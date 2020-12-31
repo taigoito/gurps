@@ -176,7 +176,7 @@ function renderProgress() {
 export default class Battle {
   constructor() {
     this._len = 8;
-    this._model = this._set();
+    this._model = this._set(12); //this._set();
     this._view = new BattleView(this._model);
   }
 

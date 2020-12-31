@@ -18,6 +18,9 @@
 
   .caption {
     line-height: 2rem;
+    font-weight:500;
+    font-size: $small-font-size;
+    letter-spacing: $small-letter-spacing;
   }
 }
 
@@ -81,6 +84,7 @@
     height: 2rem;
     line-height: 2rem;
     text-align: center;
+    overflow: hidden;
   }
 }
 
@@ -234,6 +238,10 @@
   @include col("lg", 12);
   height: 60rem;
   margin: 3rem auto;
+
+  &>.inner {
+    @include row();
+  }
 }
 
 #battle-list {

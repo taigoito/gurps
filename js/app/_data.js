@@ -544,7 +544,7 @@ export const data = {
       'skill': 5,
       'ready': 0,
       'ev': 2,
-      'usualUsage': 3
+      'usualUsage': 4
     },
     {
       'itemId': 6,

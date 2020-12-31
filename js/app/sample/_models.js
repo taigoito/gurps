@@ -6,26 +6,26 @@ import { Unit, Units } from '../_models.js';
 
 const base = [
   { // DX, AG優先
-    ability: [-2, 4, 2, 0, 1],
+    ability: [-4, 4, 4, -2, 1],
     skills: ['剣術'],
-    equips: [3, 9, 13],
+    equips: [4, 10, 14],
     missile: [18, 17]
   },
   { // DX, IN優先
-    ability: [-4, 4, 4, -2, 1],
+    ability: [-2, 4, 2, 0, 1],
     skills: ['剣術', 's'],
-    equips: [1, 10, 14]
+    equips: [4, 10, 14]
   },
   { // DX, ST優先
     ability: [0, 4, 2, -2, 1],
-    skills: ['剣術'],
-    equips: [7, 10, 14],
-    missile: [19]
+    skills: [['弓術', '武術'], ['剣術']],
+    equips: [[8], [7]],
+    missile: [20, 19]
   },
   { // ST, DX優先
     ability: [4, 0, 0, -2, 1],
     skills: ['武術', '弓術'],
-    equips: [8, 12, 16],
+    equips: [8, 15],
     missile: [20]
   },
   { // ST, AG優先
@@ -36,22 +36,22 @@ const base = [
   { // ST, IN優先
     ability: [4, -2, 0, 0, 1],
     skills: ['武術', 's'],
-    equips: [5, 11, 15]
+    equips: [6, 12, 16]
   },
   { // IN, ST優先
     ability: [0, -2, 2, 4, 1],
     skills: ['s', '武術'],
-    equips: [4, 11, 15]
+    equips: [5, 11]
   },
   { // IN, DX優先
-    ability: [-4, -2, 4, 4, 1],
+    ability: [-2, 0, 2, 4, 1],
     skills: ['s', '剣術'],
     equips: [3, 9, 13]
   },
   { // IN, AG優先
-    ability: [-2, 0, 2, 4, 1],
-    skills: ['s', '柔術'],
-    equips: [0]
+    ability: [-4, -2, 4, 4, 1],
+    skills: ['s', '剣術'],
+    equips: [3, 9, 13]
   }
 ];
 
@@ -116,7 +116,8 @@ class SampleUnit extends Unit {
 
     // IDから性別:g, 能力値:a, 出自:b, 装備:e を割り振り
     this.sid = this.get('sid') || this.id;
-    const i = this.sid === undefined ? Math.floor(Math.random() * 54) : this.sid % 54;
+    let i = this.sid === undefined ? Math.floor(Math.random() * 54) : this.sid % 54;
+    //i = this._shuffle(i);
     const g = this.sid === undefined ? Math.floor(Math.random() * 2) : Math.floor(this.sid / 54) % 2;
     const a = i % 9;
     const a1 = Math.floor(i / 3) % 3;
@@ -125,6 +126,12 @@ class SampleUnit extends Unit {
     this._born(g, a, a1, a2);
     this._grow(g, a, b);
     this._equip(g, a, b);
+  }
+
+  _shuffle(r1) {
+    const r2 = Math.floor(r1 / 2) + (r1 % 2) * 27 + (Math.floor(r1 / 54) % 2) * 27;
+    const r3 = Math.floor(r2 / 6) * 6 + (Math.floor(r2 / 6) + r2 % 6) % 6;
+    return r3;
   }
 
   // 能力値の決定

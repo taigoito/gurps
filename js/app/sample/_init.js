@@ -8,7 +8,7 @@ import { SampleView } from './_views.js';
 export default class Sample {
   constructor() {
     this._len = 108;
-    this._collection = this._set();
+    this._collection = this._set(12); //this._set();
     this._view = new SampleView(this._collection);
     this._selectCp = document.getElementById('sample-select-cp');
     this._selectSort = document.getElementById('sample-select-sort');
