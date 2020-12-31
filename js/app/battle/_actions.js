@@ -209,7 +209,7 @@ class Action {
     // 判定
     const roll = this._roll();
     const level = type === 'chant' ? target.getParamValue('WL') - correction :
-      target.getParamValue('VT') - correction;
+      target.getParamValue('ST') - correction;
     const result = roll <= level ? true : false;
 
     // ログ
@@ -230,25 +230,27 @@ class Action {
   }
 
   _judgeEffects(target, dmg, dmgType, aim) {
-    const maxHP = target.getParamValue('HP');
+    const HP = target.getParamValue('ST');
+    const breakPoint = target.getAttr('breakPoint');
+    const currentHP = HP - target.getAttr('injury');
     const aimForLimb = aim === 'arm' || aim === 'leg' || aim === 'hand' || aim === 'foot';
     let injuryOnLimb = false;
 
     // 四肢を狙った攻撃のダメージ上限と損傷
     if (aim === 'hand' || aim === 'foot') {
-      if (dmg >= maxHP / 3) {
+      if (dmg >= currentHP / 3) {
         if (aim === 'hand') target.setAttr('injuryOnArm', true); // 手首の損傷
         if (aim === 'foot') target.setAttr('injuryOnLeg', true); // 足首の損傷
         injuryOnLimb = true;
       }
-      dmg = Math.min(Math.floor(maxHP / 3), dmg); // ダメージ上限
+      //dmg = Math.min(Math.floor(currentHP / 3), dmg); // ダメージ上限
     } else if (aim === 'arm' || aim === 'leg') {
-      if (dmg >= maxHP / 3) {
+      if (dmg >= currentHP / 3) {
         if (aim === 'arm') target.setAttr('injuryOnArm', true); // 腕の損傷
         if (aim === 'leg') target.setAttr('injuryOnLeg', true); // 脚の損傷
         injuryOnLimb = true;
       }
-      dmg = Math.min(Math.floor(maxHP / 2), dmg); // ダメージ上限
+      //dmg = Math.min(Math.floor(currentHP / 2), dmg); // ダメージ上限
     }
 
     // ダメージのログ
@@ -270,22 +272,22 @@ class Action {
     if (dmg < 1) return;
 
     // ダメージ効果
-    const damage = Math.max(target.getAttr('currentDamage'), dmg);
-    target.setAttr('currentDamage', damage); // 衝撃
+    //const damage = Math.max(target.getAttr('currentDamage'), dmg);
+    //target.setAttr('currentDamage', damage); // 衝撃
 
-    const injury = target.getAttr('injury');
-    target.setAttr('injury', injury + dmg); // HP減少
+    //const injury = target.getAttr('injury');
+    //target.setAttr('injury', injury + dmg); // HP減少
 
     // 各判定
-    const HP = Math.max(maxHP - target.getAttr('injury'), -maxHP);
-    const breakPoint = target.getAttr('breakPoint');
+    //const HP = Math.max(currentHP - target.getAttr('injury'), -currentHP);
+    //const breakPoint = target.getAttr('breakPoint');
 
-    let result = this._judgeDeath(target, dmg, dmgType, aim, maxHP, HP); // 死亡判定
+    let result = this._judgeDeath(target, dmg, dmgType, aim, currentHP, HP); // 死亡判定
     if (!result) {
-      result = this._judgeStunning(target, dmg, dmgType, aim, maxHP, HP, breakPoint); // 気絶判定
+      result = this._judgeStunning(target, dmg, dmgType, aim, currentHP, HP, breakPoint); // 気絶判定
     }
     if (!aimForLimb && !result) {
-      this._judgeStanding(target, dmg, aim, maxHP); // 朦朧・転倒判定
+      this._judgeStanding(target, dmg, aim, currentHP); // 朦朧・転倒判定
     }
 
     // 幻惑から復帰
@@ -298,11 +300,11 @@ class Action {
     return result;
   }
 
-  _judgeDeath(target, dmg, dmgType, aim, maxHP, HP) {
+  _judgeDeath(target, dmg, dmgType, aim, currentHP, HP) {
     let result = false;
 
     // 喉狙い
-    if (dmg >= maxHP / 2 && aim === 'neck') {
+    if (dmg >= currentHP / 2 && aim === 'neck') {
       // 攻撃型によって修正付きの致死判定
       let correction = 0;
       if (dmgType === 1 || dmgType === 2) correction++; // 刺突・切断
@@ -316,7 +318,7 @@ class Action {
     }
 
     // HPがマイナス最大値に到達
-    if (HP === -maxHP) {
+    if (dmg >= currentHP) {
       const dead = this._judge(target, 'dead', 0);
       if (!dead) {
         // 死亡
@@ -334,11 +336,11 @@ class Action {
     return result;
   }
 
-  _judgeStunning(target, dmg, dmgType, aim, maxHP, HP, breakPoint) {
+  _judgeStunning(target, dmg, dmgType, aim, currentHP, HP, breakPoint) {
     let result = false;
 
     // 頭狙い
-    if (dmg >= maxHP / 2 && aim === 'head') {
+    if (dmg >= currentHP / 2 && aim === 'head') {
       // 攻撃型によって修正付きの気絶判定
       let correction = 0;
       if (dmgType === 3) correction++; // 打撃
@@ -351,45 +353,50 @@ class Action {
       }
     }
 
-    for (let i = 0; i < 3; i++) {
-      let condition;
-      switch (i) {
-        case 0:
+    //for (let i = 0; i < 1; i++) {
+    //  let condition;
+    //  switch (i) {
+    //    case 0:
           // HPが0以下
-          condition = HP <= 0 && breakPoint < 1;
-          break;
-        case 1:
-          // HPがマイナス1/3以下
-          condition = HP <= -(maxHP / 3) && breakPoint < 2;
-          break;
-        case 2:
+    //      condition = HP <= 0 && breakPoint < 1;
+    //      break;
+    //    case 1:
+    //      // HPがマイナス1/3以下
+    //      condition = HP <= -(maxHP / 3) && breakPoint < 2;
+    //      break;
+    //    case 2:
           // HPがマイナス2/3以下
-          condition = HP <= -(maxHP * 2 / 3) && breakPoint < 3;
-          break;
-      }
-      if (condition) {
-        const stun = this._judge(target, 'stun', 0, i + 1);
-        if (!stun) {
+    //      condition = HP <= -(maxHP * 2 / 3) && breakPoint < 3;
+    //      break;
+    //  }
+    //  if (condition) {
+    //    const stun = this._judge(target, 'stun', 0, i + 1);
+    //    if (!stun) {
           // 気絶
-          target.setAttr('stun', true);
-          result = true;
-          this._write({ method: 'setattr', target: target, status: 'stun' });
-          break;
-        } else {
+    //      target.setAttr('stun', true);
+    //      result = true;
+    //      this._write({ method: 'setattr', target: target, status: 'stun' });
+    //      break;
+    //    } else {
           // 同じ気絶判定を避けるため、breakPointを++
-          breakPoint++;
-          target.setAttr('breakPoint', breakPoint);
-        }
-      }
-    }
+    //      breakPoint++;
+    //      target.setAttr('breakPoint', breakPoint);
+    //    }
+    //  }
+    //}
     return result;
   }
 
-  _judgeStanding(target, dmg, aim, maxHP) {
+  _judgeStanding(target, dmg, aim, currentHP) {
     const painful = aim === 'head' || aim === 'neck'
-    if (dmg >= maxHP / 2 || painful && dmg >= maxHP / 3) {
+    if (dmg >= currentHP / 3) {
       // 朦朧状態
       target.setAttr('painful', true);
+      target.setAttr('penalty', 2); //軽度
+    } else if (dmg >= currentHP / 2 || painful && dmg >= currentHP / 3) {
+      // 朦朧状態
+      target.setAttr('painful', true);
+      target.setAttr('penalty', 4); //重度
       // 転倒判定
       const fall = this._judge(target, 'fall', 0);
       if (!fall) {

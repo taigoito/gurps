@@ -220,7 +220,7 @@ class Summary {
       const actorId = this.model.at(order).id;
       if (actorId === i) tr.querySelector('tr').style.background = 'rgba(153, 204, 153, .5)'; // 行動者のセルをマーク
       tr.querySelector('.battle-summary-name').textContent = dt.name;
-      tr.querySelector('.battle-summary-hp').textContent = `${dt.ST} / ${dt.maxST}`;
+      tr.querySelector('.battle-summary-st').textContent = dt.ST;
       tr.querySelector('.battle-summary-disadvantage').textContent = dt.disadvantage;
       tr.querySelector('.battle-summary-action').textContent = dt.action;
       tbody.appendChild(tr);
@@ -233,7 +233,6 @@ class Summary {
       result.push({
         name: unit.name,
         ST: unit.getParamValue('ST'),
-        maxST: unit.getParamValue('ST'),
         disadvantage: this._parseDisadvantage(unit),
         action: unit.getAttr('action')
       });
@@ -244,8 +243,6 @@ class Summary {
   _parseDisadvantage(unit) {
     if (unit.getAttr('vanish')) {
       return '消滅';
-    } else if (unit.getAttr('stone')) {
-      return '金塊';
     } else if (unit.getAttr('dead')) {
       return '死亡';
     } else if (unit.getAttr('stun')) {
@@ -253,7 +250,7 @@ class Summary {
     } else {
       let arr = [];
       const posture = unit.posture;
-      const damage = unit.getAttr('damage');
+      //const damage = unit.getAttr('damage');
       if (unit.getAttr('blindness')) arr.push('失明');
       if (unit.getAttr('injuryOnArm')) arr.push('片手');
       if (unit.getAttr('injuryOnLeg')) arr.push('片足');
@@ -266,7 +263,7 @@ class Summary {
       if (unit.getAttr('immovable')) arr.push('足止');
       if (unit.getAttr('avatar')) arr.push('分身');
       if (unit.getAttr('stand')) arr.push('朦朧');
-      if (damage) arr.push(`衝撃(${damage})`);
+      //if (damage) arr.push(`衝撃(${damage})`);
       if (posture === 'falling') arr.push('転倒');
       if (posture === 'kneeStanding') arr.push('膝立');
       if (arr.length > 2) arr = arr.slice(0, 2);

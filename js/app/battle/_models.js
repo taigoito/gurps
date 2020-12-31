@@ -17,7 +17,7 @@ class Summary extends Model {
       isPlayer: true, // プレイヤー側か否か
       position: 'back', // 戦闘配置('back'(後衛), 'left'(左翼), 'center'(中央), 'right'(右翼))
       posture: 'standing', // 姿勢('standing'(直立), 'bow'(屈み), 'kneeStanding'(膝立), 'falling'(転倒))
-      condition: 'good', // STの減少具合('good', 'bad', 'worse', 'worst')
+      condition: 'good', // 朦朧状態('good', 'bad', 'worse', 'worst')
       action: '', // 直前の行動
     }
     this.attributes = Object.assign(defaults, this.attributes);
@@ -30,10 +30,10 @@ class Health extends Model {
     this._actor = this.get('actor');
     const defaults = {
       vanish: false, // 消滅
-      gold: false, // 金塊
       dead: false, // 死亡
       stun: false, // 気絶
       stand: false, // 朦朧状態
+      penalty: 0, // 朦朧状態の課せられる修正
       painful: false, // 身体的な朦朧状態
       panic: false, // 精神的な朦朧状態
       breakPoint: 0, // 気絶判定の回数
@@ -41,7 +41,7 @@ class Health extends Model {
       prevDamage: 0, // 前のターンに受けた衝撃
       currentDamage: 0, // このターンに受けた衝撃
       injury: 0, // HPの減少
-      bright: false, // 眩しい
+      bright: 0, // 眩しい
       blindness: false, // 失明
       injuryOnArm: false, // 腕・手首の故障
       injuryOnLeg: false // 脚・足首の故障
@@ -53,12 +53,6 @@ class Health extends Model {
       if (this.get('vanish')) this.set('dead', true);
     }
     this.on('change:vanish', changeVanish);
-
-    // 金塊 > 気絶
-    const changeGold = () => {
-      if (this.get('gold')) this.set('stun', true);
-    }
-    this.on('change:gold', changeGold);
 
     // 死亡 > 気絶
     const changeDead = () => {
@@ -90,21 +84,31 @@ class Health extends Model {
     this.on('change:currentDamage', changeDamage);
 
     // コンディション属性の更新
-    const changeInjury = () => {
-      const injury = this.get('injury');
-      const maxST = this._actor.getParamValue('ST');
-      const ST = Math.max(maxST - injury, -maxST);
-      let condition = 'worst';
-      if (ST > maxST) {
+    const changeHealth = () => {
+      const stun = this.get('stun');
+      const penalty = this.get('penalty');
+      const bright = this.get('bright');
+      const blindness = this.get('blindness');
+      const injuryOnArm = this.get('injuryOnArm');
+      const injuryOnLeg = this.get('injuryOnLeg');
+      let condition = 'good';
+      if (stun) {
+        // 気絶
+        condition = 'worst';
+      } else if (blindness || injuryOnArm || injuryOnLeg || penalty >= 4 || bright >= 4) {
+        // 失明、腕・手首、脚・足首の故障、-4以上(重度)の修正の朦朧状態、眩しい
         condition = 'worse';
-      } else if (ST > maxST / 3) {
+      } else if (penalty >= 2 || bright >= 2) {
+        // -2以上(軽度)の修正の朦朧状態、眩しい
         condition = 'bad';
-      } else if (ST > maxST * 2 / 3) {
-        condition = 'good';
       }
       this._actor.setAttr('condition', condition);
     }
-    this.on('change:injury', changeInjury);
+    this.on('change:damage', changeHealth);
+    this.on('change:bright', changeHealth);
+    this.on('change:blindness', changeHealth);
+    this.on('change:injuryOnArm', changeHealth);
+    this.on('change:injuryOnLeg', changeHealth);
   }
 
   startTurn() {
@@ -207,35 +211,31 @@ class Effect extends Model {
     const defaults = {
       ST: 0, // ベルセルク(30)
       DX: 0,
-      AG: 0, // ダンシングリーフ(30)
+      AG: 0,
       IN: 0,
-      VT: 0, // ベルセルク(30)
       WL: 0, // ムーングロウ(30)
-      CM: 0, // 風と樹の唄(30)
       LV: 0, // ハードファイア(30)
-      EV: 0,
-      Dmg: 0,
+      EV: 0, // ダンシングリーフ(30)
       DR: 0,  // ウォーターポール(30)
       daze: 0, // 幻惑(10) 行動不能/回避は可 ダメージによって正気に返る
       berserk: 0, // 狂戦士(10) 全力攻撃のみ
-      fear: 0, // 恐怖(10) 0になるまで精神的な朦朧状態が回復しない
+      fear: 0, // 恐怖(10) 精神的な朦朧状態と同じ(暫定的設定)
       mad: 0, // 狂気(10) 自動行動
-      dragon: 0, // 幻竜術(10)
-      firewall: 0, // セルフバーニング(10), またファイアウォール(1)
+      firewall: 0, // セルフバーニング(10)
       invisible: 0, // カムフラージュ(10)
       immovable: 0, // アースハンド(10)
-      lightwall: 0, // 光の壁(1)
-      avatar: 0, // 分身(10) 行動に影響
       windy: 0, // ミサイルガード
-      fog: 0, // 濃霧
-      squall: 0, // 豪雨
-      quickTime: 0 // クイックタイム
+      mist: 0, // 霧
     }
     this.attributes = Object.assign(defaults, this.attributes);
 
     // 恐怖なら精神的な朦朧状態
     const changeFear = () => {
-      if (this.get('fear')) this._actor.setAttr('panic', true);
+      const fear = this.get('fear');
+      if (fear) {
+        this._actor.setAttr('panic', true);
+        this._actor.setAttr('damage', fear);
+      }
     }
     this.on('change:fear', changeFear);
   }
@@ -261,13 +261,10 @@ class Changes extends Model {
       ST: 0,
       DX: 0,
       AG: 0,
-      VT: 0,
       IN: 0,
       WL: 0,
-      CM: 0,
       LV: 0,
       EV: 0,
-      Dmg: 0,
       DR: 0
     };
     this.attributes = Object.assign(defaults, this.attributes);
@@ -279,7 +276,7 @@ class Changes extends Model {
 
   update() {
     // 補助系の術法効果
-    const arr = ['ST', 'DX', 'AG', 'IN', 'VT', 'WL', 'CM', 'LV', 'EV', 'Dmg', 'DR'];
+    const arr = ['ST', 'DX', 'AG', 'IN', 'WL', 'LV', 'EV', 'DR'];
     const effect = {};
     arr.forEach((param) => {
       effect[param] = this._actor.getAttr(param);
@@ -303,16 +300,10 @@ class Changes extends Model {
       this.set('LV', this.get('LV') - 4);
     }
     if (bright) {
-      this.set('LV', this.get('LV') - 6);
+      this.set('LV', this.get('LV') - bright);
     }
     if (blindness) {
       this.set('EV', this.get('EV') - 2);
-    }
-
-    // 光の壁
-    const lightwall = this._actor.getAttr('lightwall');
-    if (lightwall) {
-      this.set('DR', this.get('DR') + 2);
     }
   }
 }
@@ -876,8 +867,8 @@ class BattleUnit extends SampleUnit {
       this.posture === 'kneeStanding' ? 2 :
         this.posture === 'falling' ? 4 : 0;
 
-    // 衝撃
-    const damage = this.getAttr('damage');
+        // 衝撃
+        const damage = this.getAttr('damage');
 
     // LV修正
     const change = this.getChange('LV');
@@ -1006,7 +997,7 @@ class BattleUnit extends SampleUnit {
     const dmgType = weapon.get('dmgType');
     const dmgOpt = options.dmg ? 2 : 0; // 全力攻撃オプション
     const damage = this.getAttr('damage');// 衝撃
-    const change = this.getChange('Dmg'); // Dmg修正
+    const change = this.getChange('Dmg'); // Dmg修正: 全力攻撃のオプションでDmg+2(暫定的設定)
     const correction = dmgOpt - Math.floor(damage / 2) + change;
     const aim = options.aim || 'body';
     return {
@@ -1063,7 +1054,7 @@ class BattleUnit extends SampleUnit {
     return dmg
   }
 
-  _judgeRecovery(param = 'VT', correction = 0) {
+  _judgeRecovery(param = 'ST', correction = 0) {
     // 判定
     const roll = this.roll();
     const level = this.getParamValue(param) + this.getChange(param) - correction;
