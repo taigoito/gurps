@@ -56,6 +56,7 @@ h1 {
 .main-menu {
   width: 100%;
   margin-bottom: 0;
+  padding-left: 0;
   text-align: center;
 
   &__item {
@@ -125,6 +126,11 @@ p {
 
 
 // Table
+
+.table-fluid {
+  width: 100%;
+  overflow: auto;
+}
 
 .table {
   @include table();

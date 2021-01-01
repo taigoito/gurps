@@ -234,7 +234,7 @@ class Effect extends Model {
       const fear = this.get('fear');
       if (fear) {
         this._actor.setAttr('panic', true);
-        this._actor.setAttr('damage', fear);
+        this._actor.setAttr('penalty', fear);
       }
     }
     this.on('change:fear', changeFear);
@@ -438,7 +438,7 @@ class Command extends Model {
 
   _checkChant() {
     // スキルを所有しているなら可
-    const arr = [26, 27, 28, 29, 30, 31];
+    const arr = [11, 12, 13, 14, 15, 16];
     let result = false;
     this._actor.parameters.models.forEach((param) => {
       if (arr.includes(param.id) && param.get('cp') > 0) {
@@ -460,8 +460,8 @@ class Command extends Model {
     const spells = {};
     for (let i = 0; i < 6; i++) {
       const char = arr[i];
-      const level = this._actor.getParamValue(i + 26);
-      const cp = this._actor.getParam(i + 26).get('cp');
+      const level = this._actor.getParamValue(i + 11);
+      const cp = this._actor.getParam(i + 11).get('cp');
       for (let j = 0; j < 8; j++) {
         const result = level > j + 10 && cp > 0;
         spells[`${char}${j + 1}`] = result;
@@ -670,15 +670,24 @@ class BattleUnit extends SampleUnit {
     // 身体的な朦朧状態の立ち直り判定
     const painful = this.getAttr('painful');
     if (painful) {
-      const recovery = this._judgeRecovery();
-      if (recovery) this.setAttr('painful', false);
+      const penalty = this.getAttr('penalty');
+      const recovery = this._judgeRecovery('ST', penalty);
+      if (recovery) {
+        this.setAttr('penalty', 0);
+        this.setAttr('painful', false);
+      }
     }
 
     // 精神的な朦朧状態の立ち直り判定（恐怖から回復しているなら）
     const panic = this.getAttr('panic') && !this.getAttr('fear');
     if (panic) {
-      const recovery = this._judgeRecovery('WL');
-      if (recovery) this.setAttr('panic', false);
+      const penalty = this.getAttr('penalty');
+      const recovery = this._judgeRecovery('WL', penalty);
+      if (recovery) {
+        this.setAttr('penalty', 0);
+        this.setAttr('panic', false);
+        this.setAttr('fear', false);
+      }
     }
 
     // 幻惑
@@ -995,10 +1004,9 @@ class BattleUnit extends SampleUnit {
     const weapon = options.weapon || this.getCurrentWeapon();
     const dmg = weapon.get('dmg');
     const dmgType = weapon.get('dmgType');
-    const dmgOpt = options.dmg ? 2 : 0; // 全力攻撃オプション
+    const dmgOpt = options.dmg ? 2 : 0; // 全力攻撃オプション(暫定的設定)
     const damage = this.getAttr('damage');// 衝撃
-    const change = this.getChange('Dmg'); // Dmg修正: 全力攻撃のオプションでDmg+2(暫定的設定)
-    const correction = dmgOpt - Math.floor(damage / 2) + change;
+    const correction = dmgOpt - Math.floor(damage / 2);
     const aim = options.aim || 'body';
     return {
       name: dmg.name,
@@ -1025,12 +1033,12 @@ class BattleUnit extends SampleUnit {
     const sdr = armor.get('sdr') || 0;
     const tdr = armor.get('tdr') || 0;
     const change = this.getChange('DR');
-    const maxHP = this.getParamValue('HP');
+    const currentHP = this.getParamValue('ST');
     return {
       name: name,
       sdr: sdr + change,
       tdr: tdr + change,
-      maxHP: maxHP
+      currentHP: currentHP
     }
   }
 
@@ -1046,9 +1054,9 @@ class BattleUnit extends SampleUnit {
       dmg *= dmgObj.type.rate; // 致傷
     }
     if (dmgObj.aim === 'hand' || dmgObj.aim === 'foot') {
-      dmg = Math.min(Math.floor(drObj.maxHP / 3), dmg); // 手首・足首狙いのダメージ上限
+      dmg = Math.min(Math.floor(drObj.currentHP / 3), dmg); // 手首・足首狙いのダメージ上限
     } else if (dmgObj.aim === 'arm' || dmgObj.aim === 'leg') {
-      dmg = Math.min(Math.floor(drObj.maxHP / 2), dmg); // 腕・脚狙いのダメージ上限
+      dmg = Math.min(Math.floor(drObj.currentHP / 2), dmg); // 腕・脚狙いのダメージ上限
     }
     dmg = Math.max(Math.ceil(dmg), 0);
     return dmg

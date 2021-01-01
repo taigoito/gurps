@@ -5,54 +5,42 @@
 import { Action } from './_actions.js';
 
 const translation = {
-  spellE1: 'ウインドカッター',
+  spellE1: 'ウインドダート',
   spellE2: 'ナップ',
   spellE3: 'ダンシングリーフ',
   spellE4: 'ソーンバインド',
   spellE5: 'ミサイルガード',
   spellE6: '風と樹の唄',
-  spellE7: '竜巻',
-  spellE8: '幻竜術',
-  spellS1: 'ファイアボール',
+  spellS1: 'エアスラッシュ',
   spellS2: 'ハードファイア',
   spellS3: 'セルフバーニング',
-  spellS4: '生命の息吹',
-  spellS5: 'ファイアウォール',
-  spellS6: '魂の歌',
-  spellS7: 'イニシレイション',
-  spellS8: 'リヴァイヴァ',
+  spellS4: '黒点波',
+  spellS5: '魂の歌',
+  spellS6: '火の鳥',
   spellW1: 'ストーンバレット',
   spellW2: 'ベルセルク',
   spellW3: 'カムフラージュ',
   spellW4: 'アースハンド',
   spellW5: 'ストーンスキン',
-  spellW6: 'タッチゴールド',
-  spellW7: 'クラック',
-  spellW8: '光の壁',
+  spellW6: 'ジェントルタッチ',
   spellN1: '生命の水',
   spellN2: '神秘の水',
   spellN3: 'ウォーターポール',
-  spellN4: 'スパークリングミスト',
-  spellN5: 'スコール',
+  spellN4: 'タイムリープ',
+  spellN5: 'スパークリングミスト',
   spellN6: '召雷',
-  spellN7: '時間遡行',
-  spellN8: 'クイックタイム',
   spellH1: 'サンシャイン',
   spellH2: 'ヒートウェイブ',
   spellH3: 'スターフィクサー',
   spellH4: 'デイブレイク',
-  spellH5: '光の剣',
-  spellH6: '太陽風',
-  spellH7: '再生光',
-  spellH8: '幻日',
+  spellH5: '太陽風',
+  spellH6: '光の剣',
   spellL1: 'ムーンシャイン',
   spellL2: 'ムーングロウ',
   spellL3: 'ソウルフリーズ',
   spellL4: 'サクション',
   spellL5: '月読の鐘',
-  spellL6: '幻惑光',
-  spellL7: 'アンティマジック',
-  spellL8: 'シャドウサーバント'
+  spellL6: 'リインカネーション'
 };
 
 class Spell extends Action {
@@ -201,10 +189,10 @@ class Spell extends Action {
 
   _spellE3() {
     // 'spellE3'
-    let AG = this._target.getAttr('AG');
-    AG += 10;
-    AG = Math.min(AG, 30);
-    this._target.setAttr('AG', AG);
+    let EV = this._target.getAttr('EV');
+    EV += 10;
+    EV = Math.min(EV, 30);
+    this._target.setAttr('EV', EV);
 
     // ログ
     this._write({
@@ -223,14 +211,6 @@ class Spell extends Action {
   }
 
   _spellE6() {
-
-  }
-
-  _spellE7() {
-
-  }
-
-  _spellE8() {
 
   }
 
@@ -257,41 +237,36 @@ class Spell extends Action {
   }
 
   _spellS3() {
-    // 'spellS4'
-    this._target.setAttr('spellS4', 10);
+    // 'spellS3'
+    this._target.setAttr('spellS3', 10);
 
     // ログ
     this._write({
       method: 'setattr',
       target: this._target,
-      status: 'spellS4'
+      status: 'spellS3'
     });
   }
 
   _spellS4() {
+    // 意志抵抗
+    const resist = this._resist(2);
+    if (!resist) return;
 
-  }
-
-  _spellS5() {
-    // 'spellS4'
-    const isPlayer = this._actor.getIsPlayer();
-    const units = this._actor.model.units;
-    for (let i = isPlayer ? 0 : 4; i < 4; i++) {
-      const unit = units.at(i);
-      if (!unit.getAttr('stun')) {
-        unit.setAttr('spellS4', 1);
-      }
-    }
+    // 'painful'
+    target.setAttr('penalty', 4);
+    this._target.setAttr('painful', true);
 
     // ログ
     this._write({
       method: 'setattr',
-      target: this._actor,
-      status: 'spellS5'
+      target: this._target,
+      status: 'painful'
     });
+
   }
 
-  _spellS6() {
+  _spellS5() {
     // 'spellS2'
     const chant = this._actor.getAttr('chant');
     const isPlayer = this._actor.getIsPlayer();
@@ -314,22 +289,14 @@ class Spell extends Action {
     });
   }
 
-  _spellS7() {
-
-  }
-
-  _spellS8() {
+  _spellS6() {
 
   }
 
   _spellW1() {
     const action = translation[this._spell];
     const level = this._getLevel();
-    const len = this._actor.getAttr('chant');
-    for (let i = 0; i < len; i++) {
-      const spell = len > 1 ? `${i + 1}回目の${action}` : action;
-      this._shoot(this._art, spell, level);
-    };
+    this._shoot(this._art, action, level);
   }
 
   _spellW2() {
@@ -339,11 +306,6 @@ class Spell extends Action {
     ST += chant * 10;
     ST = Math.min(ST, 30);
     this._target.setAttr('ST', ST);
-
-    let VT = this._target.getAttr('VT');
-    VT += 10;
-    VT = Math.min(VT, 30);
-    this._target.setAttr('VT', VT);
 
     // ログ
     this._write({
@@ -415,29 +377,6 @@ class Spell extends Action {
     });
   }
 
-  _spellW7() {
-
-  }
-
-  _spellW8() {
-    // 'spellW8'
-    const isPlayer = this._actor.getIsPlayer();
-    const units = this._actor.model.units;
-    for (let i = isPlayer ? 0 : 4; i < 4; i++) {
-      const unit = units.at(i);
-      if (!unit.getAttr('stun')) {
-        unit.setAttr('spellW8', 1);
-      }
-    }
-
-    // ログ
-    this._write({
-      method: 'setattr',
-      target: this._actor,
-      status: 'spellW8'
-    });
-  }
-
   _spellN1() {
 
   }
@@ -471,14 +410,6 @@ class Spell extends Action {
   }
 
   _spellN6() {
-
-  }
-
-  _spellN7() {
-
-  }
-
-  _spellN8() {
 
   }
 
@@ -518,22 +449,6 @@ class Spell extends Action {
 
   _spellH6() {
 
-  }
-
-  _spellH7() {
-
-  }
-
-  _spellH8() {
-    // 'avatar'
-    this._actor.setAttr('avatar', 10);
-
-    // ログ
-    this._write({
-      method: 'setattr',
-      target: this._actor,
-      status: 'avatar'
-    });
   }
 
   _spellL1() {
@@ -579,10 +494,6 @@ class Spell extends Action {
   }
 
   _spellL5() {
-
-  }
-
-  _spellL6() {
     // 意志抵抗
     const resist = this._resist(4);
     if (!resist) return;
@@ -604,20 +515,8 @@ class Spell extends Action {
     });
   }
 
-  _spellL7() {
+  _spellL6() {
 
-  }
-
-  _spellL8() {
-    // 'avatar'
-    this._target.setAttr('avatar', 10);
-
-    // ログ
-    this._write({
-      method: 'setattr',
-      target: this._target,
-      status: 'avatar'
-    });
   }
 }
 

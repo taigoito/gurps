@@ -231,6 +231,7 @@ h1 span {
 .main-menu {
   width: 100%;
   margin-bottom: 0;
+  padding-left: 0;
   text-align: center;
 }
 
@@ -290,6 +291,11 @@ p {
   font-size: 87.5%;
   line-height: 1.8;
   letter-spacing: 0.04rem;
+}
+
+.table-fluid {
+  width: 100%;
+  overflow: auto;
 }
 
 .table {
@@ -637,19 +643,36 @@ footer {
   text-decoration: none;
 }
 
-#sample-select .form-group {
+#sample-select > .inner .form-group {
   position: relative;
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-@media (min-width: 1152px) {
-  #sample-select .form-group {
+@media (min-width: 768px) {
+  #sample-select > .inner .form-group {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     max-width: 50%;
+  }
+}
+
+#sample-select > .inner .form-label {
+  display: inline-block;
+  width: 3rem;
+  text-align: center;
+}
+
+#sample-select > .inner .form-control {
+  display: inline-block;
+  width: 9rem;
+}
+
+@media (min-width: 1152px) {
+  #sample-select > .inner {
+    margin-left: 4.5rem;
   }
 }
 
@@ -663,22 +686,33 @@ footer {
   transition: opacity .5s linear;
 }
 
-#sample-list .table thead th, #sample-list .table thead td {
+#sample-list .sample-list-main {
+  width: 48rem;
+  margin: 0 auto;
+}
+
+#sample-list .sample-list-main thead th, #sample-list .sample-list-main thead td {
   padding: .5rem;
   border-top: 0;
 }
 
-#sample-list .table tr {
+#sample-list .sample-list-main tr {
   cursor: pointer;
 }
 
 #sample-list-overlay {
   position: absolute;
-  top: 6rem;
+  top: 7.5rem;
   left: 0;
   z-index: 10;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  #sample-list-overlay {
+    top: 3rem;
+  }
 }
 
 #sample-list.show #sample-list-overlay {
@@ -686,8 +720,13 @@ footer {
 }
 
 #sample-unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
-  top: 6rem;
+  top: 7.5rem;
   left: 0;
   right: 0;
   z-index: 20;
@@ -700,6 +739,18 @@ footer {
 
 #sample-unit .table th, #sample-unit .table td {
   padding: .4rem 0;
+}
+
+@media (min-width: 768px) {
+  #sample-unit {
+    top: 3rem;
+  }
+}
+
+@media (min-width: 1152px) {
+  #sample-unit {
+    width: 48rem;
+  }
 }
 
 .sample-unit-body-1 {
@@ -734,6 +785,12 @@ footer {
   }
 }
 
+@media (max-width: 576px) {
+  .sample-unit-body-2 .table {
+    width: 36rem;
+  }
+}
+
 .sample-unit-body-3 {
   position: relative;
   width: 100%;
@@ -747,6 +804,12 @@ footer {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sample-unit-body-3 .table {
+    width: 36rem;
   }
 }
 
@@ -788,6 +851,9 @@ footer {
       flex-wrap: wrap;
   margin-left: -1rem;
   margin-right: -1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #battle h5, #battle h6 {
@@ -806,10 +872,7 @@ footer {
 #battle-summary,
 #battle-command,
 #battle-log {
-  position: relative;
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  display: none;
   padding-right: 1rem;
   padding-left: 1rem;
   -webkit-user-select: none;
@@ -818,15 +881,29 @@ footer {
           user-select: none;
 }
 
+@media (min-width: 768px) {
+  #battle-formation,
+  #battle-summary,
+  #battle-command,
+  #battle-log {
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 42rem;
+  }
+}
+
 @media (min-width: 1152px) {
   #battle-formation,
   #battle-summary,
   #battle-command,
   #battle-log {
+    display: block;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 31.5rem;
   }
 }
 
@@ -839,25 +916,36 @@ footer {
 }
 
 #battle-summary {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   height: 21rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 1152px) {
   #battle-summary {
-    background: rgba(255, 255, 255, 0.3);
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 
 #battle-command {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   height: 10.5rem;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 1152px) {
+  #battle-command {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
 
 #battle-log {
@@ -890,22 +978,9 @@ footer {
 #battle-formation-col-pc-forward,
 #battle-formation-col-enemy-forward,
 #battle-formation-col-enemy-back {
-  position: relative;
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 1152px) {
-  #battle-formation-col-pc-back,
-  #battle-formation-col-pc-forward,
-  #battle-formation-col-enemy-forward,
-  #battle-formation-col-enemy-back {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-    max-width: 25%;
-  }
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
 }
 
 #battle-formation-col-pc-back > div,
@@ -1029,7 +1104,7 @@ footer {
 
 #battle-log-container {
   width: 100%;
-  height: 18rem;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -1089,12 +1164,17 @@ footer {
   transition: opacity .5s linear;
 }
 
-#battle-list .table thead th, #battle-list .table thead td {
+#battle-list .battle-list-main {
+  width: 48rem;
+  margin: 0 auto;
+}
+
+#battle-list .battle-list-main thead th, #battle-list .battle-list-main thead td {
   padding: .5rem;
   border-top: 0;
 }
 
-#battle-list .table tr {
+#battle-list .battle-list-main tr {
   cursor: pointer;
 }
 
@@ -1112,6 +1192,11 @@ footer {
 }
 
 #battle-unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -1126,6 +1211,12 @@ footer {
 
 #battle-unit .table th, #battle-unit .table td {
   padding: .4rem 0;
+}
+
+@media (min-width: 1152px) {
+  #battle-unit {
+    width: 48rem;
+  }
 }
 
 .battle-unit-body-1 {
@@ -1160,6 +1251,12 @@ footer {
   }
 }
 
+@media (max-width: 576px) {
+  .battle-unit-body-2 .table {
+    width: 36rem;
+  }
+}
+
 .battle-unit-body-3 {
   position: relative;
   width: 100%;
@@ -1173,6 +1270,12 @@ footer {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .battle-unit-body-3 .table {
+    width: 36rem;
   }
 }
 
