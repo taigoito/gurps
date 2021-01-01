@@ -797,8 +797,9 @@ class Log {
       this._section.appendChild(elem);
       this._row++;
       if (this._row > 12) {
-        const style = window.getComputedStyle(this._section);
-        let m = parseInt(style.marginTop);
+        //const style = window.getComputedStyle(this._section);
+        //let m = parseInt(style.marginTop);
+        let m = -(this._row - 12) * 24;
         m -= 24;
         this._section.style.marginTop = `${m}px`;
       }
