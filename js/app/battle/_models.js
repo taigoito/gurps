@@ -438,7 +438,7 @@ class Command extends Model {
 
   _checkChant() {
     // スキルを所有しているなら可
-    const arr = [26, 27, 28, 29, 30, 31];
+    const arr = [11, 12, 13, 14, 15, 16];
     let result = false;
     this._actor.parameters.models.forEach((param) => {
       if (arr.includes(param.id) && param.get('cp') > 0) {
@@ -460,8 +460,8 @@ class Command extends Model {
     const spells = {};
     for (let i = 0; i < 6; i++) {
       const char = arr[i];
-      const level = this._actor.getParamValue(i + 26);
-      const cp = this._actor.getParam(i + 26).get('cp');
+      const level = this._actor.getParamValue(i + 11);
+      const cp = this._actor.getParam(i + 11).get('cp');
       for (let j = 0; j < 8; j++) {
         const result = level > j + 10 && cp > 0;
         spells[`${char}${j + 1}`] = result;
