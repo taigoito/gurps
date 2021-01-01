@@ -347,7 +347,7 @@
       <div id="battle-info">
         <div id="battle-list">
           <div class="table-fluid">
-            <table class="table">
+            <table class="table battle-list-main">
               <thead>
                 <tr>
                   <th>No.</th>
@@ -382,7 +382,7 @@
             <td class="battle-list-inner-equip">&nbsp;</td>
           </tr>
         </template>
-        <div id="battle-unit" class="inner"></div>
+        <div id="battle-unit"></div>
         <template id="battle-unit-template">
           <div class="battle-unit-body-1">
             <div class="battle-unit-profile table-fluid">
@@ -392,17 +392,17 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th>Name</th>
+                    <th class="th--head">Name</th>
                     <td class="battle-unit-profile-name">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <th>Gender</th>
+                    <th class="th--head">Gender</th>
                     <td class="battle-unit-profile-gender">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
-                    <th>CP</th>
+                    <th class="th--head">CP</th>
                     <td class="battle-unit-profile-cp">&nbsp;</td>
                     <td>&nbsp;</td>
                   </tr>
@@ -444,25 +444,25 @@
         </template>
         <template id="battle-unit-ability-template">
           <tr>
-            <th class="battle-unit-ability-name">&nbsp;</th>
+            <th class="battle-unit-ability-name th--head">&nbsp;</th>
             <td class="battle-unit-ability-value">&nbsp;</td>
             <td class="battle-unit-ability-cp">&nbsp;</td>
           </tr>
         </template>
         <template id="battle-unit-skill-template">
           <tr>
-            <th class="battle-unit-skill-name-1">&nbsp;</th>
+            <th class="battle-unit-skill-name-1 th--head">&nbsp;</th>
             <td class="battle-unit-skill-value-1">&nbsp;</td>
             <td class="battle-unit-skill-cp-1">&nbsp;</td>
             <td class="border--none">&nbsp;</td>
-            <th class="battle-unit-skill-name-2">&nbsp;</th>
+            <th class="battle-unit-skill-name-2 th--head">&nbsp;</th>
             <td class="battle-unit-skill-value-2">&nbsp;</td>
             <td class="battle-unit-skill-cp-2">&nbsp;</td>
           </tr>
         </template>
         <template id="battle-unit-equip-template">
           <tr>
-            <th class="battle-unit-equip-name">&nbsp;</th>
+            <th class="battle-unit-equip-name th--head">&nbsp;</th>
             <td class="battle-unit-equip-head-1">&nbsp;</td>
             <td class="battle-unit-equip-cell-1">&nbsp;</td>
             <td class="battle-unit-equip-head-2">&nbsp;</td>

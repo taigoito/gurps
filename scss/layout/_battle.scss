@@ -9,6 +9,7 @@
 
   &>.inner {
     @include row();
+    justify-content: center;
   }
 
   h5, h6 {
@@ -28,10 +29,22 @@
 #battle-summary,
 #battle-command,
 #battle-log {
-  @include col("lg", 6);
+  display: none;
   padding-right: 1rem;
   padding-left: 1rem;
   user-select: none;
+
+  @media (min-width: breakpoint("md")) {
+    display: block;
+    flex: 0 0 100%;
+    max-width: 42rem;
+  }
+
+  @media (min-width: breakpoint("lg")) {
+    display: block;
+    flex: 0 0 50%;
+    max-width: 31.5rem;
+  }
 }
 
 #battle-formation {
@@ -41,25 +54,31 @@
 }
 
 #battle-summary {
-  order: 3;
+  order: 2;
   height: 21rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.3);
 
   @media (min-width: breakpoint("lg")) {
-    background: rgba(255, 255, 255, 0.3);
+    order: 3;
   }
 }
 
 #battle-command {
-  order: 2;
+  order: 3;
   height: 10.5rem;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+
+  @media (min-width: breakpoint("lg")) {
+    order: 2;
+    background: rgba(255, 255, 255, 0.3);
+  }
 }
 
 #battle-log {
   order: 4;
   height: 21rem;
   background: rgba(255, 255, 255, 0.3);
+
   @media (min-width: breakpoint("lg")) {
     background: rgba(255, 255, 255, 0.15);
   }
@@ -78,7 +97,7 @@
 #battle-formation-col-pc-forward,
 #battle-formation-col-enemy-forward,
 #battle-formation-col-enemy-back {
-  @include col("lg", 3);
+  flex: 0 0 25%;
     
   &> div {
     height: 2rem;
@@ -252,7 +271,10 @@
     transition: opacity .5s linear;
   }
 
-  .table {
+  .battle-list-main {
+    width: 48rem;
+    margin: 0 auto;
+
     thead th, thead td {
       padding: .5rem;
       border-top: 0;
@@ -278,6 +300,8 @@
 }
 
 #battle-unit {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -292,6 +316,10 @@
       padding: .4rem 0;
     }
   }
+
+  @media (min-width: breakpoint("lg")) {
+    width: 48rem;
+  }
 }
 
 .battle-unit-body-1 {
@@ -300,10 +328,22 @@
 
 .battle-unit-body-2 {
   @include col("lg", 8);
+
+  @media (max-width: breakpoint("sm")) {
+    .table {
+      width: 36rem;
+    }
+  }
 }
 
 .battle-unit-body-3 {
   @include col("lg", 12);
+
+  @media (max-width: breakpoint("sm")) {
+    .table {
+      width: 36rem;
+    }
+  }
 }
 
 .battle-unit-skills th,
