@@ -84,7 +84,7 @@ class Health extends Model {
     this.on('change:currentDamage', changeDamage);
 
     // コンディション属性の更新
-    const changeHealth = () => {
+    const changeCondition = () => {
       const stun = this.get('stun');
       const penalty = this.get('penalty');
       const bright = this.get('bright');
@@ -92,11 +92,11 @@ class Health extends Model {
       const injuryOnArm = this.get('injuryOnArm');
       const injuryOnLeg = this.get('injuryOnLeg');
       let condition = 'good';
-      if (stun) {
-        // 気絶
+      if (stun || penalty >= 4) {
+        // 気絶、-4以上(重度)の修正の朦朧状態
         condition = 'worst';
-      } else if (blindness || injuryOnArm || injuryOnLeg || penalty >= 4 || bright >= 4) {
-        // 失明、腕・手首、脚・足首の故障、-4以上(重度)の修正の朦朧状態、眩しい
+      } else if (blindness|| bright >= 4 || injuryOnArm || injuryOnLeg ) {
+        // 失明、腕・手首、脚・足首の故障、眩しい
         condition = 'worse';
       } else if (penalty >= 2 || bright >= 2) {
         // -2以上(軽度)の修正の朦朧状態、眩しい
@@ -104,11 +104,13 @@ class Health extends Model {
       }
       this._actor.setAttr('condition', condition);
     }
-    this.on('change:damage', changeHealth);
-    this.on('change:bright', changeHealth);
-    this.on('change:blindness', changeHealth);
-    this.on('change:injuryOnArm', changeHealth);
-    this.on('change:injuryOnLeg', changeHealth);
+    this.on('change:stun', changeCondition);
+    this.on('change:penalty', changeCondition);
+    this.on('change:damage', changeCondition);
+    this.on('change:bright', changeCondition);
+    this.on('change:blindness', changeCondition);
+    this.on('change:injuryOnArm', changeCondition);
+    this.on('change:injuryOnLeg', changeCondition);
   }
 
   startTurn() {

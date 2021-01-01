@@ -393,6 +393,7 @@ class Action {
       // 朦朧状態
       target.setAttr('penalty', 2); //軽度
       target.setAttr('painful', true);
+      this._write({ method: 'setattr', target: target, status: 'stand' });
     } else if (dmg >= currentHP / 2 || painful && dmg >= currentHP / 3) {
       // 朦朧状態
       target.setAttr('penalty', 4); //重度
