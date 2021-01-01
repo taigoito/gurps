@@ -243,14 +243,14 @@ class Action {
         if (aim === 'foot') target.setAttr('injuryOnLeg', true); // 足首の損傷
         injuryOnLimb = true;
       }
-      //dmg = Math.min(Math.floor(currentHP / 3), dmg); // ダメージ上限
+      dmg = Math.min(Math.floor(currentHP / 3), dmg); // ダメージ上限
     } else if (aim === 'arm' || aim === 'leg') {
       if (dmg >= currentHP / 3) {
         if (aim === 'arm') target.setAttr('injuryOnArm', true); // 腕の損傷
         if (aim === 'leg') target.setAttr('injuryOnLeg', true); // 脚の損傷
         injuryOnLimb = true;
       }
-      //dmg = Math.min(Math.floor(currentHP / 2), dmg); // ダメージ上限
+      dmg = Math.min(Math.floor(currentHP / 2), dmg); // ダメージ上限
     }
 
     // ダメージのログ
@@ -391,14 +391,14 @@ class Action {
     const painful = aim === 'head' || aim === 'neck'
     if (dmg >= currentHP / 3) {
       // 朦朧状態
-      target.setAttr('painful', true);
       target.setAttr('penalty', 2); //軽度
+      target.setAttr('painful', true);
     } else if (dmg >= currentHP / 2 || painful && dmg >= currentHP / 3) {
       // 朦朧状態
-      target.setAttr('painful', true);
       target.setAttr('penalty', 4); //重度
+      target.setAttr('painful', true);
       // 転倒判定
-      const fall = this._judge(target, 'fall', 0);
+      const fall = this._judge(target, 'fall', 2);
       if (!fall) {
         target.setAttr('posture', 'falling');
         this._write({ method: 'setattr', target: target, status: 'fall' });
