@@ -129,7 +129,7 @@ export const data = {
       'learnPriority': 0,
       'baseId': false,
       'baseFix': 0,
-      'min': 2
+      'min': 1
     },
     {
       'id': 1,
@@ -138,7 +138,7 @@ export const data = {
       'learnPriority': 0,
       'baseId': false,
       'baseFix': 0,
-      'min': 2
+      'min': 1
     },
     {
       'id': 2,
@@ -147,7 +147,7 @@ export const data = {
       'learnPriority': 0,
       'baseId': false,
       'baseFix': 0,
-      'min': 2
+      'min': 1
     },
     {
       'id': 3,
@@ -156,7 +156,7 @@ export const data = {
       'learnPriority': 0,
       'baseId': false,
       'baseFix': 0,
-      'min': 2
+      'min': 1
     },
     {
       'id': 4,

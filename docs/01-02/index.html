@@ -112,54 +112,46 @@
                 </tbody>
               </table>
               <h4>能力値の決定</h4>
-              <p>能力値の初期値はどれも10ですが、WL(意志力)とそれ以外の能力値とで、必要な点数が異なります。また値を大きくするほど必要な点数も等比数列的に増えていきますので、下記表を参考にしてください。</p>
+              <p>能力値の初期値はどれも10ですが、上昇・下降によって点数を消費・獲得します。値を大きくするほど必要な点数も等比数列的に増えていくので、下記表を参考にしてください。</p>
               <table class="table">
                 <thead>
                   <tr>
                     <th class="th--head">能力値</th>
-                    <th>四能力</th>
-                    <th>WL(意志力)</th>
+                    <th>CP</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="td--head">8</td>
-                    <td>-4CP</td>
                     <td>-2CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">9</td>
-                    <td>-2CP</td>
                     <td>-1CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">10</td>
                     <td>0CP</td>
-                    <td>0CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">11</td>
-                    <td>2CP</td>
                     <td>1CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">12</td>
-                    <td>4CP</td>
                     <td>2CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">13</td>
-                    <td>8CP</td>
                     <td>4CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">14</td>
-                    <td>16CP</td>
                     <td>8CP</td>
                   </tr>
                   <tr>
                     <td class="td--head">以降</td>
-                    <td colspan="2">+8CPごとに+1</td>
+                    <td>+8CPごとに+1</td>
                   </tr>
                 </tbody>
               </table>
@@ -170,7 +162,7 @@
               <p>騎士や傭兵として普段は軍隊に属して行動している、戦闘のプロフェッショナルです。</p>
               <p>戦士は、ST(体力)が高ければ、それだけ戦闘を有利にこなせます。</p>
               <ul class="list-items">
-                <li>STにまず8点消費して、13にする。</li>
+                <li>STにまず8点消費して、14にする。</li>
                 <li>戦闘能力の上では、DX(器用さ)、IN(知性)は下げても良い。</li>
                 <li>回避値に関係するAG(敏捷さ)、抵抗値に関係するWL(意志力)も上げておくと良い。</li>
               </ul>
@@ -188,11 +180,19 @@
                 <tbody>
                   <tr>
                     <td class="td--head">ウォーラス</td>
-                    <td>13</td>
+                    <td>14</td>
                     <td>10</td>
                     <td>10</td>
-                    <td>10</td>
-                    <td>11</td>
+                    <td>9</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">計9CP</td>
+                    <td>8CP</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>-1CP</td>
+                    <td>2CP</td>
                   </tr>
                 </tbody>
               </table>
@@ -200,9 +200,8 @@
               <p>探索や隠密行動、交渉、そして戦闘まで、多岐に渡って活躍できる冒険家のことです。</p>
               <p>剣士は、様々な技能を効率よく修得するために、DX(器用さ)とAG(素早さ)が重要です。</p>
               <ul class="list-items">
-                <li>DXとAGに4点ずつ消費して、それぞれ12にする。</li>
+                <li>DXとAGに4点ずつ消費して、それぞれ13にする。</li>
                 <li>戦闘能力を重視してST(体力)か、精神技能を重視してIN(知性)か、好きにバランスを取る。</li>
-                <li>犠牲にした能力を下げ、DX、AGのどちらか一方を13にすると、個性が出て面白い。</li>
               </ul>
               <table class="table">
                 <thead>
@@ -219,10 +218,18 @@
                   <tr>
                     <td class="td--head">リチャード</td>
                     <td>10</td>
-                    <td>12</td>
-                    <td>12</td>
+                    <td>13</td>
+                    <td>13</td>
                     <td>10</td>
-                    <td>10</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">計9CP</td>
+                    <td>0</td>
+                    <td>4CP</td>
+                    <td>4CP</td>
+                    <td>0</td>
+                    <td>1CP</td>
                   </tr>
                 </tbody>
               </table>
@@ -230,8 +237,8 @@
               <p>文字通り弓矢を専門に扱い、遠くから敵を射止めます。</p>
               <p>弓使いは、DX(器用さ)が弓の腕前を決めますが、ST(体力)もある程度大事になります。</p>
               <ul class="list-items">
-                <li>パターンA ST:10, DX:13 命中率重視。他の技能も効率良く修得できる。</li>
-                <li>パターンB ST:12, DX:12 ダメージ重視。戦闘では、前者よりも強い。</li>
+                <li>パターンA ST:10, DX:14 命中率重視。他の技能も効率良く修得できる。</li>
+                <li>パターンB ST:13, DX:13 ダメージ重視。戦闘では、前者よりも強い。</li>
                 <li>他の能力も高ければ、より個性が出るが、必須では無い。</li>
               </ul>
               <table class="table">
@@ -249,10 +256,18 @@
                   <tr>
                     <td class="td--head">ヘンリー</td>
                     <td>10</td>
-                    <td>13</td>
+                    <td>14</td>
                     <td>10</td>
-                    <td>10</td>
-                    <td>10</td>
+                    <td>9</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">計8CP</td>
+                    <td>0</td>
+                    <td>8CP</td>
+                    <td>0</td>
+                    <td>-1CP</td>
+                    <td>1CP</td>
                   </tr>
                 </tbody>
               </table>
@@ -281,8 +296,16 @@
                     <td>9</td>
                     <td>10</td>
                     <td>10</td>
-                    <td>13</td>
+                    <td>14</td>
                     <td>12</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">計9CP</td>
+                    <td>-1CP</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>8CP</td>
+                    <td>2CP</td>
                   </tr>
                 </tbody>
               </table>
@@ -291,7 +314,7 @@
               <p>ゲーム開始初期は、戦闘では戦士に劣り、法術では術士に劣る、中途半端な存在ですが、やがて技能が充実してくれば、術戦士ならではの戦い方ができるようになります。</p>
                 </p>
               <ul class="list-items">
-                <li>技能を司るST(体力)、IN(知性)の両方に4点ずつ消費して、それぞれ12にする。</li>
+                <li>技能を司るST(体力)、IN(知性)の両方に4点ずつ消費して、それぞれ13にする。</li>
                 <li>次いで、法術の精神集中を維持するWL(意志力)も、2CP消費して12にしたい。</li>
                 <li>DX(器用さ)とAG(敏捷さ)は、どちらか下げざるを得ない。</li>
               </ul>
@@ -309,19 +332,27 @@
                 <tbody>
                   <tr>
                     <td class="td--head">オライオン</td>
-                    <td>12</td>
+                    <td>13</td>
                     <td>9</td>
                     <td>10</td>
+                    <td>13</td>
                     <td>12</td>
-                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">計9CP</td>
+                    <td>4CP</td>
+                    <td>-1CP</td>
+                    <td>0</td>
+                    <td>4CP</td>
+                    <td>2CP</td>
                   </tr>
                 </tbody>
               </table>
               <h5>盗賊</h5>
               <p>社会の闇を生き抜く、隠密行動を専門とする仕事人です。</p>
-              <p>技能を効率よく修得するために、DX(器用さ)とAG(素早さ)を13にまで引き上げます。</p>
               <ul class="list-items">
-                <li>DXとAGに8点ずつ消費して、それぞれ13にする。</li>
+                <li>DXとAGに4点ずつ消費して、それぞれ13にする。</li>
+                <li>どちらか一方にさらに4CP消費して、14にする。</li>
                 <li>ST(体力)、IN(知性)、WL(意志力)を下げて調整する。</li>
               </ul>
               <table class="table">
@@ -340,9 +371,17 @@
                     <td class="td--head">クロウ</td>
                     <td>9</td>
                     <td>13</td>
-                    <td>13</td>
+                    <td>14</td>
+                    <td>9</td>
                     <td>8</td>
-                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td class="td--head">計8CP</td>
+                    <td>-1CP</td>
+                    <td>4CP</td>
+                    <td>8CP</td>
+                    <td>-1CP</td>
+                    <td>-2CP</td>
                   </tr>
                 </tbody>
               </table>
