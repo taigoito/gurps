@@ -6,50 +6,50 @@ import { Unit, Units } from '../_models.js';
 
 const base = [
   { // DX, AG優先
-    ability: [-4, 4, 4, -2, 1],
+    ability: [-1, 4, 1, -1, 1],
     skills: ['剣術'],
     equips: [4, 10, 14],
     missile: [18, 17]
   },
   { // DX, IN優先
-    ability: [-2, 4, 2, 0, 1],
+    ability: [-2, 4, 0, 2, 1],
     skills: ['剣術', 's'],
     equips: [4, 10, 14]
   },
   { // DX, ST優先
-    ability: [0, 4, 2, -2, 1],
+    ability: [1, 4, 0, -2, 1],
     skills: [['弓術', '武術'], ['剣術']],
     equips: [[8], [7]],
     missile: [20, 19]
   },
   { // ST, DX優先
-    ability: [4, 0, 0, -2, 1],
+    ability: [2, 2, 0, -2, 1],
     skills: ['武術', '弓術'],
     equips: [8, 15],
     missile: [20]
   },
   { // ST, AG優先
-    ability: [4, -2, 2, -2, 1],
+    ability: [2, -1, 1, -1, 1],
     skills: ['武術'],
     equips: [6, 12, 16]
   },
   { // ST, IN優先
-    ability: [4, -2, 0, 0, 1],
+    ability: [2, -2, 0, 2, 1],
     skills: ['武術', 's'],
     equips: [6, 12, 16]
   },
   { // IN, ST優先
-    ability: [0, -2, 2, 4, 1],
+    ability: [1, -2, 0, 4, 1],
     skills: ['s', '武術'],
     equips: [5, 11]
   },
   { // IN, DX優先
-    ability: [-2, 0, 2, 4, 1],
+    ability: [-2, 2, 0, 4, 1],
     skills: ['s', '剣術'],
     equips: [3, 9, 13]
   },
   { // IN, AG優先
-    ability: [-4, -2, 4, 4, 1],
+    ability: [-1, -1, 1, 4, 1],
     skills: ['s', '剣術'],
     equips: [3, 9, 13]
   }
@@ -61,21 +61,14 @@ const fixArrs = [
     [['AG', true]] // 女性
   ],
   [
-    [ // DX優先
-      [['ST', true]],
-      [['WL', false], ['DX', true]],
-      [['IN', true]]
-    ],
-    [ // ST優先
-      [['IN', true]],
-      [['WL', true], ['WL', true]],
-      [['DX', true]]
-    ],
-    [ // IN優先
-      [['DX', true]],
-      [['WL', false], ['IN', true]],
-      [['ST', true]]
-    ],
+    [['IN', true]],
+    [['ST', true]],
+    [['DX', true]]
+  ],
+  [
+    [['WL', true], ['WL', true]],
+    [['AG', true], ['WL', true]],
+    [['AG', true], ['AG', true]]
   ],
 ];
 
@@ -120,8 +113,8 @@ class SampleUnit extends Unit {
     //i = this._shuffle(i);
     const g = this.sid === undefined ? Math.floor(Math.random() * 2) : Math.floor(this.sid / 54) % 2;
     const a = i % 9;
-    const a1 = Math.floor(i / 3) % 3;
-    const a2 = Math.floor(i / 9) % 3;
+    const a1 = Math.floor(i / 9) % 3;
+    const a2 = Math.floor(i / 18) % 3;
     const b = (i + Math.floor(i / 18)) % 6;
     this._born(g, a, a1, a2);
     this._grow(g, a, b);
@@ -135,7 +128,7 @@ class SampleUnit extends Unit {
   }
 
   // 能力値の決定
-  _born(g, a, a1, a2) {
+  _born(g, a, a1, a2, a3) {
     // baseArrの添え字をid、値をcpとし、順次パラメータとして追加
     const baseArr = base[a].ability.slice();
     baseArr.forEach((value, index) => this.setParam(index, value));
@@ -145,7 +138,7 @@ class SampleUnit extends Unit {
     const len = fixArr.length;
     for (let i = 0; i < len; i++) {
       if (this.getParamTotal() < 10) {
-        this.putParam(fixArr[i][0], fixArr[i][1], 10); // capacity:10
+        this.putParam(fixArr[i][0], fixArr[i][1], 9.5); // capacity:10
       } else {
         break;
       }
@@ -238,8 +231,9 @@ class SampleUnit extends Unit {
   // 能力値の決定のための配列を作成
   _makeBirthArr(g, a1, a2) {
     const arr1 = fixArrs[0][g];
-    const arr2 = fixArrs[1][a1][a2];
-    return arr1.concat(arr2);
+    const arr2 = fixArrs[1][a1];
+    const arr3 = fixArrs[2][a2];
+    return arr1.concat(arr2.concat(arr3));
   }
 
   // 技能の決定のための配列を作成
